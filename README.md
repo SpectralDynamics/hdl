@@ -47,7 +47,7 @@ In the Vivado Tcl Console, navigate to the project directory and source the buil
 
 ```tcl
 cd c:/path/to/hdl-main/projects/ad7768evb/zed
-source system_project.tcl
+source ./system_project.tcl
 ```
 
 > Replace `c:/path/to/hdl-main` with the actual path where you extracted or cloned the repository.
