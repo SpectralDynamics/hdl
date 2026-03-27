@@ -16,6 +16,7 @@ adi_project_files ad7768evb_zed [list \
   "demux1to4.v" \
   "trigger_sel.v" \
   "$ad_hdl_dir/projects/common/zed/zed_system_constr.xdc" \
-  "$ad_hdl_dir/library/common/ad_iobuf.v" ]
+  "$ad_hdl_dir/library/common/ad_iobuf.v" \
+  "$ad_hdl_dir/library/util_cdc/sync_bits.v" ]
 
 adi_project_run ad7768evb_zed
