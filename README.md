@@ -6,7 +6,7 @@
 
 # Spectral Dynamics — HDL Reference Design
 
-This repository contains the HDL (Verilog) source files and Tcl scripts to build the **AD7768EVB** data acquisition project for the **Zedboard (Zynq-7000)** using Xilinx Vivado 2023.2.
+This repository contains the HDL (Verilog) source files and Tcl scripts to build the **Panther** data acquisition project for the **Zedboard (Zynq-7000)** using Xilinx Vivado 2023.2.
 
 > **Forked from:** [analogdevicesinc/hdl](https://github.com/analogdevicesinc/hdl)
 > Original ADI HDL libraries and IP cores are used under their respective licenses (ADIBSD / GPL2 / LGPL). See [LICENSE_ADIBSD](LICENSE_ADIBSD), [LICENSE_GPL2](LICENSE_GPL2), and [LICENSE_LGPL](LICENSE_LGPL).
