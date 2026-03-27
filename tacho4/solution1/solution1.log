@@ -1,0 +1,1375 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.882 seconds; current allocated memory: 0.738 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.075 seconds; current allocated memory: 192.855 MB.
+INFO: [HLS 200-10] Analyzing design file 'temp/tacho_4.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.766 seconds; current allocated memory: 195.094 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 1,152 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 236 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 173 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 171 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 171 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 171 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 171 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 171 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 171 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 171 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 171 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 171 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 171 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 171 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 182 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 197 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_157_7> at temp/tacho_4.cpp:157:25 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_139_6> at temp/tacho_4.cpp:139:28 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_108_5> at temp/tacho_4.cpp:108:27 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_98_4> at temp/tacho_4.cpp:98:26 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_88_3> at temp/tacho_4.cpp:88:26 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_79_2> at temp/tacho_4.cpp:79:26 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_69_1> at temp/tacho_4.cpp:69:26 
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 7.147 seconds; current allocated memory: 197.422 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 197.422 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.086 seconds; current allocated memory: 202.277 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.036 seconds; current allocated memory: 203.605 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.075 seconds; current allocated memory: 225.711 MB.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_69_1' (temp/tacho_4.cpp:69:26) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_79_2' (temp/tacho_4.cpp:79:26) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_88_3' (temp/tacho_4.cpp:88:26) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_98_4' (temp/tacho_4.cpp:98:26) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_108_5' (temp/tacho_4.cpp:108:27) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_139_6' (temp/tacho_4.cpp:139:28) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_157_7' (temp/tacho_4.cpp:157:25) in function 'tacho_control' is an infinite loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.155 seconds; current allocated memory: 225.715 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tacho_control' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tacho_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.288 seconds; current allocated memory: 225.715 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 226.621 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tacho_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/in_data' to 's_axilite & ap_ovld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_data' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_en' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_en' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_en' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spird_en' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_addr' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_addr' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_addr' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spird_addr' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_data' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_data' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spi_strobe' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spi_strobe' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/cs_line' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'cs_line' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'tacho_control' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'next_state' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'command' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data_e' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data1' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'in_data' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tacho_control'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.401 seconds; current allocated memory: 229.090 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.382 seconds; current allocated memory: 235.828 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.386 seconds; current allocated memory: 241.680 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for tacho_control.
+INFO: [VLOG 209-307] Generating Verilog RTL for tacho_control.
+INFO: [HLS 200-789] **** Estimated Fmax: 194.55 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 11.962 seconds; current allocated memory: 48.965 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -description=tacho_control
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=tacho_control_1.1.0
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1.0
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -description tacho_control -display_name tacho_control_1.1.0 -version 1.1.0 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file tacho4/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 9.384 seconds; current allocated memory: 6.840 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -description=tacho_control
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=tacho_control_1.1.0
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1.0
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -description tacho_control -display_name tacho_control_1.1.0 -format ip_catalog -rtl verilog -version 1.1.0 
+INFO: [HLS 200-1510] Running: source ./tacho4/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_control tacho_control 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.904 seconds; current allocated memory: 0.750 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -description=tacho_control
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=tacho_control_1.1.0
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1.0
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -description tacho_control -display_name tacho_control_1.1.0 -format ip_catalog -rtl verilog -version 1.1.0 
+INFO: [HLS 200-1510] Running: source ./tacho4/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_control tacho_control 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 193.664 MB.
+INFO: [HLS 200-10] Analyzing design file 'temp/tacho_4.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.927 seconds; current allocated memory: 195.906 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 896 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 189 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 154 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 153 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 153 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 153 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 153 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 153 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 153 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 153 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 153 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 153 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 153 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 153 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 164 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 177 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_167_6> at temp/tacho_4.cpp:167:26 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_143_5> at temp/tacho_4.cpp:143:28 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_116_4> at temp/tacho_4.cpp:116:28 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_109_3> at temp/tacho_4.cpp:109:28 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_102_2> at temp/tacho_4.cpp:102:28 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_95_1> at temp/tacho_4.cpp:95:26 
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.357 seconds; current allocated memory: 198.328 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 198.328 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.092 seconds; current allocated memory: 203.355 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 204.867 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 226.383 MB.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_95_1' (temp/tacho_4.cpp:95:26) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_102_2' (temp/tacho_4.cpp:102:28) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_109_3' (temp/tacho_4.cpp:109:28) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_116_4' (temp/tacho_4.cpp:116:28) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_143_5' (temp/tacho_4.cpp:143:28) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_167_6' (temp/tacho_4.cpp:167:26) in function 'tacho_control' is an infinite loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.144 seconds; current allocated memory: 226.387 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tacho_control' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tacho_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.334 seconds; current allocated memory: 226.387 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 227.227 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tacho_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/in_data' to 's_axilite & ap_ovld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_data' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_en' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_en' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_en' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spird_en' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_addr' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_addr' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_addr' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spird_addr' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_data' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_data' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spi_strobe' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spi_strobe' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/cs_line' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'cs_line' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'tacho_control' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'next_state' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'command' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data_e' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data1' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'in_data' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tacho_control'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.529 seconds; current allocated memory: 229.777 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.375 seconds; current allocated memory: 236.488 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.425 seconds; current allocated memory: 242.707 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for tacho_control.
+INFO: [VLOG 209-307] Generating Verilog RTL for tacho_control.
+INFO: [HLS 200-789] **** Estimated Fmax: 194.55 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 12.542 seconds; current allocated memory: 49.219 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -description=tacho_control
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=tacho_control_1.1.4
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1.4
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -description tacho_control -display_name tacho_control_1.1.4 -format ip_catalog -rtl verilog -version 1.1.4 
+INFO: [HLS 200-1510] Running: source ./tacho4/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_control tacho_control 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file tacho4/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 13.024 seconds; current allocated memory: 7.281 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -description=tacho_control
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=tacho_control_1.1.4
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1.4
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -description tacho_control -display_name tacho_control_1.1.4 -format ip_catalog -rtl verilog -version 1.1.4 
+INFO: [HLS 200-1510] Running: source ./tacho4/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_control tacho_control 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.346 seconds; current allocated memory: 0.418 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -description=tacho_control
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=tacho_control_1.1.4
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1.4
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -description tacho_control -display_name tacho_control_1.1.4 -format ip_catalog -rtl verilog -version 1.1.4 
+INFO: [HLS 200-1510] Running: source ./tacho4/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_control tacho_control 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.063 seconds; current allocated memory: 192.621 MB.
+INFO: [HLS 200-10] Analyzing design file 'temp/tacho_4.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.73 seconds; current allocated memory: 194.957 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 1,054 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 203 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 169 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 168 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 168 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 168 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 168 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 168 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 168 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 168 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 168 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 168 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 168 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 168 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 179 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 192 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_184_6> at temp/tacho_4.cpp:184:26 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_155_5> at temp/tacho_4.cpp:155:28 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_124_4> at temp/tacho_4.cpp:124:28 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_117_3> at temp/tacho_4.cpp:117:28 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_110_2> at temp/tacho_4.cpp:110:28 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_103_1> at temp/tacho_4.cpp:103:27 
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.171 seconds; current allocated memory: 197.242 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 197.242 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.078 seconds; current allocated memory: 202.312 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.041 seconds; current allocated memory: 203.656 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 225.516 MB.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_103_1' (temp/tacho_4.cpp:103:27) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_110_2' (temp/tacho_4.cpp:110:28) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_117_3' (temp/tacho_4.cpp:117:28) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_124_4' (temp/tacho_4.cpp:124:28) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_155_5' (temp/tacho_4.cpp:155:28) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_184_6' (temp/tacho_4.cpp:184:26) in function 'tacho_control' is an infinite loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.135 seconds; current allocated memory: 225.520 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tacho_control' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tacho_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.238 seconds; current allocated memory: 225.520 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 226.582 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tacho_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/in_data' to 's_axilite & ap_ovld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_data' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_en' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_en' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_en' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spird_en' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_addr' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_addr' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_addr' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spird_addr' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_data' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_data' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spi_strobe' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spi_strobe' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/cs_line' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'cs_line' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'tacho_control' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'next_state' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'command' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data_e' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'in_data' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tacho_control'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.422 seconds; current allocated memory: 229.176 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.352 seconds; current allocated memory: 236.043 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.413 seconds; current allocated memory: 242.164 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for tacho_control.
+INFO: [VLOG 209-307] Generating Verilog RTL for tacho_control.
+INFO: [HLS 200-789] **** Estimated Fmax: 194.55 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 11.857 seconds; current allocated memory: 49.809 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -description=tacho_control
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=tacho_control_1.1.4
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1.4
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -description tacho_control -display_name tacho_control_1.1.4 -format ip_catalog -rtl verilog -version 1.1.4 
+INFO: [HLS 200-1510] Running: source ./tacho4/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_control tacho_control 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file tacho4/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 13.094 seconds; current allocated memory: 7.711 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -description=tacho_control
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=tacho_control_1.1.4
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1.4
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -description tacho_control -display_name tacho_control_1.1.4 -format ip_catalog -rtl verilog -version 1.1.4 
+INFO: [HLS 200-1510] Running: source ./tacho4/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_control tacho_control 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.902 seconds; current allocated memory: 0.457 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -description=tacho_control
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=tacho_control_1.1.4
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1.4
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -description tacho_control -display_name tacho_control_1.1.4 -format ip_catalog -rtl verilog -version 1.1.4 
+INFO: [HLS 200-1510] Running: source ./tacho4/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_control tacho_control 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.068 seconds; current allocated memory: 192.629 MB.
+INFO: [HLS 200-10] Analyzing design file 'temp/tacho_4.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.821 seconds; current allocated memory: 195.020 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 1,116 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 216 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 182 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 181 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 181 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 181 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 181 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 181 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 181 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 181 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 181 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 181 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 181 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 181 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 193 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 206 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/Ferenc/tacho/hls_workspace/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_197_6> at temp/tacho_4.cpp:197:26 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_168_5> at temp/tacho_4.cpp:168:28 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_137_4> at temp/tacho_4.cpp:137:28 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_130_3> at temp/tacho_4.cpp:130:28 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_123_2> at temp/tacho_4.cpp:123:28 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_116_1> at temp/tacho_4.cpp:116:27 
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.318 seconds; current allocated memory: 197.531 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 197.531 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.101 seconds; current allocated memory: 202.406 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.045 seconds; current allocated memory: 204.051 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.081 seconds; current allocated memory: 226.059 MB.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_116_1' (temp/tacho_4.cpp:116:27) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_123_2' (temp/tacho_4.cpp:123:28) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_130_3' (temp/tacho_4.cpp:130:28) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_137_4' (temp/tacho_4.cpp:137:28) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_168_5' (temp/tacho_4.cpp:168:28) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_197_6' (temp/tacho_4.cpp:197:26) in function 'tacho_control' is an infinite loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 226.078 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tacho_control' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tacho_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.306 seconds; current allocated memory: 226.078 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.078 seconds; current allocated memory: 226.918 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tacho_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/in_data' to 's_axilite & ap_ovld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_data' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_en' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_en' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_en' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spird_en' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_addr' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_addr' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_addr' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spird_addr' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_data' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_data' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spi_strobe' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spi_strobe' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/cs_line' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'cs_line' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/cnt_en' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'cnt_en' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'tacho_control' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'next_state' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'command' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data_e' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'in_data' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tacho_control'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.58 seconds; current allocated memory: 229.590 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.38 seconds; current allocated memory: 236.312 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.462 seconds; current allocated memory: 242.637 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for tacho_control.
+INFO: [VLOG 209-307] Generating Verilog RTL for tacho_control.
+INFO: [HLS 200-789] **** Estimated Fmax: 194.55 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 12.534 seconds; current allocated memory: 50.074 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -description=tacho_control
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=tacho_control_1.1.5
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1.5
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -description tacho_control -display_name tacho_control_1.1.5 -format ip_catalog -rtl verilog -version 1.1.5 
+INFO: [HLS 200-1510] Running: source ./tacho4/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_control tacho_control 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file tacho4/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 15.734 seconds; current allocated memory: 6.953 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -description=tacho_control
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=tacho_control_1.1.5
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1.5
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -description tacho_control -display_name tacho_control_1.1.5 -format ip_catalog -rtl verilog -version 1.1.5 
+INFO: [HLS 200-1510] Running: source ./tacho4/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_control tacho_control 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.078 seconds; current allocated memory: 198.832 MB.
+INFO: [HLS 200-10] Analyzing design file 'temp/tacho_4.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.943 seconds; current allocated memory: 201.020 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 1,116 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 216 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 182 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 181 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 181 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 181 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 181 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 181 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 181 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 181 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 181 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 181 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 181 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 181 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 193 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 206 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_197_6> at temp/tacho_4.cpp:197:26 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_168_5> at temp/tacho_4.cpp:168:28 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_137_4> at temp/tacho_4.cpp:137:28 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_130_3> at temp/tacho_4.cpp:130:28 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_123_2> at temp/tacho_4.cpp:123:28 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_116_1> at temp/tacho_4.cpp:116:27 
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.913 seconds; current allocated memory: 203.195 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 203.195 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 208.352 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.022 seconds; current allocated memory: 209.992 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.057 seconds; current allocated memory: 231.984 MB.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_116_1' (temp/tacho_4.cpp:116:27) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_123_2' (temp/tacho_4.cpp:123:28) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_130_3' (temp/tacho_4.cpp:130:28) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_137_4' (temp/tacho_4.cpp:137:28) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_168_5' (temp/tacho_4.cpp:168:28) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_197_6' (temp/tacho_4.cpp:197:26) in function 'tacho_control' is an infinite loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.107 seconds; current allocated memory: 232.055 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tacho_control' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tacho_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.221 seconds; current allocated memory: 232.055 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.076 seconds; current allocated memory: 232.535 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tacho_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/in_data' to 's_axilite & ap_ovld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_data' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_en' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_en' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_en' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spird_en' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_addr' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_addr' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_addr' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spird_addr' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_data' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_data' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spi_strobe' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spi_strobe' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/cs_line' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'cs_line' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/cnt_en' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'cnt_en' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'tacho_control' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'next_state' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'command' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data_e' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'in_data' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tacho_control'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.395 seconds; current allocated memory: 235.070 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.425 seconds; current allocated memory: 241.875 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.558 seconds; current allocated memory: 248.094 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for tacho_control.
+INFO: [VLOG 209-307] Generating Verilog RTL for tacho_control.
+INFO: [HLS 200-789] **** Estimated Fmax: 194.55 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 11.91 seconds; current allocated memory: 49.379 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -description=tacho_control
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=tacho_control_1.1.5
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1.5
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -description tacho_control -display_name tacho_control_1.1.5 -format ip_catalog -rtl verilog -version 1.1.5 
+INFO: [HLS 200-1510] Running: source ./tacho4/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_control tacho_control 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file tacho4/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 12.123 seconds; current allocated memory: 6.898 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -description=tacho_control
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=tacho_control_1.1.5
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1.5
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -description tacho_control -display_name tacho_control_1.1.5 -format ip_catalog -rtl verilog -version 1.1.5 
+INFO: [HLS 200-1510] Running: source ./tacho4/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_control tacho_control 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.085 seconds; current allocated memory: 193.160 MB.
+INFO: [HLS 200-10] Analyzing design file 'tacho4/tacho_4.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 9.652 seconds; current allocated memory: 195.371 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 1,120 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 220 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 186 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 185 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 185 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 185 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 185 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 185 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 185 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 185 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 185 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 185 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 185 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 185 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 197 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 210 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_200_6> at tacho4/tacho_4.cpp:200:26 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_171_5> at tacho4/tacho_4.cpp:171:28 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_140_4> at tacho4/tacho_4.cpp:140:28 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_133_3> at tacho4/tacho_4.cpp:133:28 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_126_2> at tacho4/tacho_4.cpp:126:28 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_119_1> at tacho4/tacho_4.cpp:119:27 
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 10.326 seconds; current allocated memory: 197.629 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 197.629 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.531 seconds; current allocated memory: 202.781 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.082 seconds; current allocated memory: 204.453 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (tacho4/tacho_4.cpp:198:19) to (tacho4/tacho_4.cpp:209:5) in function 'tacho_control'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.174 seconds; current allocated memory: 226.750 MB.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_119_1' (tacho4/tacho_4.cpp:119:27) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_126_2' (tacho4/tacho_4.cpp:126:28) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_133_3' (tacho4/tacho_4.cpp:133:28) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_140_4' (tacho4/tacho_4.cpp:140:28) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_171_5' (tacho4/tacho_4.cpp:171:28) in function 'tacho_control' is an infinite loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.233 seconds; current allocated memory: 226.754 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tacho_control' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tacho_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.667 seconds; current allocated memory: 226.754 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.155 seconds; current allocated memory: 227.047 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tacho_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/in_data' to 's_axilite & ap_ovld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_data' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_en' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_en' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_en' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spird_en' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_addr' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_addr' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_addr' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spird_addr' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_data' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_data' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spi_strobe' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spi_strobe' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/cs_line' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'cs_line' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/cnt_en' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'cnt_en' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'tacho_control' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'next_state' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'command' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data_e' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'in_data' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tacho_control'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.555 seconds; current allocated memory: 229.668 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.547 seconds; current allocated memory: 236.680 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.611 seconds; current allocated memory: 242.676 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for tacho_control.
+INFO: [VLOG 209-307] Generating Verilog RTL for tacho_control.
+INFO: [HLS 200-789] **** Estimated Fmax: 194.55 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 23.714 seconds; current allocated memory: 49.562 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -description=tacho_control
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=tacho_control_1.1.5
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1.5
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -description tacho_control -display_name tacho_control_1.1.5 -format ip_catalog -rtl verilog -version 1.1.5 
+INFO: [HLS 200-1510] Running: source ./tacho4/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_control tacho_control 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file tacho4/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 37.072 seconds; current allocated memory: 7.168 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -description=tacho_control
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=tacho_control_1.1.5
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1.5
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -description tacho_control -display_name tacho_control_1.1.5 -format ip_catalog -rtl verilog -version 1.1.5 
+INFO: [HLS 200-1510] Running: source ./tacho4/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_control tacho_control 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.081 seconds; current allocated memory: 193.711 MB.
+INFO: [HLS 200-10] Analyzing design file 'tacho4/tacho_4.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 5.066 seconds; current allocated memory: 195.906 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 2,797 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 420 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 355 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 369 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 394 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_339_12> at tacho4/tacho_4.cpp:339:26 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_310_11> at tacho4/tacho_4.cpp:310:24 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_301_10> at tacho4/tacho_4.cpp:301:24 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_289_9> at tacho4/tacho_4.cpp:289:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_280_8> at tacho4/tacho_4.cpp:280:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_269_7> at tacho4/tacho_4.cpp:269:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_250_6> at tacho4/tacho_4.cpp:250:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_231_5> at tacho4/tacho_4.cpp:231:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_212_4> at tacho4/tacho_4.cpp:212:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_193_3> at tacho4/tacho_4.cpp:193:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_174_2> at tacho4/tacho_4.cpp:174:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_155_1> at tacho4/tacho_4.cpp:155:23 
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 8.246 seconds; current allocated memory: 198.258 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 198.258 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.157 seconds; current allocated memory: 204.023 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.045 seconds; current allocated memory: 205.762 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.113 seconds; current allocated memory: 228.457 MB.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_155_1' (tacho4/tacho_4.cpp:155:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_174_2' (tacho4/tacho_4.cpp:174:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_193_3' (tacho4/tacho_4.cpp:193:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_212_4' (tacho4/tacho_4.cpp:212:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_231_5' (tacho4/tacho_4.cpp:231:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_250_6' (tacho4/tacho_4.cpp:250:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_269_7' (tacho4/tacho_4.cpp:269:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_280_8' (tacho4/tacho_4.cpp:280:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_289_9' (tacho4/tacho_4.cpp:289:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_301_10' (tacho4/tacho_4.cpp:301:24) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_310_11' (tacho4/tacho_4.cpp:310:24) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_339_12' (tacho4/tacho_4.cpp:339:26) in function 'tacho_control' is an infinite loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.295 seconds; current allocated memory: 228.461 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tacho_control' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tacho_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.399 seconds; current allocated memory: 231.254 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.116 seconds; current allocated memory: 232.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tacho_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/in_data' to 's_axilite & ap_ovld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_data' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_en' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_en' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_en' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spird_en' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_addr' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_addr' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_addr' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spird_addr' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_data' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_data' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spi_strobe' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spi_strobe' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/cs_line' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'cs_line' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/cnt_en' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'cnt_en' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/slope' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'slope' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/square' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'square' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/avg' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'avg' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'tacho_control' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'next_state' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'ctrl_reg1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data_e' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'ctrl_reg2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'ctrl_reg3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cp_config' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data1' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'in_data' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tacho_control'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.565 seconds; current allocated memory: 236.426 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.619 seconds; current allocated memory: 244.914 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.656 seconds; current allocated memory: 251.016 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for tacho_control.
+INFO: [VLOG 209-307] Generating Verilog RTL for tacho_control.
+INFO: [HLS 200-789] **** Estimated Fmax: 190.14 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 16.436 seconds; current allocated memory: 57.594 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -description=tacho_control
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=tacho_control_1.1.5
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1.5
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -description tacho_control -display_name tacho_control_1.1.5 -format ip_catalog -rtl verilog -version 1.1.5 
+INFO: [HLS 200-1510] Running: source ./tacho4/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_control tacho_control 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file tacho4/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 16.433 seconds; current allocated memory: 7.516 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -description=tacho_control
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=tacho_control_1.1.5
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1.5
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -description tacho_control -display_name tacho_control_1.1.5 -format ip_catalog -rtl verilog -version 1.1.5 
+INFO: [HLS 200-1510] Running: source ./tacho4/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_control tacho_control 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.077 seconds; current allocated memory: 198.508 MB.
+INFO: [HLS 200-10] Analyzing design file 'tacho4/tacho_4.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.116 seconds; current allocated memory: 200.871 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 2,797 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 420 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 355 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 369 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 394 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_339_12> at tacho4/tacho_4.cpp:339:26 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_310_11> at tacho4/tacho_4.cpp:310:24 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_301_10> at tacho4/tacho_4.cpp:301:24 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_289_9> at tacho4/tacho_4.cpp:289:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_280_8> at tacho4/tacho_4.cpp:280:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_269_7> at tacho4/tacho_4.cpp:269:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_250_6> at tacho4/tacho_4.cpp:250:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_231_5> at tacho4/tacho_4.cpp:231:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_212_4> at tacho4/tacho_4.cpp:212:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_193_3> at tacho4/tacho_4.cpp:193:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_174_2> at tacho4/tacho_4.cpp:174:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_155_1> at tacho4/tacho_4.cpp:155:23 
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.175 seconds; current allocated memory: 203.180 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 203.184 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.063 seconds; current allocated memory: 208.762 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.031 seconds; current allocated memory: 210.633 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 233.512 MB.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_155_1' (tacho4/tacho_4.cpp:155:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_174_2' (tacho4/tacho_4.cpp:174:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_193_3' (tacho4/tacho_4.cpp:193:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_212_4' (tacho4/tacho_4.cpp:212:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_231_5' (tacho4/tacho_4.cpp:231:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_250_6' (tacho4/tacho_4.cpp:250:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_269_7' (tacho4/tacho_4.cpp:269:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_280_8' (tacho4/tacho_4.cpp:280:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_289_9' (tacho4/tacho_4.cpp:289:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_301_10' (tacho4/tacho_4.cpp:301:24) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_310_11' (tacho4/tacho_4.cpp:310:24) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_339_12' (tacho4/tacho_4.cpp:339:26) in function 'tacho_control' is an infinite loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.267 seconds; current allocated memory: 233.531 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tacho_control' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tacho_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.291 seconds; current allocated memory: 236.211 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.108 seconds; current allocated memory: 237.512 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tacho_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/in_data' to 's_axilite & ap_ovld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_data' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_en' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_en' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_en' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spird_en' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_addr' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_addr' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_addr' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spird_addr' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_data' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_data' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spi_strobe' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spi_strobe' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/cs_line' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'cs_line' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/cnt_en' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'cnt_en' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/slope' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'slope' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/square' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'square' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/avg' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'avg' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'tacho_control' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'next_state' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'ctrl_reg1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data_e' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'ctrl_reg2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'ctrl_reg3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cp_config' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data1' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'in_data' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tacho_control'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.589 seconds; current allocated memory: 241.375 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.552 seconds; current allocated memory: 249.758 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.648 seconds; current allocated memory: 255.953 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for tacho_control.
+INFO: [VLOG 209-307] Generating Verilog RTL for tacho_control.
+INFO: [HLS 200-789] **** Estimated Fmax: 190.14 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 13.109 seconds; current allocated memory: 57.777 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -description=tacho_control
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=tacho_control_1.1.5
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1.5
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -description tacho_control -display_name tacho_control_1.1.5 -format ip_catalog -rtl verilog -version 1.1.5 
+INFO: [HLS 200-1510] Running: source ./tacho4/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_control tacho_control 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file tacho4/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 12.905 seconds; current allocated memory: 6.953 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -description=tacho_control
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=tacho_control_1.1.5
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1.5
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -description tacho_control -display_name tacho_control_1.1.5 -format ip_catalog -rtl verilog -version 1.1.5 
+INFO: [HLS 200-1510] Running: source ./tacho4/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_control tacho_control 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.086 seconds; current allocated memory: 199.938 MB.
+INFO: [HLS 200-10] Analyzing design file 'tacho4/tacho_4.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.936 seconds; current allocated memory: 201.949 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 2,797 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 420 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 355 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 354 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 369 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 394 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_339_12> at tacho4/tacho_4.cpp:339:26 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_310_11> at tacho4/tacho_4.cpp:310:24 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_301_10> at tacho4/tacho_4.cpp:301:24 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_289_9> at tacho4/tacho_4.cpp:289:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_280_8> at tacho4/tacho_4.cpp:280:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_269_7> at tacho4/tacho_4.cpp:269:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_250_6> at tacho4/tacho_4.cpp:250:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_231_5> at tacho4/tacho_4.cpp:231:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_212_4> at tacho4/tacho_4.cpp:212:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_193_3> at tacho4/tacho_4.cpp:193:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_174_2> at tacho4/tacho_4.cpp:174:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_155_1> at tacho4/tacho_4.cpp:155:23 
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.309 seconds; current allocated memory: 204.328 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 204.328 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.105 seconds; current allocated memory: 210.133 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.067 seconds; current allocated memory: 211.605 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.084 seconds; current allocated memory: 234.395 MB.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_155_1' (tacho4/tacho_4.cpp:155:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_174_2' (tacho4/tacho_4.cpp:174:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_193_3' (tacho4/tacho_4.cpp:193:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_212_4' (tacho4/tacho_4.cpp:212:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_231_5' (tacho4/tacho_4.cpp:231:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_250_6' (tacho4/tacho_4.cpp:250:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_269_7' (tacho4/tacho_4.cpp:269:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_280_8' (tacho4/tacho_4.cpp:280:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_289_9' (tacho4/tacho_4.cpp:289:23) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_301_10' (tacho4/tacho_4.cpp:301:24) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_310_11' (tacho4/tacho_4.cpp:310:24) in function 'tacho_control' is an infinite loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_339_12' (tacho4/tacho_4.cpp:339:26) in function 'tacho_control' is an infinite loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.213 seconds; current allocated memory: 234.422 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tacho_control' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tacho_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.197 seconds; current allocated memory: 237.195 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.107 seconds; current allocated memory: 238.547 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tacho_control' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/in_data' to 's_axilite & ap_ovld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_data' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_en' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_en' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_en' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spird_en' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_addr' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_addr' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spird_addr' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spird_addr' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spiwr_data' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spiwr_data' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/spi_strobe' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'spi_strobe' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/cs_line' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'cs_line' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/cnt_en' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'cnt_en' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/slope' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'slope' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/square' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'square' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_control/avg' to 'ap_none' (register).
+WARNING: [RTGEN 206-101] Port 'avg' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'tacho_control' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'next_state' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'ctrl_reg1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data_e' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'ctrl_reg2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'ctrl_reg3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cp_config' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data1' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'in_data' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tacho_control'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.543 seconds; current allocated memory: 241.855 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.499 seconds; current allocated memory: 250.344 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.602 seconds; current allocated memory: 256.570 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for tacho_control.
+INFO: [VLOG 209-307] Generating Verilog RTL for tacho_control.
+INFO: [HLS 200-789] **** Estimated Fmax: 190.14 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 12.861 seconds; current allocated memory: 56.988 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -description=tacho_control
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=tacho_control_1.1.5
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1.5
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -description tacho_control -display_name tacho_control_1.1.5 -format ip_catalog -rtl verilog -version 1.1.5 
+INFO: [HLS 200-1510] Running: source ./tacho4/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_control tacho_control 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file tacho4/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 12.81 seconds; current allocated memory: 7.961 MB.

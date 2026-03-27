@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'data1' is power-on initialization." projectName="tacho4" solutionName="solution1" date="2025-11-20T12:25:02.070-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'cp_config' is power-on initialization." projectName="tacho4" solutionName="solution1" date="2025-11-20T12:25:02.059-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ctrl_reg3' is power-on initialization." projectName="tacho4" solutionName="solution1" date="2025-11-20T12:25:02.040-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ctrl_reg2' is power-on initialization." projectName="tacho4" solutionName="solution1" date="2025-11-20T12:25:02.028-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'data_e' is power-on initialization." projectName="tacho4" solutionName="solution1" date="2025-11-20T12:25:02.016-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ctrl_reg1' is power-on initialization." projectName="tacho4" solutionName="solution1" date="2025-11-20T12:25:02.005-0500" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

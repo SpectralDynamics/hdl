@@ -1,0 +1,884 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Analyzing design file 'ColaFloatsToCounts/ColaCounts.cpp' ... 
+WARNING: [HLS 207-1545] Invalid function level interface port in '#pragma HLS interface': expect 'return': ColaFloatsToCounts/ColaCounts.cpp:7:39
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' target.
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<32, false>::ap_bit_ref(ap_int_base<32, false>*, int)' into 'ap_int_base<32, false>::operator[](int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:938:30)
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<1, false>::ap_bit_ref(ap_int_base<1, false>*, int)' into 'ap_int_base<1, false>::operator[](int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:938:30)
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<32, false>::operator bool() const' into 'ap_bit_ref<1, false>& ap_bit_ref<1, false>::operator=<32, false>(ap_bit_ref<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_ref.h:839:38)
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<1, false>::operator=(unsigned long long)' into 'ap_bit_ref<1, false>& ap_bit_ref<1, false>::operator=<32, false>(ap_bit_ref<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_ref.h:839:12)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<32, false>::ap_range_ref(ap_int_base<32, false>*, int, int)' into 'ap_int_base<32, false>::range(int, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:857:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>::range(int, int)' into 'ap_int_base<32, false>::operator()(int, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:894:18)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<8, false>::ap_range_ref(ap_int_base<8, false>*, int, int)' into 'ap_int_base<8, false>::range(int, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:857:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::range(int, int)' into 'ap_int_base<8, false>::operator()(int, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:894:18)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<32, false>::get() const' into 'ap_int_base<32, false>::ap_int_base<32, false>(ap_range_ref<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:312:20)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::ap_int_base<32, false>(ap_int_base<32, false> const&)' into 'ap_range_ref<8, false>& ap_range_ref<8, false>::operator=<32, false>(ap_int_base<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_ref.h:367:31)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>::ap_int_base<32, false>(ap_range_ref<32, false> const&)' into 'ap_range_ref<8, false>& ap_range_ref<8, false>::operator=<32, false>(ap_range_ref<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_ref.h:382:22)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<8, false>& ap_range_ref<8, false>::operator=<32, false>(ap_int_base<32, false> const&)' into 'ap_range_ref<8, false>& ap_range_ref<8, false>::operator=<32, false>(ap_range_ref<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_ref.h:382:12)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<23, false>::ap_range_ref(ap_int_base<23, false>*, int, int)' into 'ap_int_base<23, false>::range(int, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:857:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<23, false>::range(int, int)' into 'ap_int_base<23, false>::operator()(int, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:894:18)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<23, false>::ap_int_base<32, false>(ap_int_base<32, false> const&)' into 'ap_range_ref<23, false>& ap_range_ref<23, false>::operator=<32, false>(ap_int_base<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_ref.h:367:31)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>::ap_int_base<32, false>(ap_range_ref<32, false> const&)' into 'ap_range_ref<23, false>& ap_range_ref<23, false>::operator=<32, false>(ap_range_ref<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_ref.h:382:22)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<23, false>& ap_range_ref<23, false>::operator=<32, false>(ap_int_base<32, false> const&)' into 'ap_range_ref<23, false>& ap_range_ref<23, false>::operator=<32, false>(ap_range_ref<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_ref.h:382:12)
+INFO: [HLS 214-131] Inlining function 'ap_uint<32>::ap_uint(unsigned int)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:311:28)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<23, false>& ap_range_ref<23, false>::operator=<32, false>(ap_range_ref<32, false> const&)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:319:18)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<23, false>::operator()(int, int)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:319:9)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>::operator()(int, int)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:319:20)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<8, false>& ap_range_ref<8, false>::operator=<32, false>(ap_range_ref<32, false> const&)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:318:17)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::operator()(int, int)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:318:9)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>::operator()(int, int)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:318:19)
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<1, false>& ap_bit_ref<1, false>::operator=<32, false>(ap_bit_ref<32, false> const&)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:317:17)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::operator[](int)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:317:9)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>::operator[](int)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:317:19)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:652:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:495:146)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_ufixed<24, 1, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_ufixed(int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed.h:295:60)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<23, false>::ap_range_ref(ap_int_base<23, false>*, int, int)' into 'ap_int_base<23, false>::range(int, int) const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:864:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<23, false>::range(int, int) const' into 'ap_int_base<23, false>::operator()(int, int) const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:898:18)
+INFO: [HLS 214-131] Inlining function 'af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::af_range_ref(ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>*, int, int)' into 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::range(int, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1545:12)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::range(int, int)' into 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator()(int, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1584:18)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<23, false>::get() const' into 'ap_int_base<23, false>::ap_int_base<23, false>(ap_range_ref<23, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:312:20)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<23, false>::ap_int_base<23, false>(ap_range_ref<23, false> const&)' into 'af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>& af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<23, false>(ap_range_ref<23, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_ref.h:301:38)
+INFO: [HLS 214-131] Inlining function 'af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>& af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<23, false>(ap_int_base<23, false> const&)' into 'af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>& af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<23, false>(ap_range_ref<23, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_ref.h:302:12)
+INFO: [HLS 214-131] Inlining function 'af_bit_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::af_bit_ref(ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>*, int)' into 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator[](unsigned int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1470:12)
+INFO: [HLS 214-131] Inlining function 'ap_ufixed<24, 1, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_ufixed(int)' into 'fp_struct<float>::mantissa() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:364:37)
+INFO: [HLS 214-131] Inlining function 'af_bit_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=(bool)' into 'fp_struct<float>::mantissa() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:366:21)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator[](unsigned int)' into 'fp_struct<float>::mantissa() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:366:9)
+INFO: [HLS 214-131] Inlining function 'af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>& af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<23, false>(ap_range_ref<23, false> const&)' into 'fp_struct<float>::mantissa() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:365:23)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator()(int, int)' into 'fp_struct<float>::mantissa() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:365:9)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<23, false>::operator()(int, int) const' into 'fp_struct<float>::mantissa() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:365:25)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:652:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:385:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_ufixed<63, 39, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_ufixed<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed.h:196:9)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::ap_int_base<8, false>(ap_int_base<8, false> const&)' into 'ap_int_base<8, false>::RType<32, true>::minus operator-<8, false, 32, true>(ap_int_base<8, false> const&, ap_int_base<32, true> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:1305:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<33>::ap_int<33, true>(ap_int_base<33, true> const&)' into 'ap_int_base<8, false>::RType<32, true>::minus operator-<8, false, 32, true>(ap_int_base<8, false> const&, ap_int_base<32, true> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:1305:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_int_base<8, false>::RType<32, true>::minus operator-<8, false, 32, true>(ap_int_base<8, false> const&, ap_int_base<32, true> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:1305:430)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'ap_int_base<8, false>::RType<($_0)32, true>::minus operator-<8, false>(ap_int_base<8, false> const&, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:1419:1531)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::RType<32, true>::minus operator-<8, false, 32, true>(ap_int_base<8, false> const&, ap_int_base<32, true> const&)' into 'ap_int_base<8, false>::RType<($_0)32, true>::minus operator-<8, false>(ap_int_base<8, false> const&, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:1419:1529)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::RType<($_0)32, true>::minus operator-<8, false>(ap_int_base<8, false> const&, int)' into 'fp_struct<float>::expv() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:340:19)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::operator long long() const' into 'fp_struct<float>::expv() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:340:16)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator>>(unsigned int) const' into 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<(int) const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1313:14)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<(unsigned int) const' into 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<(int) const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1315:14)
+INFO: [HLS 214-131] Inlining function 'ap_uint<63>::ap_uint<63, false>(ap_int_base<63, false> const&)' into 'ap_int_base<63, false>::RType<63, false>::arg1 operator>><63, false>(ap_int_base<63, false> const&, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:1455:650)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::ap_int_base(int)' into 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::overflow_adjust(bool, bool, bool, bool)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:349:23)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>& ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator=<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:652:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::overflow_adjust(bool, bool, bool, bool)' into 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>& ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator=<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:747:7)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<63, false>::RType<63, false>::arg1 operator>><63, false>(ap_int_base<63, false> const&, int)' into 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>& ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator=<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:721:49)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<63, false>::RType<63, false>::arg1 operator>><63, false>(ap_int_base<63, false> const&, int)' into 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>& ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator=<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:713:49)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<63, false>::ap_int_base(int)' into 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>& ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator=<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:708:36)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>& ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator=<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:385:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_ufixed<1, 16, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_ufixed<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed.h:196:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>::operator=<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:652:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>::operator=<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>::ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:385:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>::ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_ufixed<16, 16, (ap_q_mode)6, (ap_o_mode)3, 0>::ap_ufixed<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed.h:196:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator!() const' into 'ap_fixed_base<17, 17, false, (ap_q_mode)5, (ap_o_mode)0, 0>& ap_fixed_base<17, 17, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator=<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>(ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:652:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<17, 17, false, (ap_q_mode)5, (ap_o_mode)0, 0>& ap_fixed_base<17, 17, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator=<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>(ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0> const&)' into 'ap_fixed_base<17, 17, false, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>(ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:385:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<17, 17, false, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>(ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0> const&)' into 'bool ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator!=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1453:505)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'bool operator!=<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>(ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0> const&, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:2175:13043)
+INFO: [HLS 214-131] Inlining function 'bool ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator!=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' into 'bool operator!=<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>(ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0> const&, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:2175:13031)
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<16, true>::ap_bit_ref(ap_int_base<16, true>*, int)' into 'ap_int_base<16, true>::operator[](int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:938:30)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:652:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:385:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' into 'ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed.h:29:9)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::to_int() const' into 'fp_struct<float>::__signbit() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:373:21)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:652:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:385:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>::operator-() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1206:47)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:652:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:385:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed.h:29:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_ap_int_base(bool) const' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_int() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:823:69)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<16, true>::to_int() const' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_int() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:823:86)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_int() const' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator short() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:992:80)
+INFO: [HLS 214-131] Inlining function 'ap_ufixed<63, 39, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_ufixed<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15:54)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator short() const' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:61:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=(ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59:28)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59:30)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>::operator-() const' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59:30)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<(int) const' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18:73)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:58:49)
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<16, true>::operator=(int)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:38:24)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<16, true>::operator[](int)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:38:2)
+INFO: [HLS 214-131] Inlining function 'ap_int<16>::ap_int(int)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:37:31)
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<16, true>::operator=(int)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:36:24)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<16, true>::operator[](int)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:36:2)
+INFO: [HLS 214-131] Inlining function 'ap_int<16>::ap_int(int)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:35:31)
+INFO: [HLS 214-131] Inlining function 'bool operator!=<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>(ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0> const&, int)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:32:96)
+INFO: [HLS 214-131] Inlining function 'ap_ufixed<63, 39, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_ufixed<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18:64)
+INFO: [HLS 214-131] Inlining function 'ap_ufixed<16, 16, (ap_q_mode)6, (ap_o_mode)3, 0>::ap_ufixed<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:21:58)
+INFO: [HLS 214-131] Inlining function 'ap_ufixed<1, 16, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_ufixed<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:20:63)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::mantissa() const' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::__signbit() const' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'short generic_cast_IEEE754<short, float>(float, bool)' into '__hls_fptosi_float_i16' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:50:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptosi_float_i16' into 'ColaCounts(float)' (ColaFloatsToCounts/ColaCounts.cpp:5:0)
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:06 ; elapsed = 00:00:29 . Memory (MB): peak = 996.723 ; gain = 899.086
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:06 ; elapsed = 00:00:29 . Memory (MB): peak = 996.723 ; gain = 899.086
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:07 ; elapsed = 00:00:29 . Memory (MB): peak = 996.723 ; gain = 899.086
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<short, (ap_q_mode)6, float>' into 'ColaCounts' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:07 ; elapsed = 00:00:30 . Memory (MB): peak = 996.723 ; gain = 899.086
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<short, (ap_q_mode)6, float>' into 'ColaCounts' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:00:30 . Memory (MB): peak = 996.723 ; gain = 899.086
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:00:30 . Memory (MB): peak = 996.723 ; gain = 899.086
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'ColaCounts' ...
+WARNING: [SYN 201-107] Renaming port name 'ColaCounts/input' to 'ColaCounts/input_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ColaCounts' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 30.435 seconds; current allocated memory: 186.695 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.227 seconds; current allocated memory: 186.863 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ColaCounts' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'ColaCounts/input_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'ColaCounts' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ColaCounts'.
+INFO: [HLS 200-111]  Elapsed time: 0.253 seconds; current allocated memory: 187.250 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:09 ; elapsed = 00:00:33 . Memory (MB): peak = 996.723 ; gain = 899.086
+INFO: [VHDL 208-304] Generating VHDL RTL for ColaCounts.
+INFO: [VLOG 209-307] Generating Verilog RTL for ColaCounts.
+INFO: [HLS 200-789] **** Estimated Fmax: 164.61 MHz
+INFO: [HLS 200-112] Total elapsed time: 32.847 seconds; peak allocated memory: 187.250 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file C:/github/ColaFloatsToCounts/ColaCounts.zip
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_optimization_level=0
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/github/ColaFloatsToCounts/ColaCounts.zip
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_phys_opt=none
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_report_level=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -kernel_profile=false
+INFO: [HLS 200-1464] Running solution command: config_rtl -m_axi_conservative_mode=false
+INFO: [HLS 200-1464] Running solution command: config_rtl -module_auto_prefix=true
+INFO: [HLS 200-1464] Running solution command: config_rtl -mult_keep_attribute=false
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset=control
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset_async=false
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset_level=low
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Analyzing design file 'ColaFloatsToCounts/ColaCounts.cpp' ... 
+WARNING: [HLS 207-1545] Invalid function level interface port in '#pragma HLS interface': expect 'return': ColaFloatsToCounts/ColaCounts.cpp:7:39
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' target.
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<32, false>::ap_bit_ref(ap_int_base<32, false>*, int)' into 'ap_int_base<32, false>::operator[](int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:938:30)
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<1, false>::ap_bit_ref(ap_int_base<1, false>*, int)' into 'ap_int_base<1, false>::operator[](int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:938:30)
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<32, false>::operator bool() const' into 'ap_bit_ref<1, false>& ap_bit_ref<1, false>::operator=<32, false>(ap_bit_ref<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_ref.h:839:38)
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<1, false>::operator=(unsigned long long)' into 'ap_bit_ref<1, false>& ap_bit_ref<1, false>::operator=<32, false>(ap_bit_ref<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_ref.h:839:12)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<32, false>::ap_range_ref(ap_int_base<32, false>*, int, int)' into 'ap_int_base<32, false>::range(int, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:857:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>::range(int, int)' into 'ap_int_base<32, false>::operator()(int, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:894:18)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<8, false>::ap_range_ref(ap_int_base<8, false>*, int, int)' into 'ap_int_base<8, false>::range(int, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:857:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::range(int, int)' into 'ap_int_base<8, false>::operator()(int, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:894:18)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<32, false>::get() const' into 'ap_int_base<32, false>::ap_int_base<32, false>(ap_range_ref<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:312:20)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::ap_int_base<32, false>(ap_int_base<32, false> const&)' into 'ap_range_ref<8, false>& ap_range_ref<8, false>::operator=<32, false>(ap_int_base<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_ref.h:367:31)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>::ap_int_base<32, false>(ap_range_ref<32, false> const&)' into 'ap_range_ref<8, false>& ap_range_ref<8, false>::operator=<32, false>(ap_range_ref<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_ref.h:382:22)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<8, false>& ap_range_ref<8, false>::operator=<32, false>(ap_int_base<32, false> const&)' into 'ap_range_ref<8, false>& ap_range_ref<8, false>::operator=<32, false>(ap_range_ref<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_ref.h:382:12)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<23, false>::ap_range_ref(ap_int_base<23, false>*, int, int)' into 'ap_int_base<23, false>::range(int, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:857:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<23, false>::range(int, int)' into 'ap_int_base<23, false>::operator()(int, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:894:18)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<23, false>::ap_int_base<32, false>(ap_int_base<32, false> const&)' into 'ap_range_ref<23, false>& ap_range_ref<23, false>::operator=<32, false>(ap_int_base<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_ref.h:367:31)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>::ap_int_base<32, false>(ap_range_ref<32, false> const&)' into 'ap_range_ref<23, false>& ap_range_ref<23, false>::operator=<32, false>(ap_range_ref<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_ref.h:382:22)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<23, false>& ap_range_ref<23, false>::operator=<32, false>(ap_int_base<32, false> const&)' into 'ap_range_ref<23, false>& ap_range_ref<23, false>::operator=<32, false>(ap_range_ref<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_ref.h:382:12)
+INFO: [HLS 214-131] Inlining function 'ap_uint<32>::ap_uint(unsigned int)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:311:28)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<23, false>& ap_range_ref<23, false>::operator=<32, false>(ap_range_ref<32, false> const&)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:319:18)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<23, false>::operator()(int, int)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:319:9)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>::operator()(int, int)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:319:20)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<8, false>& ap_range_ref<8, false>::operator=<32, false>(ap_range_ref<32, false> const&)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:318:17)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::operator()(int, int)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:318:9)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>::operator()(int, int)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:318:19)
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<1, false>& ap_bit_ref<1, false>::operator=<32, false>(ap_bit_ref<32, false> const&)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:317:17)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::operator[](int)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:317:9)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>::operator[](int)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:317:19)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:652:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:495:146)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_ufixed<24, 1, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_ufixed(int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed.h:295:60)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<23, false>::ap_range_ref(ap_int_base<23, false>*, int, int)' into 'ap_int_base<23, false>::range(int, int) const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:864:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<23, false>::range(int, int) const' into 'ap_int_base<23, false>::operator()(int, int) const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:898:18)
+INFO: [HLS 214-131] Inlining function 'af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::af_range_ref(ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>*, int, int)' into 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::range(int, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1545:12)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::range(int, int)' into 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator()(int, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1584:18)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<23, false>::get() const' into 'ap_int_base<23, false>::ap_int_base<23, false>(ap_range_ref<23, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:312:20)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<23, false>::ap_int_base<23, false>(ap_range_ref<23, false> const&)' into 'af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>& af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<23, false>(ap_range_ref<23, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_ref.h:301:38)
+INFO: [HLS 214-131] Inlining function 'af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>& af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<23, false>(ap_int_base<23, false> const&)' into 'af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>& af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<23, false>(ap_range_ref<23, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_ref.h:302:12)
+INFO: [HLS 214-131] Inlining function 'af_bit_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::af_bit_ref(ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>*, int)' into 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator[](unsigned int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1470:12)
+INFO: [HLS 214-131] Inlining function 'ap_ufixed<24, 1, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_ufixed(int)' into 'fp_struct<float>::mantissa() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:364:37)
+INFO: [HLS 214-131] Inlining function 'af_bit_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=(bool)' into 'fp_struct<float>::mantissa() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:366:21)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator[](unsigned int)' into 'fp_struct<float>::mantissa() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:366:9)
+INFO: [HLS 214-131] Inlining function 'af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>& af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<23, false>(ap_range_ref<23, false> const&)' into 'fp_struct<float>::mantissa() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:365:23)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator()(int, int)' into 'fp_struct<float>::mantissa() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:365:9)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<23, false>::operator()(int, int) const' into 'fp_struct<float>::mantissa() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:365:25)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:652:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:385:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_ufixed<63, 39, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_ufixed<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed.h:196:9)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::ap_int_base<8, false>(ap_int_base<8, false> const&)' into 'ap_int_base<8, false>::RType<32, true>::minus operator-<8, false, 32, true>(ap_int_base<8, false> const&, ap_int_base<32, true> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:1305:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<33>::ap_int<33, true>(ap_int_base<33, true> const&)' into 'ap_int_base<8, false>::RType<32, true>::minus operator-<8, false, 32, true>(ap_int_base<8, false> const&, ap_int_base<32, true> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:1305:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_int_base<8, false>::RType<32, true>::minus operator-<8, false, 32, true>(ap_int_base<8, false> const&, ap_int_base<32, true> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:1305:430)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'ap_int_base<8, false>::RType<($_0)32, true>::minus operator-<8, false>(ap_int_base<8, false> const&, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:1419:1531)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::RType<32, true>::minus operator-<8, false, 32, true>(ap_int_base<8, false> const&, ap_int_base<32, true> const&)' into 'ap_int_base<8, false>::RType<($_0)32, true>::minus operator-<8, false>(ap_int_base<8, false> const&, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:1419:1529)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::RType<($_0)32, true>::minus operator-<8, false>(ap_int_base<8, false> const&, int)' into 'fp_struct<float>::expv() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:340:19)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::operator long long() const' into 'fp_struct<float>::expv() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:340:16)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator>>(unsigned int) const' into 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<(int) const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1313:14)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<(unsigned int) const' into 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<(int) const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1315:14)
+INFO: [HLS 214-131] Inlining function 'ap_uint<63>::ap_uint<63, false>(ap_int_base<63, false> const&)' into 'ap_int_base<63, false>::RType<63, false>::arg1 operator>><63, false>(ap_int_base<63, false> const&, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:1455:650)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::ap_int_base(int)' into 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::overflow_adjust(bool, bool, bool, bool)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:349:23)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>& ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator=<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:652:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::overflow_adjust(bool, bool, bool, bool)' into 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>& ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator=<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:747:7)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<63, false>::RType<63, false>::arg1 operator>><63, false>(ap_int_base<63, false> const&, int)' into 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>& ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator=<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:721:49)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<63, false>::RType<63, false>::arg1 operator>><63, false>(ap_int_base<63, false> const&, int)' into 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>& ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator=<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:713:49)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<63, false>::ap_int_base(int)' into 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>& ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator=<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:708:36)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>& ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator=<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:385:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_ufixed<1, 16, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_ufixed<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed.h:196:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>::operator=<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:652:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>::operator=<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>::ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:385:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>::ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_ufixed<16, 16, (ap_q_mode)6, (ap_o_mode)3, 0>::ap_ufixed<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed.h:196:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator!() const' into 'ap_fixed_base<17, 17, false, (ap_q_mode)5, (ap_o_mode)0, 0>& ap_fixed_base<17, 17, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator=<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>(ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:652:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<17, 17, false, (ap_q_mode)5, (ap_o_mode)0, 0>& ap_fixed_base<17, 17, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator=<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>(ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0> const&)' into 'ap_fixed_base<17, 17, false, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>(ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:385:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<17, 17, false, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>(ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0> const&)' into 'bool ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator!=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1453:505)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'bool operator!=<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>(ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0> const&, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:2175:13043)
+INFO: [HLS 214-131] Inlining function 'bool ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator!=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' into 'bool operator!=<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>(ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0> const&, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:2175:13031)
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<16, true>::ap_bit_ref(ap_int_base<16, true>*, int)' into 'ap_int_base<16, true>::operator[](int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:938:30)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:652:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:385:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' into 'ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed.h:29:9)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::to_int() const' into 'fp_struct<float>::__signbit() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:373:21)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:652:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:385:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>::operator-() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1206:47)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:652:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:385:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed.h:29:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_ap_int_base(bool) const' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_int() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:823:69)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<16, true>::to_int() const' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_int() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:823:86)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_int() const' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator short() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:992:80)
+INFO: [HLS 214-131] Inlining function 'ap_ufixed<63, 39, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_ufixed<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15:54)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator short() const' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:61:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=(ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59:28)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59:30)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>::operator-() const' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59:30)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<(int) const' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18:73)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:58:49)
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<16, true>::operator=(int)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:38:24)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<16, true>::operator[](int)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:38:2)
+INFO: [HLS 214-131] Inlining function 'ap_int<16>::ap_int(int)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:37:31)
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<16, true>::operator=(int)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:36:24)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<16, true>::operator[](int)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:36:2)
+INFO: [HLS 214-131] Inlining function 'ap_int<16>::ap_int(int)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:35:31)
+INFO: [HLS 214-131] Inlining function 'bool operator!=<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>(ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0> const&, int)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:32:96)
+INFO: [HLS 214-131] Inlining function 'ap_ufixed<63, 39, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_ufixed<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18:64)
+INFO: [HLS 214-131] Inlining function 'ap_ufixed<16, 16, (ap_q_mode)6, (ap_o_mode)3, 0>::ap_ufixed<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:21:58)
+INFO: [HLS 214-131] Inlining function 'ap_ufixed<1, 16, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_ufixed<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:20:63)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::mantissa() const' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::__signbit() const' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'short generic_cast_IEEE754<short, float>(float, bool)' into '__hls_fptosi_float_i16' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:50:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptosi_float_i16' into 'ColaCounts(float)' (ColaFloatsToCounts/ColaCounts.cpp:5:0)
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:06 ; elapsed = 00:00:28 . Memory (MB): peak = 996.750 ; gain = 899.098
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:06 ; elapsed = 00:00:28 . Memory (MB): peak = 996.750 ; gain = 899.098
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:06 ; elapsed = 00:00:28 . Memory (MB): peak = 996.750 ; gain = 899.098
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<short, (ap_q_mode)6, float>' into 'ColaCounts' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:06 ; elapsed = 00:00:28 . Memory (MB): peak = 996.750 ; gain = 899.098
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<short, (ap_q_mode)6, float>' into 'ColaCounts' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:00:29 . Memory (MB): peak = 996.750 ; gain = 899.098
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:00:29 . Memory (MB): peak = 996.750 ; gain = 899.098
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'ColaCounts' ...
+WARNING: [SYN 201-107] Renaming port name 'ColaCounts/input' to 'ColaCounts/input_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ColaCounts' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 29.166 seconds; current allocated memory: 187.160 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.223 seconds; current allocated memory: 187.357 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ColaCounts' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'ColaCounts/input_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'ColaCounts' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ColaCounts'.
+INFO: [HLS 200-111]  Elapsed time: 0.237 seconds; current allocated memory: 187.730 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:09 ; elapsed = 00:00:31 . Memory (MB): peak = 996.750 ; gain = 899.098
+INFO: [VHDL 208-304] Generating VHDL RTL for ColaCounts.
+INFO: [VLOG 209-307] Generating Verilog RTL for ColaCounts.
+INFO: [HLS 200-789] **** Estimated Fmax: 164.61 MHz
+INFO: [HLS 200-112] Total elapsed time: 31.6 seconds; peak allocated memory: 187.730 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_optimization_level=0
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/github/ColaFloatsToCounts/ColaCounts.zip
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_phys_opt=none
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_report_level=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -kernel_profile=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -m_axi_conservative_mode=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -module_auto_prefix=1
+INFO: [HLS 200-1464] Running solution command: config_rtl -mult_keep_attribute=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset=control
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset_async=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset_level=low
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file C:/github/ColaFloatsToCounts/ColaCounts.zip
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_optimization_level=0
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/github/ColaFloatsToCounts/ColaCounts.zip
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_phys_opt=none
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_report_level=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -kernel_profile=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -m_axi_conservative_mode=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -module_auto_prefix=1
+INFO: [HLS 200-1464] Running solution command: config_rtl -mult_keep_attribute=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset=control
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset_async=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset_level=low
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Analyzing design file 'ColaFloatsToCounts/ColaCounts.cpp' ... 
+WARNING: [HLS 207-1545] Invalid function level interface port in '#pragma HLS interface': expect 'return': ColaFloatsToCounts/ColaCounts.cpp:7:39
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' target.
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<32, false>::ap_bit_ref(ap_int_base<32, false>*, int)' into 'ap_int_base<32, false>::operator[](int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:938:30)
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<1, false>::ap_bit_ref(ap_int_base<1, false>*, int)' into 'ap_int_base<1, false>::operator[](int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:938:30)
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<32, false>::operator bool() const' into 'ap_bit_ref<1, false>& ap_bit_ref<1, false>::operator=<32, false>(ap_bit_ref<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_ref.h:839:38)
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<1, false>::operator=(unsigned long long)' into 'ap_bit_ref<1, false>& ap_bit_ref<1, false>::operator=<32, false>(ap_bit_ref<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_ref.h:839:12)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<32, false>::ap_range_ref(ap_int_base<32, false>*, int, int)' into 'ap_int_base<32, false>::range(int, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:857:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>::range(int, int)' into 'ap_int_base<32, false>::operator()(int, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:894:18)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<8, false>::ap_range_ref(ap_int_base<8, false>*, int, int)' into 'ap_int_base<8, false>::range(int, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:857:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::range(int, int)' into 'ap_int_base<8, false>::operator()(int, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:894:18)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<32, false>::get() const' into 'ap_int_base<32, false>::ap_int_base<32, false>(ap_range_ref<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:312:20)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::ap_int_base<32, false>(ap_int_base<32, false> const&)' into 'ap_range_ref<8, false>& ap_range_ref<8, false>::operator=<32, false>(ap_int_base<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_ref.h:367:31)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>::ap_int_base<32, false>(ap_range_ref<32, false> const&)' into 'ap_range_ref<8, false>& ap_range_ref<8, false>::operator=<32, false>(ap_range_ref<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_ref.h:382:22)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<8, false>& ap_range_ref<8, false>::operator=<32, false>(ap_int_base<32, false> const&)' into 'ap_range_ref<8, false>& ap_range_ref<8, false>::operator=<32, false>(ap_range_ref<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_ref.h:382:12)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<23, false>::ap_range_ref(ap_int_base<23, false>*, int, int)' into 'ap_int_base<23, false>::range(int, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:857:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<23, false>::range(int, int)' into 'ap_int_base<23, false>::operator()(int, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:894:18)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<23, false>::ap_int_base<32, false>(ap_int_base<32, false> const&)' into 'ap_range_ref<23, false>& ap_range_ref<23, false>::operator=<32, false>(ap_int_base<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_ref.h:367:31)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>::ap_int_base<32, false>(ap_range_ref<32, false> const&)' into 'ap_range_ref<23, false>& ap_range_ref<23, false>::operator=<32, false>(ap_range_ref<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_ref.h:382:22)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<23, false>& ap_range_ref<23, false>::operator=<32, false>(ap_int_base<32, false> const&)' into 'ap_range_ref<23, false>& ap_range_ref<23, false>::operator=<32, false>(ap_range_ref<32, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_ref.h:382:12)
+INFO: [HLS 214-131] Inlining function 'ap_uint<32>::ap_uint(unsigned int)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:311:28)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<23, false>& ap_range_ref<23, false>::operator=<32, false>(ap_range_ref<32, false> const&)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:319:18)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<23, false>::operator()(int, int)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:319:9)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>::operator()(int, int)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:319:20)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<8, false>& ap_range_ref<8, false>::operator=<32, false>(ap_range_ref<32, false> const&)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:318:17)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::operator()(int, int)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:318:9)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>::operator()(int, int)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:318:19)
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<1, false>& ap_bit_ref<1, false>::operator=<32, false>(ap_bit_ref<32, false> const&)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:317:17)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::operator[](int)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:317:9)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>::operator[](int)' into 'fp_struct<float>::fp_struct(float)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:317:19)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:652:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:495:146)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_ufixed<24, 1, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_ufixed(int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed.h:295:60)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<23, false>::ap_range_ref(ap_int_base<23, false>*, int, int)' into 'ap_int_base<23, false>::range(int, int) const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:864:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<23, false>::range(int, int) const' into 'ap_int_base<23, false>::operator()(int, int) const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:898:18)
+INFO: [HLS 214-131] Inlining function 'af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::af_range_ref(ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>*, int, int)' into 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::range(int, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1545:12)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::range(int, int)' into 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator()(int, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1584:18)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<23, false>::get() const' into 'ap_int_base<23, false>::ap_int_base<23, false>(ap_range_ref<23, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:312:20)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<23, false>::ap_int_base<23, false>(ap_range_ref<23, false> const&)' into 'af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>& af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<23, false>(ap_range_ref<23, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_ref.h:301:38)
+INFO: [HLS 214-131] Inlining function 'af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>& af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<23, false>(ap_int_base<23, false> const&)' into 'af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>& af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<23, false>(ap_range_ref<23, false> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_ref.h:302:12)
+INFO: [HLS 214-131] Inlining function 'af_bit_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::af_bit_ref(ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>*, int)' into 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator[](unsigned int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1470:12)
+INFO: [HLS 214-131] Inlining function 'ap_ufixed<24, 1, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_ufixed(int)' into 'fp_struct<float>::mantissa() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:364:37)
+INFO: [HLS 214-131] Inlining function 'af_bit_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=(bool)' into 'fp_struct<float>::mantissa() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:366:21)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator[](unsigned int)' into 'fp_struct<float>::mantissa() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:366:9)
+INFO: [HLS 214-131] Inlining function 'af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>& af_range_ref<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<23, false>(ap_range_ref<23, false> const&)' into 'fp_struct<float>::mantissa() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:365:23)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator()(int, int)' into 'fp_struct<float>::mantissa() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:365:9)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<23, false>::operator()(int, int) const' into 'fp_struct<float>::mantissa() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:365:25)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:652:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:385:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_ufixed<63, 39, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_ufixed<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed.h:196:9)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::ap_int_base<8, false>(ap_int_base<8, false> const&)' into 'ap_int_base<8, false>::RType<32, true>::minus operator-<8, false, 32, true>(ap_int_base<8, false> const&, ap_int_base<32, true> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:1305:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<33>::ap_int<33, true>(ap_int_base<33, true> const&)' into 'ap_int_base<8, false>::RType<32, true>::minus operator-<8, false, 32, true>(ap_int_base<8, false> const&, ap_int_base<32, true> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:1305:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_int_base<8, false>::RType<32, true>::minus operator-<8, false, 32, true>(ap_int_base<8, false> const&, ap_int_base<32, true> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:1305:430)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'ap_int_base<8, false>::RType<($_0)32, true>::minus operator-<8, false>(ap_int_base<8, false> const&, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:1419:1531)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::RType<32, true>::minus operator-<8, false, 32, true>(ap_int_base<8, false> const&, ap_int_base<32, true> const&)' into 'ap_int_base<8, false>::RType<($_0)32, true>::minus operator-<8, false>(ap_int_base<8, false> const&, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:1419:1529)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::RType<($_0)32, true>::minus operator-<8, false>(ap_int_base<8, false> const&, int)' into 'fp_struct<float>::expv() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:340:19)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::operator long long() const' into 'fp_struct<float>::expv() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:340:16)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator>>(unsigned int) const' into 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<(int) const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1313:14)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<(unsigned int) const' into 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<(int) const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1315:14)
+INFO: [HLS 214-131] Inlining function 'ap_uint<63>::ap_uint<63, false>(ap_int_base<63, false> const&)' into 'ap_int_base<63, false>::RType<63, false>::arg1 operator>><63, false>(ap_int_base<63, false> const&, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:1455:650)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::ap_int_base(int)' into 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::overflow_adjust(bool, bool, bool, bool)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:349:23)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>& ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator=<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:652:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::overflow_adjust(bool, bool, bool, bool)' into 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>& ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator=<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:747:7)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<63, false>::RType<63, false>::arg1 operator>><63, false>(ap_int_base<63, false> const&, int)' into 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>& ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator=<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:721:49)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<63, false>::RType<63, false>::arg1 operator>><63, false>(ap_int_base<63, false> const&, int)' into 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>& ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator=<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:713:49)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<63, false>::ap_int_base(int)' into 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>& ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator=<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:708:36)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>& ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator=<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:385:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_ufixed<1, 16, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_ufixed<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed.h:196:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>::operator=<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:652:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>::operator=<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>::ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:385:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>::ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_ufixed<16, 16, (ap_q_mode)6, (ap_o_mode)3, 0>::ap_ufixed<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed.h:196:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator!() const' into 'ap_fixed_base<17, 17, false, (ap_q_mode)5, (ap_o_mode)0, 0>& ap_fixed_base<17, 17, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator=<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>(ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:652:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<17, 17, false, (ap_q_mode)5, (ap_o_mode)0, 0>& ap_fixed_base<17, 17, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator=<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>(ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0> const&)' into 'ap_fixed_base<17, 17, false, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>(ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:385:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<17, 17, false, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>(ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0> const&)' into 'bool ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator!=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1453:505)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'bool operator!=<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>(ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0> const&, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:2175:13043)
+INFO: [HLS 214-131] Inlining function 'bool ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>::operator!=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' into 'bool operator!=<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>(ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0> const&, int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:2175:13031)
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<16, true>::ap_bit_ref(ap_int_base<16, true>*, int)' into 'ap_int_base<16, true>::operator[](int)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_int_base.h:938:30)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:652:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:385:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' into 'ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed.h:29:9)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::to_int() const' into 'fp_struct<float>::__signbit() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:373:21)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:652:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:385:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>::operator-() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:1206:47)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:652:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:385:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed.h:29:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_ap_int_base(bool) const' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_int() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:823:69)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<16, true>::to_int() const' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_int() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:823:86)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_int() const' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator short() const' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/include/header_files\ap_fixed_base.h:992:80)
+INFO: [HLS 214-131] Inlining function 'ap_ufixed<63, 39, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_ufixed<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<24, 1, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15:54)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator short() const' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:61:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=(ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59:28)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<17, 17, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59:30)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>::operator-() const' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59:30)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<(int) const' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18:73)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, false, (ap_q_mode)6, (ap_o_mode)3, 0> const&)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:58:49)
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<16, true>::operator=(int)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:38:24)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<16, true>::operator[](int)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:38:2)
+INFO: [HLS 214-131] Inlining function 'ap_int<16>::ap_int(int)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:37:31)
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<16, true>::operator=(int)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:36:24)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<16, true>::operator[](int)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:36:2)
+INFO: [HLS 214-131] Inlining function 'ap_int<16>::ap_int(int)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:35:31)
+INFO: [HLS 214-131] Inlining function 'bool operator!=<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0>(ap_fixed_base<1, 16, false, (ap_q_mode)5, (ap_o_mode)0, 0> const&, int)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:32:96)
+INFO: [HLS 214-131] Inlining function 'ap_ufixed<63, 39, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_ufixed<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18:64)
+INFO: [HLS 214-131] Inlining function 'ap_ufixed<16, 16, (ap_q_mode)6, (ap_o_mode)3, 0>::ap_ufixed<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:21:58)
+INFO: [HLS 214-131] Inlining function 'ap_ufixed<1, 16, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_ufixed<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<63, 39, false, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:20:63)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::mantissa() const' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::__signbit() const' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'short generic_cast_IEEE754<short, float>(float, bool)' into '__hls_fptosi_float_i16' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:50:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptosi_float_i16' into 'ColaCounts(float)' (ColaFloatsToCounts/ColaCounts.cpp:5:0)
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:08 ; elapsed = 00:00:38 . Memory (MB): peak = 996.785 ; gain = 899.031
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:08 ; elapsed = 00:00:38 . Memory (MB): peak = 996.785 ; gain = 899.031
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:08 ; elapsed = 00:00:38 . Memory (MB): peak = 996.785 ; gain = 899.031
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<short, (ap_q_mode)6, float>' into 'ColaCounts' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:08 ; elapsed = 00:00:39 . Memory (MB): peak = 996.785 ; gain = 899.031
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<short, (ap_q_mode)6, float>' into 'ColaCounts' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:39 . Memory (MB): peak = 996.785 ; gain = 899.031
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:39 . Memory (MB): peak = 996.785 ; gain = 899.031
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'ColaCounts' ...
+WARNING: [SYN 201-107] Renaming port name 'ColaCounts/input' to 'ColaCounts/input_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ColaCounts' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 39.708 seconds; current allocated memory: 187.175 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.264 seconds; current allocated memory: 187.373 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ColaCounts' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'ColaCounts/input_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'ColaCounts' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ColaCounts'.
+INFO: [HLS 200-111]  Elapsed time: 0.308 seconds; current allocated memory: 187.745 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:11 ; elapsed = 00:00:42 . Memory (MB): peak = 996.785 ; gain = 899.031
+INFO: [VHDL 208-304] Generating VHDL RTL for ColaCounts.
+INFO: [VLOG 209-307] Generating Verilog RTL for ColaCounts.
+INFO: [HLS 200-789] **** Estimated Fmax: 164.61 MHz
+INFO: [HLS 200-112] Total elapsed time: 42.579 seconds; peak allocated memory: 187.745 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_optimization_level=0
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/github/ColaFloatsToCounts/ColaCounts.zip
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_phys_opt=none
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_report_level=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -kernel_profile=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -m_axi_conservative_mode=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -module_auto_prefix=1
+INFO: [HLS 200-1464] Running solution command: config_rtl -mult_keep_attribute=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset=control
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset_async=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset_level=low
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file C:/github/ColaFloatsToCounts/ColaCounts.zip
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_optimization_level=0
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/github/ColaFloatsToCounts/ColaCounts.zip
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vendor=SpectralDynamics
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.0
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_phys_opt=none
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_report_level=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -kernel_profile=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -m_axi_conservative_mode=0
+INFO: [HLS 200-1907] Replacing 'config_rtl -m_axi_conservative_mode=0' with 'config_interface -m_axi_conservative_mode=0' in current solution file
+INFO: [HLS 200-1464] Running solution command: config_rtl -module_auto_prefix=1
+INFO: [HLS 200-1907] Replacing 'config_rtl -m_axi_conservative_mode=0' with 'config_interface -m_axi_conservative_mode=0' in current solution file
+INFO: [HLS 200-1464] Running solution command: config_rtl -mult_keep_attribute=0
+INFO: [HLS 200-1907] Replacing 'config_rtl -m_axi_conservative_mode=0' with 'config_interface -m_axi_conservative_mode=0' in current solution file
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=0
+INFO: [HLS 200-1907] Replacing 'config_rtl -m_axi_conservative_mode=0' with 'config_interface -m_axi_conservative_mode=0' in current solution file
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset=control
+INFO: [HLS 200-1907] Replacing 'config_rtl -m_axi_conservative_mode=0' with 'config_interface -m_axi_conservative_mode=0' in current solution file
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset_async=0
+INFO: [HLS 200-1907] Replacing 'config_rtl -m_axi_conservative_mode=0' with 'config_interface -m_axi_conservative_mode=0' in current solution file
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset_level=low
+INFO: [HLS 200-1907] Replacing 'config_rtl -m_axi_conservative_mode=0' with 'config_interface -m_axi_conservative_mode=0' in current solution file
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/github/ColaFloatsToCounts/ColaCounts.zip -rtl verilog -vendor SpectralDynamics -version 1.0 -vivado_optimization_level 0 -vivado_phys_opt none -vivado_report_level 0 
+INFO: [HLS 200-1510] Running: config_rtl -kernel_profile=0 -module_auto_prefix -mult_keep_attribute=0 -register_reset_num 0 -reset control -reset_async=0 -reset_level low 
+INFO: [HLS 200-1907] Replacing 'config_rtl -m_axi_conservative_mode=0' with 'config_interface -m_axi_conservative_mode=0' in current solution file
+INFO: [HLS 200-1510] Running: source ./ColaFloatsToCounts/ColaCounts/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name ColaCounts ColaCounts 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output C:/github/ColaFloatsToCounts/ColaCounts.zip 
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.016 seconds; current allocated memory: 0.000 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_optimization_level=0
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/github/ColaFloatsToCounts/ColaCounts.zip
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vendor=SpectralDynamics
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.0
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_phys_opt=none
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_report_level=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -kernel_profile=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -module_auto_prefix=1
+INFO: [HLS 200-1464] Running solution command: config_rtl -mult_keep_attribute=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset=control
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset_async=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset_level=low
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/github/ColaFloatsToCounts/ColaCounts.zip -rtl verilog -vendor SpectralDynamics -version 1.0 -vivado_optimization_level 0 -vivado_phys_opt none -vivado_report_level 0 
+INFO: [HLS 200-1510] Running: config_rtl -kernel_profile=0 -module_auto_prefix -mult_keep_attribute=0 -register_reset_num 0 -reset control -reset_async=0 -reset_level low 
+INFO: [HLS 200-1510] Running: source ./ColaFloatsToCounts/ColaCounts/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name ColaCounts ColaCounts 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output C:/github/ColaFloatsToCounts/ColaCounts.zip 
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.011 seconds; current allocated memory: 0.012 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_optimization_level=0
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/github/ColaFloatsToCounts/ColaCounts.zip
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vendor=SpectralDynamics
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.0
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_phys_opt=none
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_report_level=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -kernel_profile=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -module_auto_prefix=1
+INFO: [HLS 200-1464] Running solution command: config_rtl -mult_keep_attribute=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset=control
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset_async=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset_level=low
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/github/ColaFloatsToCounts/ColaCounts.zip -rtl verilog -vendor SpectralDynamics -version 1.0 -vivado_optimization_level 0 -vivado_phys_opt none -vivado_report_level 0 
+INFO: [HLS 200-1510] Running: config_rtl -kernel_profile=0 -module_auto_prefix -mult_keep_attribute=0 -register_reset_num 0 -reset control -reset_async=0 -reset_level low 
+INFO: [HLS 200-1510] Running: source ./ColaFloatsToCounts/ColaCounts/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name ColaCounts ColaCounts 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.078 seconds; current allocated memory: 1.040 GB.
+INFO: [HLS 200-10] Analyzing design file 'ColaFloatsToCounts/ColaCounts.cpp' ... 
+WARNING: [HLS 207-5545] Invalid function level interface port in '#pragma HLS interface': expect 'return' (ColaFloatsToCounts/ColaCounts.cpp:7:39)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.882 seconds; current allocated memory: 1.041 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::mantissa() const' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::__signbit() const' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' into 'short generic_cast_IEEE754<short, float>(float, bool)' (C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:116:0)
+INFO: [HLS 214-178] Inlining function 'short generic_cast_IEEE754<short, float>(float, bool)' into '__hls_fptosi_float_i16' (C:\scratch\2023.1\hls_product\1026\2023.1\src\shared\hls\clib\hlsmath\src\lib_floatconversion.cpp:50:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptosi_float_i16' into 'ColaCounts(float)' (ColaFloatsToCounts/ColaCounts.cpp:5:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.209 seconds; current allocated memory: 1.042 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 1.042 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.081 seconds; current allocated memory: 1.048 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.035 seconds; current allocated memory: 1.052 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.048 seconds; current allocated memory: 1.073 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.034 seconds; current allocated memory: 1.074 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'ColaCounts' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ColaCounts' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.216 seconds; current allocated memory: 1.074 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.157 seconds; current allocated memory: 1.074 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ColaCounts' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'ColaCounts/input_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'ColaCounts' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ColaCounts'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.137 seconds; current allocated memory: 1.074 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.255 seconds; current allocated memory: 1.079 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.319 seconds; current allocated memory: 1.084 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for ColaCounts.
+INFO: [VLOG 209-307] Generating Verilog RTL for ColaCounts.
+INFO: [HLS 200-789] **** Estimated Fmax: 164.61 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.497 seconds; current allocated memory: 45.449 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_optimization_level=0
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/github/ColaFloatsToCounts/ColaCounts.zip
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vendor=SpectralDynamics
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.0
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_phys_opt=none
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_report_level=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -kernel_profile=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -module_auto_prefix=1
+INFO: [HLS 200-1464] Running solution command: config_rtl -mult_keep_attribute=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset=control
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset_async=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset_level=low
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/github/ColaFloatsToCounts/ColaCounts.zip -rtl verilog -vendor SpectralDynamics -version 1.0 -vivado_optimization_level 0 -vivado_phys_opt none -vivado_report_level 0 
+INFO: [HLS 200-1510] Running: config_rtl -kernel_profile=0 -module_auto_prefix -mult_keep_attribute=0 -register_reset_num 0 -reset control -reset_async=0 -reset_level low 
+INFO: [HLS 200-1510] Running: source ./ColaFloatsToCounts/ColaCounts/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name ColaCounts ColaCounts 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output C:/github/ColaFloatsToCounts/ColaCounts.zip 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file C:/github/ColaFloatsToCounts/ColaCounts.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 13.337 seconds; current allocated memory: 6.234 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_optimization_level=0
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/github/ColaFloatsToCounts/ColaCounts.zip
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vendor=SpectralDynamics
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.0
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_phys_opt=none
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_report_level=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -kernel_profile=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -module_auto_prefix=1
+INFO: [HLS 200-1464] Running solution command: config_rtl -mult_keep_attribute=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset=control
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset_async=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset_level=low
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/github/ColaFloatsToCounts/ColaCounts.zip -rtl verilog -vendor SpectralDynamics -version 1.0 -vivado_optimization_level 0 -vivado_phys_opt none -vivado_report_level 0 
+INFO: [HLS 200-1510] Running: config_rtl -kernel_profile=0 -module_auto_prefix -mult_keep_attribute=0 -register_reset_num 0 -reset control -reset_async=0 -reset_level low 
+INFO: [HLS 200-1510] Running: source ./ColaFloatsToCounts/ColaCounts/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name ColaCounts ColaCounts 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.061 seconds; current allocated memory: 194.059 MB.
+INFO: [HLS 200-10] Analyzing design file 'ColaFloatsToCounts/ColaCounts.cpp' ... 
+WARNING: [HLS 207-5551] Invalid function level interface port in '#pragma HLS interface': expect 'return' (ColaFloatsToCounts/ColaCounts.cpp:7:39)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.982 seconds; current allocated memory: 196.133 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 2,115 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/ColaFloatsToCounts/ColaCounts/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 176 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/ColaFloatsToCounts/ColaCounts/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 65 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/ColaFloatsToCounts/ColaCounts/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 60 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/ColaFloatsToCounts/ColaCounts/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 34 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/ColaFloatsToCounts/ColaCounts/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 34 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/ColaFloatsToCounts/ColaCounts/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 34 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/ColaFloatsToCounts/ColaCounts/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 34 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/ColaFloatsToCounts/ColaCounts/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 34 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/ColaFloatsToCounts/ColaCounts/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 34 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/ColaFloatsToCounts/ColaCounts/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 34 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/ColaFloatsToCounts/ColaCounts/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 34 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/ColaFloatsToCounts/ColaCounts/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 34 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/ColaFloatsToCounts/ColaCounts/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 34 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/ColaFloatsToCounts/ColaCounts/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 36 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/ColaFloatsToCounts/ColaCounts/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 37 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/ColaFloatsToCounts/ColaCounts/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::mantissa() const' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::__signbit() const' into 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'short generic_cast_IEEE754<short, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<short>::is_signed, bool>::type)' into 'short generic_cast_IEEE754<short, float>(float, bool)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:116:0)
+INFO: [HLS 214-178] Inlining function 'short generic_cast_IEEE754<short, float>(float, bool)' into '__hls_fptosi_float_i16' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib\hlsmath\src\lib_floatconversion.cpp:50:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptosi_float_i16' into 'ColaCounts(float)' (ColaFloatsToCounts/ColaCounts.cpp:5:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.768 seconds; current allocated memory: 198.402 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 198.402 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.029 seconds; current allocated memory: 204.672 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.022 seconds; current allocated memory: 207.430 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.036 seconds; current allocated memory: 229.914 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.025 seconds; current allocated memory: 230.824 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'ColaCounts' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ColaCounts' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.114 seconds; current allocated memory: 230.824 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.047 seconds; current allocated memory: 230.824 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ColaCounts' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'ColaCounts/input_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'ColaCounts' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ColaCounts'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.057 seconds; current allocated memory: 231.598 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.215 seconds; current allocated memory: 236.707 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.299 seconds; current allocated memory: 241.707 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for ColaCounts.
+INFO: [VLOG 209-307] Generating Verilog RTL for ColaCounts.
+INFO: [HLS 200-789] **** Estimated Fmax: 164.61 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.708 seconds; current allocated memory: 47.797 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_optimization_level=0
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/github/ColaFloatsToCounts/ColaCounts.zip
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vendor=SpectralDynamics
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.0
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_phys_opt=none
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_report_level=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -kernel_profile=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -module_auto_prefix=1
+INFO: [HLS 200-1464] Running solution command: config_rtl -mult_keep_attribute=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset=control
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset_async=0
+INFO: [HLS 200-1464] Running solution command: config_rtl -reset_level=low
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/github/ColaFloatsToCounts/ColaCounts.zip -rtl verilog -vendor SpectralDynamics -version 1.0 -vivado_optimization_level 0 -vivado_phys_opt none -vivado_report_level 0 
+INFO: [HLS 200-1510] Running: config_rtl -kernel_profile=0 -module_auto_prefix -mult_keep_attribute=0 -register_reset_num 0 -reset control -reset_async=0 -reset_level low 
+INFO: [HLS 200-1510] Running: source ./ColaFloatsToCounts/ColaCounts/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name ColaCounts ColaCounts 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output C:/github/ColaFloatsToCounts/ColaCounts.zip 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file C:/github/ColaFloatsToCounts/ColaCounts.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 11.922 seconds; current allocated memory: 6.477 MB.

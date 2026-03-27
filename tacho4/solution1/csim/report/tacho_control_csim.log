@@ -1,0 +1,25 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../temp/tacho_4_tb.cpp in debug mode
+   Compiling ../../../../temp/tacho_4.cpp in debug mode
+   Generating csim.exe
+SPI init, wr_data: 20064 0
+SPI init, wr_data: 20064 0
+SPI init, wr_data: 20064 0
+SPI init, wr_data: 20064 0
+Expander init, wr_data: 701 1
+Expander init, wr_data: 701 1
+Expander init, wr_data: 701 1
+Expander init, wr_data: 701 1
+DAC, wr_data: aa 2
+DAC, wr_data: aa 2
+DAC, wr_data: aa 2
+DAC, wr_data: aa 2
+ADC, rd_data: ffff 3
+ADC, rd_data: ffff 3
+ADC, rd_data: ffff 3
+ADC, rd_data: ffff 3
+ADC, rd_data: ffff 3
+in_data: 430000bb
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

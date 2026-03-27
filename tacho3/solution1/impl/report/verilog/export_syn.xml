@@ -1,0 +1,161 @@
+<profile>
+  <RunData>
+    <RUN_TYPE>synth</RUN_TYPE>
+    <VIVADO_VERSION>v.2023.2</VIVADO_VERSION>
+    <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+  </RunData>
+  <TimingReport>
+    <TargetClockPeriod>10.000</TargetClockPeriod>
+    <AchievedClockPeriod>5.622</AchievedClockPeriod>
+    <CLOCK_NAME>ap_clk</CLOCK_NAME>
+    <CP_FINAL>5.622</CP_FINAL>
+    <CP_ROUTE>NA</CP_ROUTE>
+    <CP_SYNTH>5.622</CP_SYNTH>
+    <CP_TARGET>10.000</CP_TARGET>
+    <SLACK_FINAL>4.378</SLACK_FINAL>
+    <SLACK_ROUTE/>
+    <SLACK_SYNTH>4.378</SLACK_SYNTH>
+    <TIMING_MET>TRUE</TIMING_MET>
+    <TNS_FINAL>0.000</TNS_FINAL>
+    <TNS_ROUTE>NA</TNS_ROUTE>
+    <TNS_SYNTH>0.000</TNS_SYNTH>
+    <WNS_FINAL>4.378</WNS_FINAL>
+    <WNS_ROUTE>NA</WNS_ROUTE>
+    <WNS_SYNTH>4.378</WNS_SYNTH>
+  </TimingReport>
+  <AreaReport>
+    <Resources>
+      <BRAM>0</BRAM>
+      <CLB>0</CLB>
+      <DSP>0</DSP>
+      <FF>514</FF>
+      <LATCH>0</LATCH>
+      <LUT>632</LUT>
+      <SRL>0</SRL>
+      <URAM>0</URAM>
+    </Resources>
+    <AvailableResources>
+      <BRAM>280</BRAM>
+      <CLB>0</CLB>
+      <DSP>220</DSP>
+      <FF>106400</FF>
+      <LUT>53200</LUT>
+      <URAM>0</URAM>
+    </AvailableResources>
+  </AreaReport>
+  <RtlModules>
+    <RtlModule CELL="inst" DEPTH="0" IS_TOP="1" TYPE="function" MODULENAME="tacho" DISPNAME="inst" RTLNAME="tacho">
+      <Resources FF="514" LUT="632"/>
+    </RtlModule>
+  </RtlModules>
+  <TimingPaths>
+    <TPATH DATAPATH_DELAY="5.615" DATAPATH_LOGIC_DELAY="2.804" DATAPATH_NET_DELAY="2.811" ENDPOINT_PIN="error_new_7_reg_303_reg[30]/D" LOGIC_LEVELS="11" MAX_FANOUT="109" SLACK="4.378" STARTPOINT_PIN="ap_CS_fsm_reg[2]/C">
+      <CELL NAME="ap_CS_fsm_reg[2]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="160"/>
+      <CELL NAME="trig_cnt_new_5_reg_415[7]_i_3" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="169"/>
+      <CELL NAME="ap_return[3]_INST_0_i_4" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="169"/>
+      <CELL NAME="ap_return[3]_INST_0_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[10]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[14]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[18]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[22]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[26]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[30]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[30]_INST_0_i_2" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="169"/>
+      <CELL NAME="error_new_7_reg_303[30]_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="169"/>
+      <CELL NAME="error_new_7_reg_303_reg[30]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="308"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="5.613" DATAPATH_LOGIC_DELAY="2.809" DATAPATH_NET_DELAY="2.804" ENDPOINT_PIN="error_new_7_reg_303_reg[29]/D" LOGIC_LEVELS="11" MAX_FANOUT="109" SLACK="4.380" STARTPOINT_PIN="ap_CS_fsm_reg[2]/C">
+      <CELL NAME="ap_CS_fsm_reg[2]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="160"/>
+      <CELL NAME="trig_cnt_new_5_reg_415[7]_i_3" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="169"/>
+      <CELL NAME="ap_return[7]_INST_0_i_5" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="169"/>
+      <CELL NAME="ap_return[7]_INST_0_i_4" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[11]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[15]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[19]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[23]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[27]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[31]_INST_0_i_8" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[29]_INST_0_i_2" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="169"/>
+      <CELL NAME="error_new_7_reg_303[29]_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="169"/>
+      <CELL NAME="error_new_7_reg_303_reg[29]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="308"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="5.613" DATAPATH_LOGIC_DELAY="2.809" DATAPATH_NET_DELAY="2.804" ENDPOINT_PIN="error_reg[28]/D" LOGIC_LEVELS="11" MAX_FANOUT="109" SLACK="4.380" STARTPOINT_PIN="ap_CS_fsm_reg[2]/C">
+      <CELL NAME="ap_CS_fsm_reg[2]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="160"/>
+      <CELL NAME="trig_cnt_new_5_reg_415[7]_i_3" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="169"/>
+      <CELL NAME="ap_return[3]_INST_0_i_4" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="169"/>
+      <CELL NAME="ap_return[3]_INST_0_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[10]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[14]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[18]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[22]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[26]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[30]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="error[28]_i_2" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="169"/>
+      <CELL NAME="error[28]_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="169"/>
+      <CELL NAME="error_reg[28]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="420"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="5.605" DATAPATH_LOGIC_DELAY="2.801" DATAPATH_NET_DELAY="2.804" ENDPOINT_PIN="error_loc_7_reg_323_reg[28]/D" LOGIC_LEVELS="11" MAX_FANOUT="109" SLACK="4.388" STARTPOINT_PIN="ap_CS_fsm_reg[2]/C">
+      <CELL NAME="ap_CS_fsm_reg[2]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="160"/>
+      <CELL NAME="trig_cnt_new_5_reg_415[7]_i_3" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="169"/>
+      <CELL NAME="ap_return[3]_INST_0_i_4" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="169"/>
+      <CELL NAME="ap_return[3]_INST_0_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[10]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[14]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[18]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[22]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[26]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[30]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="error[28]_i_2" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="169"/>
+      <CELL NAME="error_loc_7_reg_323[28]_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="169"/>
+      <CELL NAME="error_loc_7_reg_323_reg[28]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="292"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="5.498" DATAPATH_LOGIC_DELAY="2.687" DATAPATH_NET_DELAY="2.811" ENDPOINT_PIN="error_new_7_reg_303_reg[26]/D" LOGIC_LEVELS="10" MAX_FANOUT="109" SLACK="4.495" STARTPOINT_PIN="ap_CS_fsm_reg[2]/C">
+      <CELL NAME="ap_CS_fsm_reg[2]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="160"/>
+      <CELL NAME="trig_cnt_new_5_reg_415[7]_i_3" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="169"/>
+      <CELL NAME="ap_return[3]_INST_0_i_4" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="169"/>
+      <CELL NAME="ap_return[3]_INST_0_i_2" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[10]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[14]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[18]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[22]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[26]_INST_0_i_3" PRIMITIVE_TYPE="CARRY.others.CARRY4" LINE_NUMBER="183"/>
+      <CELL NAME="ap_return[26]_INST_0_i_2" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="169"/>
+      <CELL NAME="error_new_7_reg_303[26]_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="169"/>
+      <CELL NAME="error_new_7_reg_303_reg[26]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="308"/>
+    </TPATH>
+  </TimingPaths>
+  <VivadoReportFiles>
+    <ReportFile TYPE="design_analysis" PATH="verilog/report/tacho_design_analysis_synth.rpt"/>
+    <ReportFile TYPE="failfast" PATH="verilog/report/tacho_failfast_synth.rpt"/>
+    <ReportFile TYPE="timing" PATH="verilog/report/tacho_timing_synth.rpt"/>
+    <ReportFile TYPE="timing_paths" PATH="verilog/report/tacho_timing_paths_synth.rpt"/>
+    <ReportFile TYPE="utilization" PATH="verilog/report/tacho_utilization_synth.rpt"/>
+    <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/tacho_utilization_hierarchical_synth.rpt"/>
+  </VivadoReportFiles>
+  <GeneralInfo NAME="General Information">
+    <item NAME="Date" VALUE="Mon Dec 01 16:08:48 -0500 2025"/>
+    <item NAME="Version" VALUE="2023.2 (Build 4023990 on Oct 11 2023)"/>
+    <item NAME="Project" VALUE="tacho3"/>
+    <item NAME="Solution" VALUE="solution1 (Vivado IP Flow Target)"/>
+    <item NAME="Product family" VALUE="zynq"/>
+    <item NAME="Target device" VALUE="xc7z020-clg484-1"/>
+  </GeneralInfo>
+  <RunOptions NAME="Run Constraints &amp; Options">
+    <General NAME="Design Constraints &amp; Options">
+      <item NAME="RTL Synthesis target clock" VALUE="10 ns"/>
+      <item NAME="C-Synthesis target clock" VALUE="10 ns"/>
+      <item NAME="C-Synthesis uncertainty" VALUE="0 ns"/>
+      <item NAME="config_export -ip_xdc_file" VALUE=""/>
+      <item NAME="config_export -ip_xdc_ooc_file" VALUE=""/>
+    </General>
+    <Syn NAME="RTL Synthesis Options">
+      <item NAME="config_export -vivado_synth_strategy" VALUE="default"/>
+      <item NAME="config_export -vivado_synth_design_args" VALUE="-directive sdx_optimization_effort_high"/>
+    </Syn>
+    <Reporting NAME="Reporting Options">
+      <item NAME="config_export -vivado_report_level" VALUE="2"/>
+      <item NAME="config_export -vivado_max_timing_paths" VALUE="10"/>
+    </Reporting>
+  </RunOptions>
+</profile>
+

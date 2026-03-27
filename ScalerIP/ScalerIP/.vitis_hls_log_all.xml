@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'fDACScaleFactor' is power-on initialization." projectName="ScalerIP" solutionName="solution1" date="2025-12-16T14:17:56.537-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'interp' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="ScalerIP" solutionName="solution1" date="2025-12-16T14:17:56.485-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="ScalerIP" solutionName="solution1" date="2025-12-16T14:17:55.864-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5551] Invalid function level interface port in '#pragma HLS interface': expect 'return' (Scaler.cpp:28:39)" projectName="ScalerIP" solutionName="solution1" date="2025-12-16T14:17:47.485-0500" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'DriveScale_fpext_32ns_64_1_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="ScalerIP" solutionName="solution1" date="2025-12-16T14:18:32.652-0500" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'DriveScale_fmul_32ns_32ns_32_2_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="ScalerIP" solutionName="solution1" date="2025-12-16T14:18:30.886-0500" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'DriveScale_fdiv_32ns_32ns_32_6_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="ScalerIP" solutionName="solution1" date="2025-12-16T14:18:26.879-0500" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'DriveScale_fcmp_32ns_32ns_1_1_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="ScalerIP" solutionName="solution1" date="2025-12-16T14:18:24.866-0500" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'DriveScale_dadd_64ns_64ns_64_3_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="ScalerIP" solutionName="solution1" date="2025-12-16T14:18:22.855-0500" type="Warning"/>
+      </packageLog>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

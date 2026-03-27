@@ -1,0 +1,19 @@
+# ==============================================================
+# Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+# Tool Version Limit: 2023.10
+# Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+# Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+# 
+# ==============================================================
+OPTION psf_version = 2.1;
+
+BEGIN driver tacho_control
+
+ OPTION supported_peripherals = (tacho_control_v1_1 );
+ OPTION driver_state = ACTIVE;
+ OPTION copyfiles = all;
+ OPTION name = tacho_control;
+ OPTION version = 1.1;
+
+END driver
+

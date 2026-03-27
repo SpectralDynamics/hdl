@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <packageLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <packageLog>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'tacho_quant_uitofp_32ns_32_6_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="tacho_quant" solutionName="solution1" date="2025-11-20T12:18:32.722-0500" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'tacho_quant_fmul_32ns_32ns_32_4_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="tacho_quant" solutionName="solution1" date="2025-11-20T12:18:30.988-0500" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'tacho_quant_fdiv_32ns_32ns_32_16_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="tacho_quant" solutionName="solution1" date="2025-11-20T12:18:28.978-0500" type="Warning"/>
+      </packageLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

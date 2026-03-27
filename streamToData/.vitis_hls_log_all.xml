@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="streamToData" solutionName="solution1" date="2024-09-17T08:34:19.662-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5551] Invalid function level interface port in '#pragma HLS interface': expect 'return' (streamToData/streamToData.cpp:20:41)" projectName="streamToData" solutionName="solution1" date="2024-09-17T08:34:10.214-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5551] Invalid function level interface port in '#pragma HLS interface': expect 'return' (streamToData/streamToData.cpp:19:41)" projectName="streamToData" solutionName="solution1" date="2024-09-17T08:34:07.810-0400" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

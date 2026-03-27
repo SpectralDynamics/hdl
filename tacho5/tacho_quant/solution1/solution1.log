@@ -1,0 +1,885 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: source ./tacho_quant/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.079 seconds; current allocated memory: 192.836 MB.
+INFO: [HLS 200-10] Analyzing design file 'tacho_5.cpp' ... 
+WARNING: [HLS 207-5292] unused parameter 'avg' (tacho_5.cpp:13:105)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 2.678 seconds; current allocated memory: 194.863 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 1,997 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 197 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 99 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 97 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'unsigned int generic_cast_IEEE754<unsigned int, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned int>::is_signed), bool>::type)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:65:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::mantissa() const' into 'unsigned int generic_cast_IEEE754<unsigned int, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned int>::is_signed), bool>::type)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:65:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'unsigned int generic_cast_IEEE754<unsigned int, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned int>::is_signed), bool>::type)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:65:0)
+INFO: [HLS 214-178] Inlining function 'unsigned int generic_cast_IEEE754<unsigned int, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned int>::is_signed), bool>::type)' into 'unsigned int generic_cast_IEEE754<unsigned int, float>(float, bool)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:116:0)
+INFO: [HLS 214-178] Inlining function 'unsigned int generic_cast_IEEE754<unsigned int, float>(float, bool)' into '__hls_fptoui_float_i32' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib\hlsmath\src\lib_floatconversion.cpp:65:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptoui_float_i32' into 'tacho_quant(unsigned int, ap_uint<4>, ap_uint<8>, unsigned int*)' (tacho_5.cpp:14:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.812 seconds; current allocated memory: 196.898 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 196.898 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.036 seconds; current allocated memory: 202.477 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.024 seconds; current allocated memory: 204.742 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (tacho_5.cpp:37:3) to (tacho_5.cpp:49:2) in function 'tacho_quant'... converting 7 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.046 seconds; current allocated memory: 226.934 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 227.191 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tacho_quant' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tacho_quant' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.154 seconds; current allocated memory: 227.191 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.055 seconds; current allocated memory: 227.191 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tacho_quant' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_quant/count' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_quant/unit' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_quant/avg' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_quant/out_data' to 's_axilite & ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on function 'tacho_quant' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'prev_count' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'freq' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Tt' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'r' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'ir' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'out_data' to AXI-Lite port control.
+WARNING: [RTGEN 206-101] Port 'tacho_quant/avg' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tacho_quant'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.285 seconds; current allocated memory: 229.957 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.423 seconds; current allocated memory: 235.727 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.572 seconds; current allocated memory: 241.645 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for tacho_quant.
+INFO: [VLOG 209-307] Generating Verilog RTL for tacho_quant.
+INFO: [HLS 200-789] **** Estimated Fmax: 155.93 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 11.26 seconds; current allocated memory: 48.918 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: source ./tacho_quant/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file tacho_quant/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 19.007 seconds; current allocated memory: 7.320 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./tacho_quant/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_quant tacho_quant 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.073 seconds; current allocated memory: 192.719 MB.
+INFO: [HLS 200-10] Analyzing design file 'tacho_5.cpp' ... 
+ERROR: [HLS 207-3717] invalid operands to binary expression ('volatile uint4_t' (aka 'volatile ap_uint<4>') and 'int') (tacho_5.cpp:27:12)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1786:2264)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1787:2364)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1788:2344)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1789:2354)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1820:303)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1820:700)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_range_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1928:129)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_range_ref<_AP_W2, _AP_S2>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1928:411)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref<_AP_W2, _AP_S2>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:2037:129)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:2037:394)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_concat_ref<_AP_W1, type-parameter-0-1, _AP_W2, type-parameter-0-3>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:2144:162)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_concat_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:2144:463)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_range_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1054:1002)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1054:1235)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1054:1422)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_concat_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1054:1642)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_range_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1055:1020)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1055:1262)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1055:1449)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_concat_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1055:1669)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_range_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1056:1028)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1056:1267)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1056:1461)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_concat_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1056:1688)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_range_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1057:1038)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1057:1280)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1057:1476)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_concat_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1057:1705)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_range_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1058:1030)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1058:1276)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1058:1464)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_concat_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1058:1685)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_range_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1059:1068)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1059:1324)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1059:1521)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_concat_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1059:1751)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_range_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1060:1018)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1060:1260)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1060:1446)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_concat_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1060:1665)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_range_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1061:1056)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1061:1308)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1061:1503)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_concat_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1061:1731)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_range_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1062:1024)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1062:1268)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1062:1455)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_concat_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1062:1675)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_range_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1063:1062)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1063:1316)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1063:1512)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_concat_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1063:1741)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_range_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1064:1048)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1064:1300)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1064:1491)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_concat_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1064:1715)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_range_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1065:1050)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1065:1303)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_bit_ref<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1065:1494)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_concat_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_ref.h:1065:1718)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2372:12837)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2372:13152)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2373:13296)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2373:13620)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2374:13031)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2374:13352)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2375:13152)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2375:13476)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2376:14095)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2376:14436)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2377:14461)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2377:14812)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2378:13829)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2378:14164)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2379:14195)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2379:14540)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2380:13962)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2380:14300)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2381:14328)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2381:14676)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2382:14494)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2382:14844)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2383:14545)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2383:14896)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2481:183)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2481:558)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_base.h:2500:89)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:679:6082)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:679:6404)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:679:6726)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:679:6998)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:680:6172)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:680:6503)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:680:6834)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:680:7106)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:681:6212)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:681:6540)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:681:6868)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:681:7147)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:682:6262)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:682:6593)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:682:6924)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:682:7205)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:683:6222)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:683:6557)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:683:6892)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:683:7165)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:684:6412)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:684:6757)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:684:7102)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:684:7384)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:685:6162)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:685:6493)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:685:6824)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:685:7095)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:686:6352)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:686:6693)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:686:7034)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:686:7314)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:687:6192)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:687:6525)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:687:6858)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:687:7130)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:688:6382)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:688:6725)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:688:7068)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:688:7349)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:689:6312)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:689:6653)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:689:6994)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:689:7270)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:690:6322)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:690:6664)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:690:7006)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:690:7282)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:730:183)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_range_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:730:532)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref' against 'ap_uint' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:730:882)
+INFO: [HLS 207-4390] candidate template ignored: deduced type 'const ap_int_base<4, false>' of 1st parameter does not match adjusted type 'volatile uint4_t' (aka 'volatile ap_uint<4>') of argument [with _AP_W = 4, _AP_S = false] (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1778:2361)
+INFO: [HLS 207-4390] candidate template ignored: deduced type 'const ap_int_base<4, false>' of 1st parameter does not match adjusted type 'volatile uint4_t' (aka 'volatile ap_uint<4>') of argument [with _AP_W = 4, _AP_S = false] (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1779:2460)
+INFO: [HLS 207-4390] candidate template ignored: deduced type 'const ap_int_base<4, false>' of 1st parameter does not match adjusted type 'volatile uint4_t' (aka 'volatile ap_uint<4>') of argument [with _AP_W = 4, _AP_S = false] (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1780:2427)
+INFO: [HLS 207-4390] candidate template ignored: deduced type 'const ap_int_base<4, false>' of 1st parameter does not match adjusted type 'volatile uint4_t' (aka 'volatile ap_uint<4>') of argument [with _AP_W = 4, _AP_S = false] (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1781:2460)
+INFO: [HLS 207-4390] candidate template ignored: deduced type 'const ap_int_base<4, false>' of 1st parameter does not match adjusted type 'volatile uint4_t' (aka 'volatile ap_uint<4>') of argument [with _AP_W = 4, _AP_S = false] (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1782:2504)
+INFO: [HLS 207-4390] candidate template ignored: deduced type 'const ap_int_base<4, false>' of 1st parameter does not match adjusted type 'volatile uint4_t' (aka 'volatile ap_uint<4>') of argument [with _AP_W = 4, _AP_S = false] (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1783:2614)
+INFO: [HLS 207-4390] candidate template ignored: deduced type 'const ap_int_base<4, false>' of 1st parameter does not match adjusted type 'volatile uint4_t' (aka 'volatile ap_uint<4>') of argument [with _AP_W = 4, _AP_S = false] (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1784:2460)
+INFO: [HLS 207-4390] candidate template ignored: deduced type 'const ap_int_base<4, false>' of 1st parameter does not match adjusted type 'volatile uint4_t' (aka 'volatile ap_uint<4>') of argument [with _AP_W = 4, _AP_S = false] (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1785:2570)
+INFO: [HLS 207-4390] candidate template ignored: deduced type 'const ap_int_base<4, false>' of 1st parameter does not match adjusted type 'volatile uint4_t' (aka 'volatile ap_uint<4>') of argument [with _AP_W = 4, _AP_S = false] (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1786:2482)
+INFO: [HLS 207-4390] candidate template ignored: deduced type 'const ap_int_base<4, false>' of 1st parameter does not match adjusted type 'volatile uint4_t' (aka 'volatile ap_uint<4>') of argument [with _AP_W = 4, _AP_S = false] (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1787:2592)
+INFO: [HLS 207-4390] candidate template ignored: deduced type 'const ap_int_base<4, false>' of 1st parameter does not match adjusted type 'volatile uint4_t' (aka 'volatile ap_uint<4>') of argument [with _AP_W = 4, _AP_S = false] (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1788:2570)
+INFO: [HLS 207-4390] candidate template ignored: deduced type 'const ap_int_base<4, false>' of 1st parameter does not match adjusted type 'volatile uint4_t' (aka 'volatile ap_uint<4>') of argument [with _AP_W = 4, _AP_S = false] (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1789:2581)
+INFO: [HLS 207-4390] candidate template ignored: deduced type 'const ap_int_base<4, false>' of 1st parameter does not match adjusted type 'volatile uint4_t' (aka 'volatile ap_uint<4>') of argument [with _AP_W = 4, _AP_S = false] (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1820:104)
+INFO: [HLS 207-4390] candidate template ignored: deduced type 'const ap_int_base<4, false>' of 1st parameter does not match adjusted type 'volatile uint4_t' (aka 'volatile ap_uint<4>') of argument [with _AP_W = 4, _AP_S = false] (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1820:502)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1018:85)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1778:2154)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1779:2244)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1780:2214)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1781:2244)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1782:2284)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1783:2384)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1784:2244)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'ap_int_base<_AP_W, _AP_S>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_int_base.h:1785:2344)
+INFO: [HLS 207-4406] candidate template ignored: could not match 'af_bit_ref<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>' against 'int' (C:/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot\etc/ap_fixed_ref.h:730:1226)
+ERROR: [HLS 207-3742] statement requires expression of integer type ('volatile uint4_t' (aka 'volatile ap_uint<4>') invalid) (tacho_5.cpp:37:3)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.259 seconds; current allocated memory: 4.199 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./tacho_quant/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_quant tacho_quant 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.086 seconds; current allocated memory: 193.008 MB.
+INFO: [HLS 200-10] Analyzing design file 'tacho_5.cpp' ... 
+WARNING: [HLS 207-5292] unused parameter 'avg' (tacho_5.cpp:13:123)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.952 seconds; current allocated memory: 195.242 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 2,003 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 203 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 105 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 103 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 77 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 78 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 79 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'unsigned int generic_cast_IEEE754<unsigned int, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned int>::is_signed), bool>::type)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:65:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::mantissa() const' into 'unsigned int generic_cast_IEEE754<unsigned int, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned int>::is_signed), bool>::type)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:65:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'unsigned int generic_cast_IEEE754<unsigned int, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned int>::is_signed), bool>::type)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:65:0)
+INFO: [HLS 214-178] Inlining function 'unsigned int generic_cast_IEEE754<unsigned int, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned int>::is_signed), bool>::type)' into 'unsigned int generic_cast_IEEE754<unsigned int, float>(float, bool)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:116:0)
+INFO: [HLS 214-178] Inlining function 'unsigned int generic_cast_IEEE754<unsigned int, float>(float, bool)' into '__hls_fptoui_float_i32' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib\hlsmath\src\lib_floatconversion.cpp:65:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptoui_float_i32' into 'tacho_quant(unsigned int, ap_uint<4>, ap_uint<8>, unsigned int volatile*)' (tacho_5.cpp:14:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.921 seconds; current allocated memory: 197.863 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 197.863 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.042 seconds; current allocated memory: 203.625 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 206.086 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.048 seconds; current allocated memory: 228.246 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.028 seconds; current allocated memory: 228.250 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tacho_quant' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tacho_quant' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.184 seconds; current allocated memory: 228.250 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.065 seconds; current allocated memory: 228.250 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tacho_quant' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_quant/count' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_quant/unit' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_quant/avg' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_quant/out_data' to 's_axilite & ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on function 'tacho_quant' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'prev_count' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'freq' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Tt' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'r' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'ir' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'out_data' to AXI-Lite port control.
+WARNING: [RTGEN 206-101] Port 'tacho_quant/avg' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tacho_quant'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.321 seconds; current allocated memory: 231.422 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.424 seconds; current allocated memory: 237.102 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.674 seconds; current allocated memory: 243.273 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for tacho_quant.
+INFO: [VLOG 209-307] Generating Verilog RTL for tacho_quant.
+INFO: [HLS 200-789] **** Estimated Fmax: 137.17 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 11.837 seconds; current allocated memory: 50.332 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./tacho_quant/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_quant tacho_quant 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file tacho_quant/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 18.337 seconds; current allocated memory: 7.363 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./tacho_quant/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_quant tacho_quant 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.083 seconds; current allocated memory: 193.469 MB.
+INFO: [HLS 200-10] Analyzing design file 'tacho_5.cpp' ... 
+WARNING: [HLS 207-5292] unused parameter 'avg' (tacho_5.cpp:13:123)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.664 seconds; current allocated memory: 195.215 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 2,003 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 203 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 105 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 103 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 77 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 78 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 79 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'unsigned int generic_cast_IEEE754<unsigned int, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned int>::is_signed), bool>::type)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:65:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::mantissa() const' into 'unsigned int generic_cast_IEEE754<unsigned int, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned int>::is_signed), bool>::type)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:65:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'unsigned int generic_cast_IEEE754<unsigned int, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned int>::is_signed), bool>::type)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:65:0)
+INFO: [HLS 214-178] Inlining function 'unsigned int generic_cast_IEEE754<unsigned int, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned int>::is_signed), bool>::type)' into 'unsigned int generic_cast_IEEE754<unsigned int, float>(float, bool)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:116:0)
+INFO: [HLS 214-178] Inlining function 'unsigned int generic_cast_IEEE754<unsigned int, float>(float, bool)' into '__hls_fptoui_float_i32' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib\hlsmath\src\lib_floatconversion.cpp:65:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptoui_float_i32' into 'tacho_quant(unsigned int, ap_uint<4>, ap_uint<8>, unsigned int volatile*)' (tacho_5.cpp:14:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.83 seconds; current allocated memory: 197.590 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 197.590 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.033 seconds; current allocated memory: 202.945 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.024 seconds; current allocated memory: 205.195 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.045 seconds; current allocated memory: 227.332 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.026 seconds; current allocated memory: 227.336 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tacho_quant' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tacho_quant' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.154 seconds; current allocated memory: 227.336 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.063 seconds; current allocated memory: 227.805 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tacho_quant' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_quant/count' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_quant/unit' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_quant/avg' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_quant/out_data' to 's_axilite & ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on function 'tacho_quant' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'prev_count' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'freq' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Tt' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'r' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'ir' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'out_data' to AXI-Lite port control.
+WARNING: [RTGEN 206-101] Port 'tacho_quant/avg' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tacho_quant'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.205 seconds; current allocated memory: 230.938 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.39 seconds; current allocated memory: 236.387 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.567 seconds; current allocated memory: 242.426 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for tacho_quant.
+INFO: [VLOG 209-307] Generating Verilog RTL for tacho_quant.
+INFO: [HLS 200-789] **** Estimated Fmax: 137.17 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 11.155 seconds; current allocated memory: 49.145 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./tacho_quant/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_quant tacho_quant 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file tacho_quant/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 18.051 seconds; current allocated memory: 7.789 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./tacho_quant/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_quant tacho_quant 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.078 seconds; current allocated memory: 195.465 MB.
+INFO: [HLS 200-10] Analyzing design file 'tacho_5.cpp' ... 
+WARNING: [HLS 207-5292] unused parameter 'avg' (tacho_5.cpp:13:105)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.837 seconds; current allocated memory: 197.324 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 1,997 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 197 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 99 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 97 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'unsigned int generic_cast_IEEE754<unsigned int, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned int>::is_signed), bool>::type)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:65:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::mantissa() const' into 'unsigned int generic_cast_IEEE754<unsigned int, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned int>::is_signed), bool>::type)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:65:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'unsigned int generic_cast_IEEE754<unsigned int, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned int>::is_signed), bool>::type)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:65:0)
+INFO: [HLS 214-178] Inlining function 'unsigned int generic_cast_IEEE754<unsigned int, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned int>::is_signed), bool>::type)' into 'unsigned int generic_cast_IEEE754<unsigned int, float>(float, bool)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:116:0)
+INFO: [HLS 214-178] Inlining function 'unsigned int generic_cast_IEEE754<unsigned int, float>(float, bool)' into '__hls_fptoui_float_i32' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib\hlsmath\src\lib_floatconversion.cpp:65:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptoui_float_i32' into 'tacho_quant(unsigned int, ap_uint<4>, ap_uint<8>, unsigned int*)' (tacho_5.cpp:14:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.947 seconds; current allocated memory: 199.750 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 199.750 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.036 seconds; current allocated memory: 205.230 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.028 seconds; current allocated memory: 207.660 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (tacho_5.cpp:37:3) to (tacho_5.cpp:49:2) in function 'tacho_quant'... converting 7 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.043 seconds; current allocated memory: 229.430 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.021 seconds; current allocated memory: 229.609 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tacho_quant' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tacho_quant' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.195 seconds; current allocated memory: 229.609 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.066 seconds; current allocated memory: 229.738 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tacho_quant' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_quant/count' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_quant/unit' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_quant/avg' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_quant/out_data' to 's_axilite & ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on function 'tacho_quant' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'prev_count' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'freq' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Tt' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'r' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'ir' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'out_data' to AXI-Lite port control.
+WARNING: [RTGEN 206-101] Port 'tacho_quant/avg' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tacho_quant'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.276 seconds; current allocated memory: 232.703 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.474 seconds; current allocated memory: 238.832 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.568 seconds; current allocated memory: 244.734 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for tacho_quant.
+INFO: [VLOG 209-307] Generating Verilog RTL for tacho_quant.
+INFO: [HLS 200-789] **** Estimated Fmax: 155.93 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 11.633 seconds; current allocated memory: 49.340 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./tacho_quant/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_quant tacho_quant 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file tacho_quant/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 26.213 seconds; current allocated memory: 7.062 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./tacho_quant/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_quant tacho_quant 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.094 seconds; current allocated memory: 193.488 MB.
+INFO: [HLS 200-10] Analyzing design file 'tacho_5.cpp' ... 
+WARNING: [HLS 207-5292] unused parameter 'avg' (tacho_5.cpp:13:105)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.9 seconds; current allocated memory: 195.328 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 1,997 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 197 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 99 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 97 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'unsigned int generic_cast_IEEE754<unsigned int, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned int>::is_signed), bool>::type)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:65:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::mantissa() const' into 'unsigned int generic_cast_IEEE754<unsigned int, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned int>::is_signed), bool>::type)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:65:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'unsigned int generic_cast_IEEE754<unsigned int, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned int>::is_signed), bool>::type)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:65:0)
+INFO: [HLS 214-178] Inlining function 'unsigned int generic_cast_IEEE754<unsigned int, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned int>::is_signed), bool>::type)' into 'unsigned int generic_cast_IEEE754<unsigned int, float>(float, bool)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:116:0)
+INFO: [HLS 214-178] Inlining function 'unsigned int generic_cast_IEEE754<unsigned int, float>(float, bool)' into '__hls_fptoui_float_i32' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib\hlsmath\src\lib_floatconversion.cpp:65:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptoui_float_i32' into 'tacho_quant(unsigned int, ap_uint<4>, ap_uint<8>, unsigned int*)' (tacho_5.cpp:14:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.187 seconds; current allocated memory: 197.434 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 197.438 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 202.766 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.042 seconds; current allocated memory: 205.062 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (tacho_5.cpp:37:3) to (tacho_5.cpp:49:2) in function 'tacho_quant'... converting 7 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.055 seconds; current allocated memory: 227.246 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.022 seconds; current allocated memory: 227.375 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tacho_quant' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tacho_quant' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.216 seconds; current allocated memory: 227.375 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 227.465 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tacho_quant' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_quant/count' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_quant/unit' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_quant/avg' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_quant/out_data' to 's_axilite & ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on function 'tacho_quant' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'prev_count' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'freq' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Tt' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'r' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'ir' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'out_data' to AXI-Lite port control.
+WARNING: [RTGEN 206-101] Port 'tacho_quant/avg' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tacho_quant'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.391 seconds; current allocated memory: 230.801 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.546 seconds; current allocated memory: 236.008 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.64 seconds; current allocated memory: 242.484 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for tacho_quant.
+INFO: [VLOG 209-307] Generating Verilog RTL for tacho_quant.
+INFO: [HLS 200-789] **** Estimated Fmax: 155.93 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 12.313 seconds; current allocated memory: 49.352 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./tacho_quant/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_quant tacho_quant 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file tacho_quant/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 20.171 seconds; current allocated memory: 7.500 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./tacho_quant/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_quant tacho_quant 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.082 seconds; current allocated memory: 193.305 MB.
+INFO: [HLS 200-10] Analyzing design file 'tacho_5.cpp' ... 
+WARNING: [HLS 207-5292] unused parameter 'avg' (tacho_5.cpp:13:105)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.983 seconds; current allocated memory: 195.328 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 1,997 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 197 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 99 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 97 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/tacho5/tacho_quant/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'unsigned int generic_cast_IEEE754<unsigned int, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned int>::is_signed), bool>::type)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:65:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::mantissa() const' into 'unsigned int generic_cast_IEEE754<unsigned int, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned int>::is_signed), bool>::type)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:65:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'unsigned int generic_cast_IEEE754<unsigned int, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned int>::is_signed), bool>::type)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:65:0)
+INFO: [HLS 214-178] Inlining function 'unsigned int generic_cast_IEEE754<unsigned int, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned int>::is_signed), bool>::type)' into 'unsigned int generic_cast_IEEE754<unsigned int, float>(float, bool)' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:116:0)
+INFO: [HLS 214-178] Inlining function 'unsigned int generic_cast_IEEE754<unsigned int, float>(float, bool)' into '__hls_fptoui_float_i32' (C:\scratch\2023.2\hls_product\689\2023.2\src\shared\hls\clib\hlsmath\src\lib_floatconversion.cpp:65:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptoui_float_i32' into 'tacho_quant(unsigned int, ap_uint<4>, ap_uint<8>, unsigned int*)' (tacho_5.cpp:14:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 7.094 seconds; current allocated memory: 197.453 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 197.453 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.058 seconds; current allocated memory: 203.066 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.037 seconds; current allocated memory: 205.320 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (tacho_5.cpp:37:3) to (tacho_5.cpp:49:2) in function 'tacho_quant'... converting 7 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.052 seconds; current allocated memory: 227.273 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.022 seconds; current allocated memory: 227.277 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tacho_quant' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tacho_quant' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 227.277 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 227.277 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tacho_quant' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_quant/count' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_quant/unit' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_quant/avg' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tacho_quant/out_data' to 's_axilite & ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on function 'tacho_quant' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'prev_count' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'freq' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Tt' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'r' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'ir' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'out_data' to AXI-Lite port control.
+WARNING: [RTGEN 206-101] Port 'tacho_quant/avg' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tacho_quant'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.301 seconds; current allocated memory: 230.453 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.486 seconds; current allocated memory: 236.250 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.664 seconds; current allocated memory: 242.582 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for tacho_quant.
+INFO: [VLOG 209-307] Generating Verilog RTL for tacho_quant.
+INFO: [HLS 200-789] **** Estimated Fmax: 155.93 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 12.179 seconds; current allocated memory: 49.473 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./tacho_quant/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name tacho_quant tacho_quant 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file tacho_quant/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 19.607 seconds; current allocated memory: 7.414 MB.

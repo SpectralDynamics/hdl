@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="tacho_5.cpp" path="C:\github\hdl-master\tacho5\tacho_5.cpp"/>
+    <originFiles name="tacho_5.h" path="C:\github\hdl-master\tacho5\tacho_5.h"/>
+  </source>
+  <testbench>
+    <originFiles name="tacho_5_tb.cpp" path="C:\github\hdl-master\tacho5\tacho_5_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

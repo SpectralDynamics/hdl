@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'retVal' is power-on initialization." projectName="ADCCountsToFloat" solutionName="solution1" date="2025-12-12T14:11:44.314-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'iCurrentOverloads' is power-on initialization." projectName="ADCCountsToFloat" solutionName="solution1" date="2025-12-12T14:11:44.301-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'iCurrentGainChanges' is power-on initialization." projectName="ADCCountsToFloat" solutionName="solution1" date="2025-12-12T14:11:44.284-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'iCountdownGainChange' is power-on initialization." projectName="ADCCountsToFloat" solutionName="solution1" date="2025-12-12T14:11:44.264-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'doOnce' is power-on initialization." projectName="ADCCountsToFloat" solutionName="solution1" date="2025-12-12T14:11:44.246-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'iCurrentGain' is power-on initialization." projectName="ADCCountsToFloat" solutionName="solution1" date="2025-12-12T14:11:44.235-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="ADCCountsToFloat" solutionName="solution1" date="2025-12-12T14:11:44.051-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (ADCCountsToFloat/ADCCountsToFloat.cpp:31:36)" projectName="ADCCountsToFloat" solutionName="solution1" date="2025-12-12T14:11:36.629-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (ADCCountsToFloat/ADCCountsToFloat.cpp:30:36)" projectName="ADCCountsToFloat" solutionName="solution1" date="2025-12-12T14:11:34.027-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5551] Invalid function level interface port in '#pragma HLS interface': expect 'return' (ADCCountsToFloat/ADCCountsToFloat.cpp:21:39)" projectName="ADCCountsToFloat" solutionName="solution1" date="2025-12-12T14:11:34.010-0500" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'ADCCountsToFloat_sitofp_32ns_32_2_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="ADCCountsToFloat" solutionName="solution1" date="2025-12-12T14:12:12.085-0500" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'ADCCountsToFloat_fsub_32ns_32ns_32_3_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="ADCCountsToFloat" solutionName="solution1" date="2025-12-12T14:12:10.397-0500" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'ADCCountsToFloat_fmul_32ns_32ns_32_2_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="ADCCountsToFloat" solutionName="solution1" date="2025-12-12T14:12:08.394-0500" type="Warning"/>
+      </packageLog>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

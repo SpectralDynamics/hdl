@@ -1,0 +1,778 @@
+{
+  "Top": "tacho_control",
+  "RtlTop": "tacho_control",
+  "RtlPrefix": "",
+  "RtlSubPrefix": "tacho_control_",
+  "SourceLanguage": "cpp",
+  "HostMachineBits": "64",
+  "FunctionProtocol": "ap_ctrl_hs",
+  "ResetStyle": "control",
+  "Target": {
+    "Family": "zynq",
+    "Device": "xc7z020",
+    "Package": "-clg484",
+    "Speed": "-1",
+    "Triple": "fpga64-xilinx-none"
+  },
+  "Args": {
+    "in_data": {
+      "index": "0",
+      "direction": "inout",
+      "srcType": "int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_data_i",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_data_o",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_data_o_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "spird_data": {
+      "index": "1",
+      "direction": "in",
+      "srcType": "int",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "port",
+          "interface": "spird_data",
+          "name": "spird_data",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "spiwr_en": {
+      "index": "2",
+      "direction": "out",
+      "srcType": "ap_uint<1>*",
+      "srcSize": "8",
+      "hwRefs": [{
+          "type": "port",
+          "interface": "spiwr_en",
+          "name": "spiwr_en",
+          "usage": "data",
+          "direction": "out"
+        }]
+    },
+    "spird_en": {
+      "index": "3",
+      "direction": "out",
+      "srcType": "ap_uint<1>*",
+      "srcSize": "8",
+      "hwRefs": [{
+          "type": "port",
+          "interface": "spird_en",
+          "name": "spird_en",
+          "usage": "data",
+          "direction": "out"
+        }]
+    },
+    "spiwr_addr": {
+      "index": "4",
+      "direction": "out",
+      "srcType": "ap_uint<2>*",
+      "srcSize": "8",
+      "hwRefs": [{
+          "type": "port",
+          "interface": "spiwr_addr",
+          "name": "spiwr_addr",
+          "usage": "data",
+          "direction": "out"
+        }]
+    },
+    "spird_addr": {
+      "index": "5",
+      "direction": "out",
+      "srcType": "ap_uint<2>*",
+      "srcSize": "8",
+      "hwRefs": [{
+          "type": "port",
+          "interface": "spird_addr",
+          "name": "spird_addr",
+          "usage": "data",
+          "direction": "out"
+        }]
+    },
+    "spiwr_data": {
+      "index": "6",
+      "direction": "out",
+      "srcType": "int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "port",
+          "interface": "spiwr_data",
+          "name": "spiwr_data",
+          "usage": "data",
+          "direction": "out"
+        }]
+    },
+    "spi_strobe": {
+      "index": "7",
+      "direction": "out",
+      "srcType": "ap_uint<4>*",
+      "srcSize": "8",
+      "hwRefs": [{
+          "type": "port",
+          "interface": "spi_strobe",
+          "name": "spi_strobe",
+          "usage": "data",
+          "direction": "out"
+        }]
+    },
+    "cs_line": {
+      "index": "8",
+      "direction": "out",
+      "srcType": "ap_uint<2>*",
+      "srcSize": "8",
+      "hwRefs": [{
+          "type": "port",
+          "interface": "cs_line",
+          "name": "cs_line",
+          "usage": "data",
+          "direction": "out"
+        }]
+    },
+    "cnt_en": {
+      "index": "9",
+      "direction": "out",
+      "srcType": "ap_uint<1>*",
+      "srcSize": "8",
+      "hwRefs": [{
+          "type": "port",
+          "interface": "cnt_en",
+          "name": "cnt_en",
+          "usage": "data",
+          "direction": "out"
+        }]
+    },
+    "slope": {
+      "index": "10",
+      "direction": "out",
+      "srcType": "ap_uint<1>*",
+      "srcSize": "8",
+      "hwRefs": [{
+          "type": "port",
+          "interface": "slope",
+          "name": "slope",
+          "usage": "data",
+          "direction": "out"
+        }]
+    },
+    "square": {
+      "index": "11",
+      "direction": "out",
+      "srcType": "ap_uint<1>*",
+      "srcSize": "8",
+      "hwRefs": [{
+          "type": "port",
+          "interface": "square",
+          "name": "square",
+          "usage": "data",
+          "direction": "out"
+        }]
+    },
+    "avg": {
+      "index": "12",
+      "direction": "out",
+      "srcType": "ap_uint<8>*",
+      "srcSize": "8",
+      "hwRefs": [{
+          "type": "port",
+          "interface": "avg",
+          "name": "avg",
+          "usage": "data",
+          "direction": "out"
+        }]
+    }
+  },
+  "HlsSolution": {
+    "FlowTarget": "vivado",
+    "ConfigTcl": [
+      "config_export -description=tacho_control",
+      "config_export -display_name=tacho_control_1.1.5",
+      "config_export -format=ip_catalog",
+      "config_export -rtl=verilog",
+      "config_export -version=1.1.5"
+    ],
+    "DirectiveTcl": ["set_directive_top tacho_control -name tacho_control"],
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "KernelName": "tacho_control"
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "10",
+    "Uncertainty": "2.7",
+    "IsCombinational": "0",
+    "II": "3 ~ 5",
+    "Latency": "2"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "xilinx.com",
+    "Library": "hls",
+    "Name": "tacho_control",
+    "Version": "1.1",
+    "DisplayName": "tacho_control_1.1.5",
+    "Revision": "5",
+    "Description": "tacho_control",
+    "Taxonomy": "\/VITIS_HLS_IP",
+    "AutoFamilySupport": "",
+    "ZipFile": "xilinx_com_hls_tacho_control_1_1.zip"
+  },
+  "Files": {
+    "CSource": ["..\/tacho_4.cpp"],
+    "Vhdl": [
+      "impl\/vhdl\/tacho_control_control_s_axi.vhd",
+      "impl\/vhdl\/tacho_control.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/tacho_control_control_s_axi.v",
+      "impl\/verilog\/tacho_control.v"
+    ],
+    "SwDriver": [
+      "impl\/misc\/drivers\/tacho_control_v1_1\/data\/tacho_control.mdd",
+      "impl\/misc\/drivers\/tacho_control_v1_1\/data\/tacho_control.tcl",
+      "impl\/misc\/drivers\/tacho_control_v1_1\/data\/tacho_control.yaml",
+      "impl\/misc\/drivers\/tacho_control_v1_1\/src\/CMakeLists.txt",
+      "impl\/misc\/drivers\/tacho_control_v1_1\/src\/Makefile",
+      "impl\/misc\/drivers\/tacho_control_v1_1\/src\/xtacho_control.c",
+      "impl\/misc\/drivers\/tacho_control_v1_1\/src\/xtacho_control.h",
+      "impl\/misc\/drivers\/tacho_control_v1_1\/src\/xtacho_control_hw.h",
+      "impl\/misc\/drivers\/tacho_control_v1_1\/src\/xtacho_control_linux.c",
+      "impl\/misc\/drivers\/tacho_control_v1_1\/src\/xtacho_control_sinit.c"
+    ],
+    "IpMisc": ["impl\/misc\/logo.png"],
+    "CsynthXml": "syn\/report\/csynth.xml",
+    "DebugDir": ".debug",
+    "KernelXml": ".autopilot\/db\/kernel.internal.xml",
+    "Xo": "",
+    "XoHlsDir": "",
+    "ProtoInst": [".debug\/tacho_control.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "Ip": []
+  },
+  "Interfaces": {
+    "s_axi_control": {
+      "type": "axi4lite",
+      "busTypeName": "aximm",
+      "mode": "slave",
+      "dataWidth": "32",
+      "addrWidth": "5",
+      "portPrefix": "s_axi_control_",
+      "paramPrefix": "C_S_AXI_CONTROL_",
+      "ports": [
+        "s_axi_control_ARADDR",
+        "s_axi_control_ARREADY",
+        "s_axi_control_ARVALID",
+        "s_axi_control_AWADDR",
+        "s_axi_control_AWREADY",
+        "s_axi_control_AWVALID",
+        "s_axi_control_BREADY",
+        "s_axi_control_BRESP",
+        "s_axi_control_BVALID",
+        "s_axi_control_RDATA",
+        "s_axi_control_RREADY",
+        "s_axi_control_RRESP",
+        "s_axi_control_RVALID",
+        "s_axi_control_WDATA",
+        "s_axi_control_WREADY",
+        "s_axi_control_WSTRB",
+        "s_axi_control_WVALID"
+      ],
+      "registers": [
+        {
+          "offset": "0x10",
+          "name": "in_data_i",
+          "access": "W",
+          "description": "Data signal of in_data_i",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_data_i",
+              "access": "W",
+              "description": "Bit 31 to 0 of in_data_i"
+            }]
+        },
+        {
+          "offset": "0x18",
+          "name": "in_data_o",
+          "access": "R",
+          "description": "Data signal of in_data_o",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_data_o",
+              "access": "R",
+              "description": "Bit 31 to 0 of in_data_o"
+            }]
+        },
+        {
+          "offset": "0x1c",
+          "name": "in_data_o_ctrl",
+          "access": "R",
+          "description": "Control signal of in_data_o",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "in_data_o_ap_vld",
+              "access": "R",
+              "description": "Control signal in_data_o_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        }
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "16",
+          "argName": "in_data"
+        }]
+    },
+    "ap_clk": {
+      "type": "clock",
+      "busTypeName": "clock",
+      "mode": "slave",
+      "busParams": {
+        "ASSOCIATED_BUSIF": "s_axi_control",
+        "ASSOCIATED_RESET": "ap_rst_n"
+      },
+      "portMap": {"ap_clk": "CLK"},
+      "ports": ["ap_clk"]
+    },
+    "ap_rst_n": {
+      "type": "reset",
+      "busTypeName": "reset",
+      "mode": "slave",
+      "busParams": {"POLARITY": "ACTIVE_LOW"},
+      "portMap": {"ap_rst_n": "RST"},
+      "ports": ["ap_rst_n"]
+    },
+    "ap_ctrl": {
+      "type": "ap_ctrl",
+      "busTypeName": "acc_handshake",
+      "mode": "slave",
+      "portMap": {
+        "ap_start": "start",
+        "ap_done": "done",
+        "ap_idle": "idle",
+        "ap_ready": "ready"
+      },
+      "ports": [
+        "ap_done",
+        "ap_idle",
+        "ap_ready",
+        "ap_start"
+      ]
+    },
+    "spird_data": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "slave",
+      "dataWidth": "32",
+      "portMap": {"spird_data": "DATA"},
+      "ports": ["spird_data"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "0",
+          "argName": "spird_data"
+        }]
+    },
+    "spiwr_en": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "master",
+      "dataWidth": "1",
+      "portMap": {"spiwr_en": "DATA"},
+      "ports": ["spiwr_en"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "1",
+          "argName": "spiwr_en"
+        }]
+    },
+    "spird_en": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "master",
+      "dataWidth": "1",
+      "portMap": {"spird_en": "DATA"},
+      "ports": ["spird_en"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "1",
+          "argName": "spird_en"
+        }]
+    },
+    "spiwr_addr": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "master",
+      "dataWidth": "2",
+      "portMap": {"spiwr_addr": "DATA"},
+      "ports": ["spiwr_addr"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "1",
+          "argName": "spiwr_addr"
+        }]
+    },
+    "spird_addr": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "master",
+      "dataWidth": "2",
+      "portMap": {"spird_addr": "DATA"},
+      "ports": ["spird_addr"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "1",
+          "argName": "spird_addr"
+        }]
+    },
+    "spiwr_data": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "master",
+      "dataWidth": "32",
+      "portMap": {"spiwr_data": "DATA"},
+      "ports": ["spiwr_data"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "1",
+          "argName": "spiwr_data"
+        }]
+    },
+    "spi_strobe": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "master",
+      "dataWidth": "4",
+      "portMap": {"spi_strobe": "DATA"},
+      "ports": ["spi_strobe"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "1",
+          "argName": "spi_strobe"
+        }]
+    },
+    "cs_line": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "master",
+      "dataWidth": "2",
+      "portMap": {"cs_line": "DATA"},
+      "ports": ["cs_line"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "1",
+          "argName": "cs_line"
+        }]
+    },
+    "cnt_en": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "master",
+      "dataWidth": "1",
+      "portMap": {"cnt_en": "DATA"},
+      "ports": ["cnt_en"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "1",
+          "argName": "cnt_en"
+        }]
+    },
+    "slope": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "master",
+      "dataWidth": "1",
+      "portMap": {"slope": "DATA"},
+      "ports": ["slope"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "1",
+          "argName": "slope"
+        }]
+    },
+    "square": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "master",
+      "dataWidth": "1",
+      "portMap": {"square": "DATA"},
+      "ports": ["square"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "1",
+          "argName": "square"
+        }]
+    },
+    "avg": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "master",
+      "dataWidth": "8",
+      "portMap": {"avg": "DATA"},
+      "ports": ["avg"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "1",
+          "argName": "avg"
+        }]
+    }
+  },
+  "RtlPorts": {
+    "s_axi_control_AWVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_control_AWREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_control_AWADDR": {
+      "dir": "in",
+      "width": "5"
+    },
+    "s_axi_control_WVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_control_WREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_control_WDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "s_axi_control_WSTRB": {
+      "dir": "in",
+      "width": "4"
+    },
+    "s_axi_control_ARVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_control_ARREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_control_ARADDR": {
+      "dir": "in",
+      "width": "5"
+    },
+    "s_axi_control_RVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_control_RREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_control_RDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "s_axi_control_RRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "s_axi_control_BVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_control_BREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_control_BRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_start": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_done": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_idle": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_ready": {
+      "dir": "out",
+      "width": "1"
+    },
+    "spird_data": {
+      "dir": "in",
+      "width": "32"
+    },
+    "spiwr_en": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "spird_en": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "spiwr_addr": {
+      "dir": "out",
+      "width": "2"
+    },
+    "spird_addr": {
+      "dir": "out",
+      "width": "2"
+    },
+    "spiwr_data": {
+      "dir": "out",
+      "width": "32"
+    },
+    "spi_strobe": {
+      "dir": "out",
+      "width": "4"
+    },
+    "cs_line": {
+      "dir": "out",
+      "width": "2"
+    },
+    "cnt_en": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "slope": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "square": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "avg": {
+      "dir": "out",
+      "width": "8"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {"ModuleName": "tacho_control"},
+    "Info": {"tacho_control": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }},
+    "Metrics": {"tacho_control": {
+        "Latency": {
+          "LatencyBest": "2",
+          "LatencyAvg": "2",
+          "LatencyWorst": "4",
+          "PipelineIIMin": "3",
+          "PipelineIIMax": "5",
+          "PipelineII": "3 ~ 5",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "5.259"
+        },
+        "Area": {
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "280",
+          "UTIL_BRAM": "0",
+          "FF": "519",
+          "AVAIL_FF": "106400",
+          "UTIL_FF": "~0",
+          "LUT": "809",
+          "AVAIL_LUT": "53200",
+          "UTIL_LUT": "1",
+          "DSP": "0",
+          "AVAIL_DSP": "220",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      }}
+  },
+  "GenerateBdFiles": "0",
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2025-11-20 12:25:20 -0500",
+    "ToolName": "vitis_hls",
+    "ToolVersion": "2023.2"
+  }
+}
