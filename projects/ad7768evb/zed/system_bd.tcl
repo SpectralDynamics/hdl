@@ -46,3 +46,10 @@ close_bd_design [current_bd_design]
 file mkdir $bd_dir
 file copy -force $src_bd $bd_file
 open_bd_design $bd_file
+
+# Disable OOC synthesis for all module_ref instances (StartGen, demux1to4,
+# trigger_sel, sync_bits). These are plain Verilog modules — Vivado must not
+# look for pre-synthesized DCPs for them.
+foreach cell [get_bd_cells -filter {VLNV =~ "xilinx.com:module_ref:*"}] {
+  set_property generate_synth_checkpoint false $cell
+}
