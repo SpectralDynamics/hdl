@@ -7,6 +7,11 @@ source ../../../scripts/adi_env.tcl
 source $ad_hdl_dir/projects/scripts/adi_project_xilinx.tcl
 source $ad_hdl_dir/projects/scripts/adi_board.tcl
 
+# Disable OOC synthesis so module_ref sources (StartGen, demux1to4,
+# trigger_sel, sync_bits) are compiled in the top-level synthesis run
+# where project sources are visible, rather than in isolated OOC runs.
+set ::ADI_USE_OOC_SYNTHESIS 0
+
 adi_project ad7768evb_zed
 
 adi_project_files ad7768evb_zed [list \
