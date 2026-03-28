@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]C:\github\hdl-master\projects\ad7768evb\zed\Panther\Panther\zynq_fsbl\fsbl.elf
+	C:\github\hdl-master\projects\ad7768evb\zed\Panther\Panther\hw\system_top.bit
+	C:\github\hdl-master\projects\ad7768evb\u-boot_zynq_zed.elf
+}
