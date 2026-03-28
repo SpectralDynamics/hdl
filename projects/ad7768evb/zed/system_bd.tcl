@@ -53,3 +53,11 @@ open_bd_design $bd_file
 foreach cell [get_bd_cells -filter {VLNV =~ "xilinx.com:module_ref:*"}] {
   set_property generate_synth_checkpoint false $cell
 }
+
+# Set BD synthesis mode to None so the regenerated system.v references
+# module_ref cells by their original RTL module names (e.g. StartGen) rather
+# than OOC checkpoint wrapper names (e.g. system_StartGen_0_0).  Without this,
+# top-level synthesis cannot find the module definitions even though the .v
+# source files are in sources_1.
+set_property synth_checkpoint_mode None [get_files $bd_file]
+generate_target all [get_files $bd_file]
