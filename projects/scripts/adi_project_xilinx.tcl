@@ -272,6 +272,17 @@ proc adi_project_create {project_name mode parameter_list device {board "not-app
   }
   set_property generic $proj_params [current_fileset]
 
+  # Add any RTL sources needed for module_ref resolution before the BD is
+  # opened. Projects set ::ad_extra_sources in their system_project.tcl.
+  # These must be in the fileset before create_bd_design so Vivado can
+  # resolve module interfaces when open_bd_design runs inside system_bd.tcl.
+  if {[info exists ::ad_extra_sources]} {
+    foreach src_file $::ad_extra_sources {
+      add_files -norecurse -fileset sources_1 $src_file
+    }
+    update_compile_order -fileset sources_1
+  }
+
   create_bd_design "system"
   source system_bd.tcl
 
