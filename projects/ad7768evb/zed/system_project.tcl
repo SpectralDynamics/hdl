@@ -18,6 +18,7 @@ adi_project_files ad7768evb_zed [list \
   "system_top.v" \
   "system_constr.xdc" \
   "StartGen.v" \
+  "system_StartGen_0_0.v" \
   "demux1to4.v" \
   "trigger_sel.v" \
   "$ad_hdl_dir/projects/common/zed/zed_system_constr.xdc" \
