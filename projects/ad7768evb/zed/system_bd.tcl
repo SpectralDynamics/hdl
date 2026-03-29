@@ -41,6 +41,18 @@ foreach coe_file [glob -nocomplain [file join $coe_src "*.coe"]] {
   file copy -force $coe_file $coe_dst
 }
 
+# Add RTL sources for all module_ref instances (StartGen, demux1to4,
+# trigger_sel, sync_bits) BEFORE open_bd_design so Vivado can resolve
+# their port lists when the BD is loaded.
+add_files -norecurse -fileset sources_1 [list \
+  [file join $script_dir "StartGen.v"] \
+  [file join $script_dir "system_StartGen_0_0.v"] \
+  [file join $script_dir "demux1to4.v"] \
+  [file join $script_dir "trigger_sel.v"] \
+  [file normalize "$ad_hdl_dir/library/util_cdc/sync_bits.v"] \
+]
+update_compile_order -fileset sources_1
+
 # Close the empty BD that create_bd_design just created, copy ours in, reopen
 close_bd_design [current_bd_design]
 file mkdir $bd_dir
