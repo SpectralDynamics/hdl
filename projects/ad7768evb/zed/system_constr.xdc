@@ -118,7 +118,9 @@ set_property -dict {PACKAGE_PIN W12 IOSTANDARD LVCMOS33} [get_ports cola_cs]  ; 
 
 create_clock -period 29.800 -name adc_clk [get_ports clk_in]
 
-set_clock_groups -asynchronous -group [get_clocks adc_clk] -group [get_clocks clk_fpga_0]
+# clk_fpga_0 is defined in the PS7 IP XDC and is not visible during top-level
+# synthesis. catch silently skips this during synthesis; it applies at impl.
+catch {set_clock_groups -asynchronous -group [get_clocks adc_clk] -group [get_clocks clk_fpga_0]}
 ## set_property SLEW SLOW [get_ports iic_scl]
 ## set_property SLEW SLOW [get_ports coupling_iic_scl]
 ## set_property SLEW SLOW [get_ports coupling_iic_sda]
