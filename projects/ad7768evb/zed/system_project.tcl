@@ -36,4 +36,9 @@ adi_project_files ad7768evb_zed [list \
   "$ad_hdl_dir/library/common/ad_iobuf.v" \
   "$ad_hdl_dir/library/util_cdc/sync_bits.v" ]
 
+# Add implementation-only constraints (clock groups referencing PS7 clocks
+# that are not visible during top-level synthesis).
+add_files -norecurse -fileset constrs_1 "system_impl_constr.xdc"
+set_property used_in_synthesis false [get_files system_impl_constr.xdc]
+
 adi_project_run ad7768evb_zed
