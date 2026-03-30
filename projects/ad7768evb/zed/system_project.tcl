@@ -41,4 +41,11 @@ adi_project_files ad7768evb_zed [list \
 add_files -norecurse -fileset constrs_1 "system_impl_constr.xdc"
 set_property used_in_synthesis false [get_files system_impl_constr.xdc]
 
+# Use a timing-closure-focused implementation strategy.  The 7z020 is
+# congested with 31 AXI master connections at 100 MHz; the default placer
+# leaves zero-logic-level routing paths that exceed the 10 ns budget.
+# Performance_ExplorePostRoutePhysOpt tries multiple placer directives and
+# runs post-route physical optimisation to recover routing-dominated slack.
+set_property strategy Performance_ExplorePostRoutePhysOpt [get_runs impl_1]
+
 adi_project_run ad7768evb_zed
