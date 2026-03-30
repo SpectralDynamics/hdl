@@ -2708,9 +2708,6 @@
         "parameters": {
           "NUM_MI": {
             "value": "31"
-          },
-          "STRATEGY": {
-            "value": "1"
           }
         },
         "interface_ports": {
