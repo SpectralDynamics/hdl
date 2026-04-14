@@ -6,7 +6,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="Synch_Synch,hls_ip_2023_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg484-1,HLS_INPUT_CLOCK=30.302999,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.706000,HLS_SYN_LAT=1,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=106,HLS_SYN_LUT=182,HLS_VERSION=2023_2}" *)
+(* CORE_GENERATION_INFO="Synch_Synch,hls_ip_2023_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg484-1,HLS_INPUT_CLOCK=30.302999,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.706000,HLS_SYN_LAT=4,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=139,HLS_SYN_LUT=249,HLS_VERSION=2023_2}" *)
 
 module Synch (
         ap_clk,
@@ -16,6 +16,8 @@ module Synch (
         ap_idle,
         ap_ready,
         spiSync,
+        bSynch,
+        bSynch_ap_vld,
         ap_return,
         s_axi_control_AWVALID,
         s_axi_control_AWREADY,
@@ -36,10 +38,14 @@ module Synch (
         s_axi_control_BRESP
 );
 
-parameter    ap_ST_fsm_state1 = 2'd1;
-parameter    ap_ST_fsm_state2 = 2'd2;
+parameter    ap_ST_fsm_state1 = 6'd1;
+parameter    ap_ST_fsm_state2 = 6'd2;
+parameter    ap_ST_fsm_state3 = 6'd4;
+parameter    ap_ST_fsm_state4 = 6'd8;
+parameter    ap_ST_fsm_state5 = 6'd16;
+parameter    ap_ST_fsm_state6 = 6'd32;
 parameter    C_S_AXI_CONTROL_DATA_WIDTH = 32;
-parameter    C_S_AXI_CONTROL_ADDR_WIDTH = 5;
+parameter    C_S_AXI_CONTROL_ADDR_WIDTH = 6;
 parameter    C_S_AXI_DATA_WIDTH = 32;
 
 parameter C_S_AXI_CONTROL_WSTRB_WIDTH = (32 / 8);
@@ -52,6 +58,8 @@ output   ap_done;
 output   ap_idle;
 output   ap_ready;
 input  [0:0] spiSync;
+output  [0:0] bSynch;
+output   bSynch_ap_vld;
 output  [0:0] ap_return;
 input   s_axi_control_AWVALID;
 output   s_axi_control_AWREADY;
@@ -74,41 +82,80 @@ output  [1:0] s_axi_control_BRESP;
 reg ap_done;
 reg ap_idle;
 reg ap_ready;
+reg bSynch_ap_vld;
 
  reg    ap_rst_n_inv;
-(* fsm_encoding = "none" *) reg   [1:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [5:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 wire   [31:0] bufStart;
 reg   [31:0] bufStart_0_data_reg;
 reg    bufStart_0_vld_reg;
 reg    bufStart_0_ack_out;
+wire   [0:0] bSpuriousSynch_i;
+reg   [0:0] bSpuriousSynch_0_data_reg;
+reg    bSpuriousSynch_0_vld_reg;
+reg    bSpuriousSynch_0_ack_out;
+reg   [0:0] bSpuriousSynch_1_data_reg;
+reg    bSpuriousSynch_1_vld_reg;
+reg    bSpuriousSynch_1_vld_in;
+reg    bSpuriousSynch_1_ack_in;
+wire   [0:0] bRunningAcq;
+reg   [0:0] bRunningAcq_0_data_reg;
+reg    bRunningAcq_0_vld_reg;
+reg    bRunningAcq_0_ack_out;
+reg   [0:0] bSpuriousSynchLastIn;
+reg   [0:0] bCurrentSynch;
+reg   [0:0] SpiSyncLast;
 reg   [0:0] bStarted;
 reg   [0:0] SyncStarted;
-reg   [0:0] SpiSyncLast;
+wire   [0:0] grp_read_fu_82_p2;
+reg   [0:0] bRunningAcq_read_reg_260;
 wire    ap_CS_fsm_state2;
-wire   [0:0] icmp_ln15_fu_67_p2;
-wire   [0:0] SyncStarted_load_load_fu_101_p1;
-reg   [0:0] ap_sig_allocacmp_bStarted_load;
-wire   [0:0] spiSync_assign_load_load_fu_73_p1;
-wire   [0:0] spiSync_assign_load_1_load_fu_76_p1;
-wire   [0:0] SpiSyncLast_load_load_fu_79_p1;
+wire    ap_CS_fsm_state3;
+reg   [0:0] grp_load_fu_132_p1;
+wire    ap_CS_fsm_state5;
+reg   [0:0] ap_phi_mux_retval_0_phi_fu_111_p4;
+reg   [0:0] retval_0_reg_108;
+wire    ap_CS_fsm_state6;
+wire    ap_CS_fsm_state4;
+wire   [0:0] icmp_ln51_fu_143_p2;
+wire   [0:0] or_ln29_fu_217_p2;
+reg   [0:0] ap_sig_allocacmp_bCurrentSynch_load;
+wire   [0:0] grp_load_fu_117_p1;
+wire   [0:0] grp_load_fu_120_p1;
+wire   [0:0] grp_load_fu_123_p1;
+wire   [0:0] SyncStarted_load_load_fu_167_p1;
 reg   [0:0] ap_sig_allocacmp_SyncStarted_load;
-reg   [0:0] spiSync_assign_fu_46;
-reg   [1:0] ap_NS_fsm;
+reg   [0:0] spiSync_assign_fu_66;
+wire   [0:0] xor_ln29_fu_211_p2;
+reg   [5:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 wire    ap_ST_fsm_state2_blk;
-reg    ap_condition_115;
+wire    ap_ST_fsm_state3_blk;
+wire    ap_ST_fsm_state4_blk;
+wire    ap_ST_fsm_state5_blk;
+reg    ap_ST_fsm_state6_blk;
+reg    ap_condition_320;
+reg    ap_condition_233;
 wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 2'd1;
+#0 ap_CS_fsm = 6'd1;
 #0 bufStart_0_data_reg = 32'd0;
 #0 bufStart_0_vld_reg = 1'b0;
+#0 bSpuriousSynch_0_data_reg = 1'd0;
+#0 bSpuriousSynch_0_vld_reg = 1'b0;
+#0 bSpuriousSynch_1_data_reg = 1'd0;
+#0 bSpuriousSynch_1_vld_reg = 1'b0;
+#0 bRunningAcq_0_data_reg = 1'd0;
+#0 bRunningAcq_0_vld_reg = 1'b0;
+#0 bSpuriousSynchLastIn = 1'd0;
+#0 bCurrentSynch = 1'd0;
+#0 SpiSyncLast = 1'd0;
 #0 bStarted = 1'd0;
 #0 SyncStarted = 1'd0;
-#0 SpiSyncLast = 1'd0;
-#0 spiSync_assign_fu_46 = 1'd0;
+#0 spiSync_assign_fu_66 = 1'd0;
 end
 
 Synch_control_s_axi #(
@@ -135,7 +182,11 @@ control_s_axi_U(
     .ACLK(ap_clk),
     .ARESET(ap_rst_n_inv),
     .ACLK_EN(1'b1),
-    .bufStart(bufStart)
+    .bufStart(bufStart),
+    .bSpuriousSynch_o(bSpuriousSynch_1_data_reg),
+    .bSpuriousSynch_o_ap_vld(bSpuriousSynch_1_vld_reg),
+    .bSpuriousSynch_i(bSpuriousSynch_i),
+    .bRunningAcq(bRunningAcq)
 );
 
 always @ (posedge ap_clk) begin
@@ -147,46 +198,102 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state2)) begin
-        if ((icmp_ln15_fu_67_p2 == 1'd1)) begin
-            SpiSyncLast <= 1'd0;
-        end else if (((icmp_ln15_fu_67_p2 == 1'd0) & (spiSync_assign_load_load_fu_73_p1 == 1'd1))) begin
-            SpiSyncLast <= 1'd1;
-        end else if ((1'b1 == ap_condition_115)) begin
-            SpiSyncLast <= 1'd0;
-        end
+    if (((icmp_ln51_fu_143_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2) & (grp_read_fu_82_p2 == 1'd0))) begin
+        SpiSyncLast <= 1'd0;
+    end else if (((grp_load_fu_117_p1 == 1'd1) & (icmp_ln51_fu_143_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2) & (grp_read_fu_82_p2 == 1'd0))) begin
+        SpiSyncLast <= 1'd1;
+    end else if (((grp_load_fu_123_p1 == 1'd1) & (grp_load_fu_120_p1 == 1'd0) & (grp_load_fu_117_p1 == 1'd0) & (icmp_ln51_fu_143_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2) & (grp_read_fu_82_p2 == 1'd0))) begin
+        SpiSyncLast <= 1'd0;
+    end else if (((grp_load_fu_117_p1 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        SpiSyncLast <= 1'd1;
+    end else if (((grp_load_fu_123_p1 == 1'd1) & (grp_load_fu_120_p1 == 1'd0) & (grp_load_fu_117_p1 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
+        SpiSyncLast <= 1'd0;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state2)) begin
-        if ((icmp_ln15_fu_67_p2 == 1'd1)) begin
+    if (((1'b1 == ap_CS_fsm_state2) & (grp_read_fu_82_p2 == 1'd0))) begin
+        if ((icmp_ln51_fu_143_p2 == 1'd1)) begin
             SyncStarted <= 1'd0;
-        end else if ((1'b1 == ap_condition_115)) begin
+        end else if ((1'b1 == ap_condition_320)) begin
             SyncStarted <= 1'd1;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state2)) begin
-        if ((icmp_ln15_fu_67_p2 == 1'd1)) begin
+    if (((grp_load_fu_123_p1 == 1'd1) & (grp_load_fu_120_p1 == 1'd0) & (grp_load_fu_117_p1 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
+        bCurrentSynch <= 1'd1;
+    end else if ((((or_ln29_fu_217_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4)) | ((icmp_ln51_fu_143_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2) & (grp_read_fu_82_p2 == 1'd0)))) begin
+        bCurrentSynch <= 1'd0;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((icmp_ln51_fu_143_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2) & (grp_read_fu_82_p2 == 1'd0))) begin
+        bSpuriousSynchLastIn <= 1'd0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        bSpuriousSynchLastIn <= bSpuriousSynch_0_data_reg;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((~((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b0)) & (bSpuriousSynch_1_vld_in == 1'b1) & (bSpuriousSynch_1_vld_reg == 1'b0))) begin
+        bSpuriousSynch_1_vld_reg <= 1'b1;
+    end else if (((1'b1 == 1'b1) & (bSpuriousSynch_1_vld_in == 1'b0) & (bSpuriousSynch_1_vld_reg == 1'b1))) begin
+        bSpuriousSynch_1_vld_reg <= 1'b0;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b1 == ap_CS_fsm_state2) & (grp_read_fu_82_p2 == 1'd0))) begin
+        if ((icmp_ln51_fu_143_p2 == 1'd1)) begin
             bStarted <= 1'd0;
-        end else if (((icmp_ln15_fu_67_p2 == 1'd0) & (1'd1 == SyncStarted_load_load_fu_101_p1))) begin
+        end else if (((icmp_ln51_fu_143_p2 == 1'd0) & (1'd1 == SyncStarted_load_load_fu_167_p1))) begin
             bStarted <= 1'd1;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((~((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1)) & (bufStart_0_ack_out == 1'b1) & (1'b1 == 1'b1) & (bufStart_0_vld_reg == 1'b1)) | (~((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1)) & (1'b1 == 1'b1) & (bufStart_0_vld_reg == 1'b0)))) begin
+    if (((~((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b0)) & (bRunningAcq_0_ack_out == 1'b1) & (1'b1 == 1'b1) & (bRunningAcq_0_vld_reg == 1'b1)) | (~((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b0)) & (1'b1 == 1'b1) & (bRunningAcq_0_vld_reg == 1'b0)))) begin
+        bRunningAcq_0_data_reg <= bRunningAcq;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        bRunningAcq_read_reg_260 <= bRunningAcq_0_data_reg;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((~((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b0)) & (bSpuriousSynch_0_ack_out == 1'b1) & (1'b1 == 1'b1) & (bSpuriousSynch_0_vld_reg == 1'b1)) | (~((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b0)) & (1'b1 == 1'b1) & (bSpuriousSynch_0_vld_reg == 1'b0)))) begin
+        bSpuriousSynch_0_data_reg <= bSpuriousSynch_i;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((~((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b0)) & (1'b1 == 1'b1) & (bSpuriousSynch_1_vld_in == 1'b1) & (bSpuriousSynch_1_vld_reg == 1'b1)) | (~((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b0)) & (bSpuriousSynch_1_vld_in == 1'b1) & (bSpuriousSynch_1_vld_reg == 1'b0)))) begin
+        bSpuriousSynch_1_data_reg <= grp_load_fu_132_p1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((~((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b0)) & (bufStart_0_ack_out == 1'b1) & (1'b1 == 1'b1) & (bufStart_0_vld_reg == 1'b1)) | (~((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b0)) & (1'b1 == 1'b1) & (bufStart_0_vld_reg == 1'b0)))) begin
         bufStart_0_data_reg <= bufStart;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        spiSync_assign_fu_46 <= spiSync;
+    if (((1'b1 == ap_CS_fsm_state3) | ((bSpuriousSynch_1_ack_in == 1'b1) & (1'b1 == ap_CS_fsm_state6) & (bRunningAcq_read_reg_260 == 1'd1)))) begin
+        retval_0_reg_108 <= bStarted;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
+        spiSync_assign_fu_66 <= spiSync;
     end
 end
 
@@ -200,8 +307,22 @@ end
 
 assign ap_ST_fsm_state2_blk = 1'b0;
 
+assign ap_ST_fsm_state3_blk = 1'b0;
+
+assign ap_ST_fsm_state4_blk = 1'b0;
+
+assign ap_ST_fsm_state5_blk = 1'b0;
+
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state2)) begin
+    if ((bSpuriousSynch_1_ack_in == 1'b0)) begin
+        ap_ST_fsm_state6_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state6_blk = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((bSpuriousSynch_1_ack_in == 1'b1) & (1'b1 == ap_CS_fsm_state6))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -209,7 +330,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1))) begin
+    if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b0))) begin
         ap_idle = 1'b1;
     end else begin
         ap_idle = 1'b0;
@@ -217,7 +338,15 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state2)) begin
+    if (((1'b1 == ap_CS_fsm_state6) & (bRunningAcq_read_reg_260 == 1'd1))) begin
+        ap_phi_mux_retval_0_phi_fu_111_p4 = bStarted;
+    end else begin
+        ap_phi_mux_retval_0_phi_fu_111_p4 = retval_0_reg_108;
+    end
+end
+
+always @ (*) begin
+    if (((bSpuriousSynch_1_ack_in == 1'b1) & (1'b1 == ap_CS_fsm_state6))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -225,7 +354,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln15_fu_67_p2 == 1'd0) & (1'd1 == SpiSyncLast_load_load_fu_79_p1) & (1'b1 == ap_CS_fsm_state2) & (spiSync_assign_load_1_load_fu_76_p1 == 1'd0) & (spiSync_assign_load_load_fu_73_p1 == 1'd0))) begin
+    if (((grp_load_fu_123_p1 == 1'd1) & (grp_load_fu_120_p1 == 1'd0) & (grp_load_fu_117_p1 == 1'd0) & (icmp_ln51_fu_143_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2) & (grp_read_fu_82_p2 == 1'd0))) begin
         ap_sig_allocacmp_SyncStarted_load = 1'd1;
     end else begin
         ap_sig_allocacmp_SyncStarted_load = SyncStarted;
@@ -233,21 +362,61 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state2)) begin
-        if ((icmp_ln15_fu_67_p2 == 1'd1)) begin
-            ap_sig_allocacmp_bStarted_load = 1'd0;
-        end else if (((icmp_ln15_fu_67_p2 == 1'd0) & (1'd1 == SyncStarted_load_load_fu_101_p1))) begin
-            ap_sig_allocacmp_bStarted_load = 1'd1;
+    if ((1'b1 == ap_CS_fsm_state4)) begin
+        if ((1'b1 == ap_condition_233)) begin
+            ap_sig_allocacmp_bCurrentSynch_load = 1'd1;
+        end else if ((or_ln29_fu_217_p2 == 1'd0)) begin
+            ap_sig_allocacmp_bCurrentSynch_load = 1'd0;
         end else begin
-            ap_sig_allocacmp_bStarted_load = bStarted;
+            ap_sig_allocacmp_bCurrentSynch_load = bCurrentSynch;
         end
     end else begin
-        ap_sig_allocacmp_bStarted_load = bStarted;
+        ap_sig_allocacmp_bCurrentSynch_load = bCurrentSynch;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state2)) begin
+    if (((1'b1 == ap_CS_fsm_state2) | ((bSpuriousSynch_1_ack_in == 1'b1) & (1'b1 == ap_CS_fsm_state6)))) begin
+        bRunningAcq_0_ack_out = 1'b1;
+    end else begin
+        bRunningAcq_0_ack_out = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state4) | ((bSpuriousSynch_1_ack_in == 1'b1) & (1'b1 == ap_CS_fsm_state6)))) begin
+        bSpuriousSynch_0_ack_out = 1'b1;
+    end else begin
+        bSpuriousSynch_0_ack_out = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((bSpuriousSynch_1_vld_reg == 1'b0) | ((1'b1 == 1'b1) & (bSpuriousSynch_1_vld_reg == 1'b1)))) begin
+        bSpuriousSynch_1_ack_in = 1'b1;
+    end else begin
+        bSpuriousSynch_1_ack_in = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state5)) begin
+        bSpuriousSynch_1_vld_in = 1'b1;
+    end else begin
+        bSpuriousSynch_1_vld_in = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state4)) begin
+        bSynch_ap_vld = 1'b1;
+    end else begin
+        bSynch_ap_vld = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state2) | ((bSpuriousSynch_1_ack_in == 1'b1) & (1'b1 == ap_CS_fsm_state6)))) begin
         bufStart_0_ack_out = 1'b1;
     end else begin
         bufStart_0_ack_out = 1'b0;
@@ -255,16 +424,46 @@ always @ (*) begin
 end
 
 always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state5)) begin
+        grp_load_fu_132_p1 = bCurrentSynch;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_load_fu_132_p1 = ap_sig_allocacmp_bCurrentSynch_load;
+    end else begin
+        grp_load_fu_132_p1 = 'bx;
+    end
+end
+
+always @ (*) begin
     case (ap_CS_fsm)
         ap_ST_fsm_state1 : begin
-            if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
+            if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end
         end
         ap_ST_fsm_state2 : begin
-            ap_NS_fsm = ap_ST_fsm_state1;
+            if (((1'b1 == ap_CS_fsm_state2) & (grp_read_fu_82_p2 == 1'd0))) begin
+                ap_NS_fsm = ap_ST_fsm_state3;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state4;
+            end
+        end
+        ap_ST_fsm_state3 : begin
+            ap_NS_fsm = ap_ST_fsm_state6;
+        end
+        ap_ST_fsm_state4 : begin
+            ap_NS_fsm = ap_ST_fsm_state5;
+        end
+        ap_ST_fsm_state5 : begin
+            ap_NS_fsm = ap_ST_fsm_state6;
+        end
+        ap_ST_fsm_state6 : begin
+            if (((bSpuriousSynch_1_ack_in == 1'b1) & (1'b1 == ap_CS_fsm_state6))) begin
+                ap_NS_fsm = ap_ST_fsm_state1;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state6;
+            end
         end
         default : begin
             ap_NS_fsm = 'bx;
@@ -272,28 +471,48 @@ always @ (*) begin
     endcase
 end
 
-assign SpiSyncLast_load_load_fu_79_p1 = SpiSyncLast;
-
-assign SyncStarted_load_load_fu_101_p1 = ap_sig_allocacmp_SyncStarted_load;
+assign SyncStarted_load_load_fu_167_p1 = ap_sig_allocacmp_SyncStarted_load;
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
 assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 
+assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
+
+assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
+
+assign ap_CS_fsm_state5 = ap_CS_fsm[32'd4];
+
+assign ap_CS_fsm_state6 = ap_CS_fsm[32'd5];
+
 always @ (*) begin
-    ap_condition_115 = ((icmp_ln15_fu_67_p2 == 1'd0) & (1'd1 == SpiSyncLast_load_load_fu_79_p1) & (spiSync_assign_load_1_load_fu_76_p1 == 1'd0) & (spiSync_assign_load_load_fu_73_p1 == 1'd0));
+    ap_condition_233 = ((grp_load_fu_123_p1 == 1'd1) & (grp_load_fu_120_p1 == 1'd0) & (grp_load_fu_117_p1 == 1'd0));
 end
 
-assign ap_return = ap_sig_allocacmp_bStarted_load;
+always @ (*) begin
+    ap_condition_320 = ((grp_load_fu_123_p1 == 1'd1) & (grp_load_fu_120_p1 == 1'd0) & (grp_load_fu_117_p1 == 1'd0) & (icmp_ln51_fu_143_p2 == 1'd0));
+end
+
+assign ap_return = ap_phi_mux_retval_0_phi_fu_111_p4;
 
 always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
 end
 
-assign icmp_ln15_fu_67_p2 = ((bufStart_0_data_reg == 32'd0) ? 1'b1 : 1'b0);
+assign bSynch = grp_load_fu_132_p1;
 
-assign spiSync_assign_load_1_load_fu_76_p1 = spiSync_assign_fu_46;
+assign grp_load_fu_117_p1 = spiSync_assign_fu_66;
 
-assign spiSync_assign_load_load_fu_73_p1 = spiSync_assign_fu_46;
+assign grp_load_fu_120_p1 = spiSync_assign_fu_66;
+
+assign grp_load_fu_123_p1 = SpiSyncLast;
+
+assign grp_read_fu_82_p2 = bRunningAcq_0_data_reg;
+
+assign icmp_ln51_fu_143_p2 = ((bufStart_0_data_reg == 32'd0) ? 1'b1 : 1'b0);
+
+assign or_ln29_fu_217_p2 = (xor_ln29_fu_211_p2 | bSpuriousSynch_0_data_reg);
+
+assign xor_ln29_fu_211_p2 = (bSpuriousSynchLastIn ^ 1'd1);
 
 endmodule //Synch

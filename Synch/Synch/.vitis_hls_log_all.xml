@@ -12,12 +12,15 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Register 'SpiSyncLast' is power-on initialization." projectName="Synch" solutionName="solution1" date="2026-02-24T14:36:53.166-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'SyncStarted' is power-on initialization." projectName="Synch" solutionName="solution1" date="2026-02-24T14:36:53.152-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'bStarted' is power-on initialization." projectName="Synch" solutionName="solution1" date="2026-02-24T14:36:53.138-0500" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="Synch" solutionName="solution1" date="2026-02-24T14:36:53.085-0500" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:13:36)" projectName="Synch" solutionName="solution1" date="2026-02-24T14:36:43.993-0500" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:12:36)" projectName="Synch" solutionName="solution1" date="2026-02-24T14:36:40.822-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'SyncStarted' is power-on initialization." projectName="Synch" solutionName="solution1" date="2026-04-06T17:29:21.497-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'bStarted' is power-on initialization." projectName="Synch" solutionName="solution1" date="2026-04-06T17:29:21.477-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'SpiSyncLast' is power-on initialization." projectName="Synch" solutionName="solution1" date="2026-04-06T17:29:21.435-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'bCurrentSynch' is power-on initialization." projectName="Synch" solutionName="solution1" date="2026-04-06T17:29:21.415-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'bSpuriousSynchLastIn' is power-on initialization." projectName="Synch" solutionName="solution1" date="2026-04-06T17:29:21.400-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="Synch" solutionName="solution1" date="2026-04-06T17:29:21.278-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:19:36)" projectName="Synch" solutionName="solution1" date="2026-04-06T17:29:12.882-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:18:36)" projectName="Synch" solutionName="solution1" date="2026-04-06T17:29:10.148-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:15:36)" projectName="Synch" solutionName="solution1" date="2026-04-06T17:29:10.135-0400" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

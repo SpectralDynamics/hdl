@@ -10559,12 +10559,7 @@
       },
       "GND_1_dout": {
         "ports": [
-          "GND_1/dout",
-          "sys_concat_intc/In0",
-          "sys_concat_intc/In1",
-          "sys_concat_intc/In2",
-          "sys_concat_intc/In3",
-          "sys_concat_intc/In4"
+          "GND_1/dout"
         ]
       },
       "StartGen_0_strtpuls": {
@@ -10785,8 +10780,7 @@
       "axi_ad7768_adc_adc_reset": {
         "ports": [
           "axi_ad7768_adc/adc_reset",
-          "rst_axi_ad7768_adc_33M/ext_reset_in",
-          "util_vector_logic_3/Op1"
+          "rst_axi_ad7768_adc_33M/ext_reset_in"
         ]
       },
       "axi_ad7768_adc_adc_sync": {
@@ -11670,6 +11664,7 @@
       "util_vector_logic_0_Res": {
         "ports": [
           "util_vector_logic_0/Res",
+          "util_vector_logic_3/Op1",
           "util_vector_logic_3/Op2",
           "Synch_0/spiSync"
         ]

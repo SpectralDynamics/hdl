@@ -3226,3 +3226,1094 @@ INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog
 INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
 INFO: [HLS 200-802] Generated output file Synch/solution1/impl/export.zip
 INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 13.553 seconds; current allocated memory: 6.324 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 30.303ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 33MHz -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -version 1.1 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0 
+INFO: [HLS 200-1510] Running: source ./Synch/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name Synch Synch 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.096 seconds; current allocated memory: 198.645 MB.
+INFO: [HLS 200-10] Analyzing design file 'Synch.cpp' ... 
+WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:12:36)
+WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:14:36)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 7.42 seconds; current allocated memory: 201.074 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 37 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 35 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 35 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 35 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 35 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 35 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 35 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 35 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 35 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 35 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 35 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 35 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 35 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 35 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 41 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 9.325 seconds; current allocated memory: 203.105 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 203.109 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.158 seconds; current allocated memory: 207.531 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 208.641 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.092 seconds; current allocated memory: 229.176 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.063 seconds; current allocated memory: 229.184 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Synch' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Synch' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.561 seconds; current allocated memory: 229.184 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.123 seconds; current allocated memory: 229.184 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Synch' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bufStart' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bRunningAcq' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/spiSync' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'Synch' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'bStarted' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'SyncStarted' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'SpiSyncLast' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'bufStart' and 'bRunningAcq' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Synch'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.243 seconds; current allocated memory: 229.715 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.607 seconds; current allocated memory: 234.500 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.815 seconds; current allocated memory: 240.539 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for Synch.
+INFO: [VLOG 209-307] Generating Verilog RTL for Synch.
+INFO: [HLS 200-789] **** Estimated Fmax: 120.25 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 2 seconds. Elapsed time: 19.705 seconds; current allocated memory: 42.215 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 30.303ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 33MHz -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -version 1.1 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0 
+INFO: [HLS 200-1510] Running: source ./Synch/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name Synch Synch 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file Synch/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 29.268 seconds; current allocated memory: 7.129 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 30.303ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 33MHz -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -version 1.1 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0 
+INFO: [HLS 200-1510] Running: source ./Synch/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name Synch Synch 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.097 seconds; current allocated memory: 192.656 MB.
+INFO: [HLS 200-10] Analyzing design file 'Synch.cpp' ... 
+WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:12:36)
+WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:14:36)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.5 seconds; current allocated memory: 194.828 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 41 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 50 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 51 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.75 seconds; current allocated memory: 197.098 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 197.098 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.034 seconds; current allocated memory: 201.613 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.069 seconds; current allocated memory: 203.051 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.073 seconds; current allocated memory: 223.477 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.039 seconds; current allocated memory: 223.484 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Synch' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Synch' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.308 seconds; current allocated memory: 223.484 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.097 seconds; current allocated memory: 223.484 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Synch' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bufStart' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bSpuriousSynch' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bRunningAcq' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/spiSync' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'Synch' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'bStarted' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'SyncStarted' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'SpiSyncLast' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'bufStart' and 'bRunningAcq' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Synch'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.261 seconds; current allocated memory: 224.254 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.557 seconds; current allocated memory: 229.113 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.74 seconds; current allocated memory: 235.445 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for Synch.
+INFO: [VLOG 209-307] Generating Verilog RTL for Synch.
+INFO: [HLS 200-789] **** Estimated Fmax: 120.25 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 13.65 seconds; current allocated memory: 43.094 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 30.303ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 33MHz -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -version 1.1 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0 
+INFO: [HLS 200-1510] Running: source ./Synch/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name Synch Synch 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file Synch/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 15.031 seconds; current allocated memory: 7.551 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 30.303ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 33MHz -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -version 1.1 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0 
+INFO: [HLS 200-1510] Running: source ./Synch/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name Synch Synch 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.093 seconds; current allocated memory: 198.109 MB.
+INFO: [HLS 200-10] Analyzing design file 'Synch.cpp' ... 
+WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:12:36)
+WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:14:36)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.47 seconds; current allocated memory: 200.273 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 41 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 50 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 51 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 8.23 seconds; current allocated memory: 202.289 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 202.289 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.031 seconds; current allocated memory: 206.969 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.045 seconds; current allocated memory: 208.496 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.056 seconds; current allocated memory: 228.602 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.032 seconds; current allocated memory: 228.609 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Synch' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Synch' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.272 seconds; current allocated memory: 228.609 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.105 seconds; current allocated memory: 228.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Synch' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bufStart' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bSpuriousSynch' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bRunningAcq' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/spiSync' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'Synch' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'bStarted' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'SyncStarted' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'SpiSyncLast' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'bufStart' and 'bRunningAcq' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Synch'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.306 seconds; current allocated memory: 229.395 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.549 seconds; current allocated memory: 234.547 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.748 seconds; current allocated memory: 240.594 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for Synch.
+INFO: [VLOG 209-307] Generating Verilog RTL for Synch.
+INFO: [HLS 200-789] **** Estimated Fmax: 120.25 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 14.083 seconds; current allocated memory: 42.965 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 30.303ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 33MHz -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -version 1.1 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0 
+INFO: [HLS 200-1510] Running: source ./Synch/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name Synch Synch 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.105 seconds; current allocated memory: 198.430 MB.
+INFO: [HLS 200-10] Analyzing design file 'Synch.cpp' ... 
+WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:12:36)
+WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:15:36)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 3.445 seconds; current allocated memory: 200.402 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 44 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 51 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 52 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.626 seconds; current allocated memory: 202.387 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 202.387 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.031 seconds; current allocated memory: 206.977 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.034 seconds; current allocated memory: 208.379 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.054 seconds; current allocated memory: 228.695 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.036 seconds; current allocated memory: 228.699 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Synch' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Synch' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 228.699 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.108 seconds; current allocated memory: 228.699 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Synch' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bufStart' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bSpuriousSynch' to 's_axilite & ap_ovld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bRunningAcq' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/spiSync' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'Synch' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'bStarted' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'SyncStarted' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'SpiSyncLast' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'bufStart', 'bSpuriousSynch' and 'bRunningAcq' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Synch'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.273 seconds; current allocated memory: 229.879 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.532 seconds; current allocated memory: 234.809 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.81 seconds; current allocated memory: 240.930 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for Synch.
+INFO: [VLOG 209-307] Generating Verilog RTL for Synch.
+INFO: [HLS 200-789] **** Estimated Fmax: 129.77 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 2 seconds. Elapsed time: 13.453 seconds; current allocated memory: 42.910 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 30.303ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 33MHz -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -version 1.1 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0 
+INFO: [HLS 200-1510] Running: source ./Synch/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name Synch Synch 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file Synch/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 14.777 seconds; current allocated memory: 7.176 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 30.303ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 33MHz -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -version 1.1 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0 
+INFO: [HLS 200-1510] Running: source ./Synch/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name Synch Synch 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.098 seconds; current allocated memory: 198.176 MB.
+INFO: [HLS 200-10] Analyzing design file 'Synch.cpp' ... 
+WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:12:36)
+WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:15:36)
+WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:16:36)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.014 seconds; current allocated memory: 200.613 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 59 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 67 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 68 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.794 seconds; current allocated memory: 202.613 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 202.613 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.029 seconds; current allocated memory: 206.848 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.035 seconds; current allocated memory: 208.004 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.062 seconds; current allocated memory: 228.590 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.035 seconds; current allocated memory: 228.594 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Synch' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Synch' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.326 seconds; current allocated memory: 228.594 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.111 seconds; current allocated memory: 228.594 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Synch' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bufStart' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bSpuriousSynch' to 's_axilite & ap_ovld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bRunningAcq' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/spiSync' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bSynch' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'Synch' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'SpiSyncLast' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'SyncStarted' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'bStarted' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'bufStart', 'bSpuriousSynch' and 'bRunningAcq' to AXI-Lite port control.
+WARNING: [RTGEN 206-101] Port 'Synch/bSynch' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Synch'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.304 seconds; current allocated memory: 229.832 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.677 seconds; current allocated memory: 235.656 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.796 seconds; current allocated memory: 241.492 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for Synch.
+INFO: [VLOG 209-307] Generating Verilog RTL for Synch.
+INFO: [HLS 200-789] **** Estimated Fmax: 129.77 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 14.416 seconds; current allocated memory: 43.434 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 30.303ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 33MHz -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -version 1.1 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0 
+INFO: [HLS 200-1510] Running: source ./Synch/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name Synch Synch 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file Synch/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 14.951 seconds; current allocated memory: 7.148 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 30.303ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 33MHz -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -version 1.1 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0 
+INFO: [HLS 200-1510] Running: source ./Synch/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name Synch Synch 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.124 seconds; current allocated memory: 198.129 MB.
+INFO: [HLS 200-10] Analyzing design file 'Synch.cpp' ... 
+WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:12:36)
+WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:15:36)
+WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:16:36)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.514 seconds; current allocated memory: 200.434 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 55 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 55 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 55 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 55 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 55 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 55 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 55 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 55 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 55 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 55 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 55 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 55 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 55 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 65 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 66 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.747 seconds; current allocated memory: 202.590 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 202.590 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.032 seconds; current allocated memory: 206.871 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.051 seconds; current allocated memory: 207.949 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.062 seconds; current allocated memory: 228.648 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.037 seconds; current allocated memory: 228.668 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Synch' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Synch' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.278 seconds; current allocated memory: 228.668 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 228.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Synch' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bufStart' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bSpuriousSynch' to 's_axilite & ap_ovld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bRunningAcq' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/spiSync' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bSynch' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'Synch' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'SpiSyncLast' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'SyncStarted' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'bStarted' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'bufStart', 'bSpuriousSynch' and 'bRunningAcq' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Synch'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.304 seconds; current allocated memory: 229.848 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.587 seconds; current allocated memory: 235.168 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.779 seconds; current allocated memory: 241.555 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for Synch.
+INFO: [VLOG 209-307] Generating Verilog RTL for Synch.
+INFO: [HLS 200-789] **** Estimated Fmax: 129.77 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 13.785 seconds; current allocated memory: 43.500 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 30.303ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 33MHz -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -version 1.1 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0 
+INFO: [HLS 200-1510] Running: source ./Synch/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name Synch Synch 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file Synch/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 14.994 seconds; current allocated memory: 7.676 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 30.303ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 33MHz -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -version 1.1 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0 
+INFO: [HLS 200-1510] Running: source ./Synch/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name Synch Synch 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.104 seconds; current allocated memory: 202.832 MB.
+INFO: [HLS 200-10] Analyzing design file 'Synch.cpp' ... 
+WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:12:36)
+WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:15:36)
+WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:16:36)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.198 seconds; current allocated memory: 205.219 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 58 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 66 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 67 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 8.104 seconds; current allocated memory: 207.660 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 207.660 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.036 seconds; current allocated memory: 211.754 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.121 seconds; current allocated memory: 213.211 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.065 seconds; current allocated memory: 233.824 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.059 seconds; current allocated memory: 233.828 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Synch' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Synch' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.207 seconds; current allocated memory: 233.828 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.138 seconds; current allocated memory: 233.828 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Synch' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bufStart' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bSpuriousSynch' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bRunningAcq' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/spiSync' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bSynch' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'Synch' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'SpiSyncLast' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'SyncStarted' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'bStarted' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'bufStart', 'bSpuriousSynch' and 'bRunningAcq' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Synch'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.51 seconds; current allocated memory: 234.746 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.761 seconds; current allocated memory: 240.434 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.884 seconds; current allocated memory: 246.562 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for Synch.
+INFO: [VLOG 209-307] Generating Verilog RTL for Synch.
+INFO: [HLS 200-789] **** Estimated Fmax: 120.25 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 16.42 seconds; current allocated memory: 43.824 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 30.303ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 33MHz -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -version 1.1 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0 
+INFO: [HLS 200-1510] Running: source ./Synch/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name Synch Synch 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file Synch/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 46.784 seconds; current allocated memory: 7.266 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 30.303ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 33MHz -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -version 1.1 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0 
+INFO: [HLS 200-1510] Running: source ./Synch/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name Synch Synch 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.123 seconds; current allocated memory: 198.828 MB.
+INFO: [HLS 200-10] Analyzing design file 'Synch.cpp' ... 
+WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:12:36)
+WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:15:36)
+WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:16:36)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.718 seconds; current allocated memory: 200.699 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 59 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 67 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 68 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.771 seconds; current allocated memory: 202.914 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 202.914 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.032 seconds; current allocated memory: 207.125 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.083 seconds; current allocated memory: 208.566 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 229.258 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.055 seconds; current allocated memory: 229.266 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Synch' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Synch' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.404 seconds; current allocated memory: 229.266 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.37 seconds; current allocated memory: 229.266 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Synch' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bufStart' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bSpuriousSynch' to 's_axilite & ap_ovld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bRunningAcq' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/spiSync' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bSynch' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'Synch' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'SpiSyncLast' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'SyncStarted' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'bStarted' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'bufStart', 'bSpuriousSynch' and 'bRunningAcq' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Synch'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.345 seconds; current allocated memory: 230.137 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.593 seconds; current allocated memory: 235.590 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.861 seconds; current allocated memory: 241.906 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for Synch.
+INFO: [VLOG 209-307] Generating Verilog RTL for Synch.
+INFO: [HLS 200-789] **** Estimated Fmax: 120.25 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 14.731 seconds; current allocated memory: 43.129 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 30.303ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 33MHz -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -version 1.1 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0 
+INFO: [HLS 200-1510] Running: source ./Synch/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name Synch Synch 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file Synch/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 15.533 seconds; current allocated memory: 7.617 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 30.303ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 33MHz -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -version 1.1 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0 
+INFO: [HLS 200-1510] Running: source ./Synch/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name Synch Synch 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.114 seconds; current allocated memory: 198.953 MB.
+INFO: [HLS 200-10] Analyzing design file 'Synch.cpp' ... 
+WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:12:36)
+WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:15:36)
+WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:16:36)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.324 seconds; current allocated memory: 200.789 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 58 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 66 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 67 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 8.011 seconds; current allocated memory: 202.988 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 202.988 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.252 seconds; current allocated memory: 207.398 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.037 seconds; current allocated memory: 208.469 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.074 seconds; current allocated memory: 229.254 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.045 seconds; current allocated memory: 229.258 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Synch' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Synch' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.269 seconds; current allocated memory: 229.258 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.181 seconds; current allocated memory: 229.258 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Synch' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bufStart' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bSpuriousSynch' to 's_axilite & ap_ovld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bRunningAcq' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/spiSync' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bSynch' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'Synch' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'SpiSyncLast' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'SyncStarted' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'bStarted' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'bufStart', 'bSpuriousSynch' and 'bRunningAcq' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Synch'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.446 seconds; current allocated memory: 230.527 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.636 seconds; current allocated memory: 235.953 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.826 seconds; current allocated memory: 242.301 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for Synch.
+INFO: [VLOG 209-307] Generating Verilog RTL for Synch.
+INFO: [HLS 200-789] **** Estimated Fmax: 129.77 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 15.437 seconds; current allocated memory: 43.484 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 30.303ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 33MHz -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -version 1.1 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0 
+INFO: [HLS 200-1510] Running: source ./Synch/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name Synch Synch 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file Synch/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 15.061 seconds; current allocated memory: 6.988 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 30.303ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 33MHz -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -version 1.1 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0 
+INFO: [HLS 200-1510] Running: source ./Synch/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name Synch Synch 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.121 seconds; current allocated memory: 198.645 MB.
+INFO: [HLS 200-10] Analyzing design file 'Synch.cpp' ... 
+WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:15:36)
+WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:18:36)
+WARNING: [HLS 207-5565] unexpected pragma parameter 'register' (Synch.cpp:19:36)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 4.385 seconds; current allocated memory: 200.527 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 63 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 61 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 62 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 62 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 62 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 62 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 62 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 62 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 62 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 62 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 62 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 62 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 62 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 62 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 72 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 73 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/github/hdl-master/Synch/Synch/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.706 seconds; current allocated memory: 202.672 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 202.672 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.037 seconds; current allocated memory: 206.906 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.039 seconds; current allocated memory: 208.457 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.064 seconds; current allocated memory: 229.047 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.036 seconds; current allocated memory: 229.051 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Synch' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Synch' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.226 seconds; current allocated memory: 229.051 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.128 seconds; current allocated memory: 229.051 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Synch' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bufStart' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bSpuriousSynch' to 's_axilite & ap_ovld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bRunningAcq' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/spiSync' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Synch/bSynch' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'Synch' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'bSpuriousSynchLastIn' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'bCurrentSynch' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'SpiSyncLast' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'bStarted' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'SyncStarted' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'bufStart', 'bSpuriousSynch' and 'bRunningAcq' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Synch'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.344 seconds; current allocated memory: 230.668 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.642 seconds; current allocated memory: 235.977 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.833 seconds; current allocated memory: 242.492 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for Synch.
+INFO: [VLOG 209-307] Generating Verilog RTL for Synch.
+INFO: [HLS 200-789] **** Estimated Fmax: 129.77 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 14.677 seconds; current allocated memory: 43.930 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 30.303ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.1
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 33MHz -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -version 1.1 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0 
+INFO: [HLS 200-1510] Running: source ./Synch/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name Synch Synch 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file Synch/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 15.204 seconds; current allocated memory: 7.238 MB.

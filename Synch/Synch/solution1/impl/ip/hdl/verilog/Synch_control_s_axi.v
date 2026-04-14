@@ -8,7 +8,7 @@
 `timescale 1ns/1ps
 module Synch_control_s_axi
 #(parameter
-    C_S_AXI_ADDR_WIDTH = 5,
+    C_S_AXI_ADDR_WIDTH = 6,
     C_S_AXI_DATA_WIDTH = 32
 )(
     input  wire                          ACLK,
@@ -31,7 +31,11 @@ module Synch_control_s_axi
     output wire [1:0]                    RRESP,
     output wire                          RVALID,
     input  wire                          RREADY,
-    output wire [31:0]                   bufStart
+    output wire [31:0]                   bufStart,
+    output wire [0:0]                    bSpuriousSynch_i,
+    input  wire [0:0]                    bSpuriousSynch_o,
+    input  wire                          bSpuriousSynch_o_ap_vld,
+    output wire [0:0]                    bRunningAcq
 );
 //------------------------Address Info-------------------
 // Protocol Used: ap_ctrl_none
@@ -43,20 +47,40 @@ module Synch_control_s_axi
 // 0x10 : Data signal of bufStart
 //        bit 31~0 - bufStart[31:0] (Read/Write)
 // 0x14 : reserved
+// 0x18 : Data signal of bSpuriousSynch_i
+//        bit 0  - bSpuriousSynch_i[0] (Read/Write)
+//        others - reserved
+// 0x1c : reserved
+// 0x20 : Data signal of bSpuriousSynch_o
+//        bit 0  - bSpuriousSynch_o[0] (Read)
+//        others - reserved
+// 0x24 : Control signal of bSpuriousSynch_o
+//        bit 0  - bSpuriousSynch_o_ap_vld (Read/COR)
+//        others - reserved
+// 0x28 : Data signal of bRunningAcq
+//        bit 0  - bRunningAcq[0] (Read/Write)
+//        others - reserved
+// 0x2c : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
 localparam
-    ADDR_BUFSTART_DATA_0 = 5'h10,
-    ADDR_BUFSTART_CTRL   = 5'h14,
-    WRIDLE               = 2'd0,
-    WRDATA               = 2'd1,
-    WRRESP               = 2'd2,
-    WRRESET              = 2'd3,
-    RDIDLE               = 2'd0,
-    RDDATA               = 2'd1,
-    RDRESET              = 2'd2,
-    ADDR_BITS                = 5;
+    ADDR_BUFSTART_DATA_0         = 6'h10,
+    ADDR_BUFSTART_CTRL           = 6'h14,
+    ADDR_BSPURIOUSSYNCH_I_DATA_0 = 6'h18,
+    ADDR_BSPURIOUSSYNCH_I_CTRL   = 6'h1c,
+    ADDR_BSPURIOUSSYNCH_O_DATA_0 = 6'h20,
+    ADDR_BSPURIOUSSYNCH_O_CTRL   = 6'h24,
+    ADDR_BRUNNINGACQ_DATA_0      = 6'h28,
+    ADDR_BRUNNINGACQ_CTRL        = 6'h2c,
+    WRIDLE                       = 2'd0,
+    WRDATA                       = 2'd1,
+    WRRESP                       = 2'd2,
+    WRRESET                      = 2'd3,
+    RDIDLE                       = 2'd0,
+    RDDATA                       = 2'd1,
+    RDRESET                      = 2'd2,
+    ADDR_BITS                = 6;
 
 //------------------------Local signal-------------------
     reg  [1:0]                    wstate = WRRESET;
@@ -72,6 +96,10 @@ localparam
     wire [ADDR_BITS-1:0]          raddr;
     // internal registers
     reg  [31:0]                   int_bufStart = 'b0;
+    reg  [0:0]                    int_bSpuriousSynch_i = 'b0;
+    reg                           int_bSpuriousSynch_o_ap_vld;
+    reg  [0:0]                    int_bSpuriousSynch_o = 'b0;
+    reg  [0:0]                    int_bRunningAcq = 'b0;
 
 //------------------------Instantiation------------------
 
@@ -167,6 +195,18 @@ always @(posedge ACLK) begin
                 ADDR_BUFSTART_DATA_0: begin
                     rdata <= int_bufStart[31:0];
                 end
+                ADDR_BSPURIOUSSYNCH_I_DATA_0: begin
+                    rdata <= int_bSpuriousSynch_i[0:0];
+                end
+                ADDR_BSPURIOUSSYNCH_O_DATA_0: begin
+                    rdata <= int_bSpuriousSynch_o[0:0];
+                end
+                ADDR_BSPURIOUSSYNCH_O_CTRL: begin
+                    rdata[0] <= int_bSpuriousSynch_o_ap_vld;
+                end
+                ADDR_BRUNNINGACQ_DATA_0: begin
+                    rdata <= int_bRunningAcq[0:0];
+                end
             endcase
         end
     end
@@ -174,7 +214,9 @@ end
 
 
 //------------------------Register logic-----------------
-assign bufStart = int_bufStart;
+assign bufStart         = int_bufStart;
+assign bSpuriousSynch_i = int_bSpuriousSynch_i;
+assign bRunningAcq      = int_bRunningAcq;
 // int_bufStart[31:0]
 always @(posedge ACLK) begin
     if (ARESET)
@@ -182,6 +224,48 @@ always @(posedge ACLK) begin
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_BUFSTART_DATA_0)
             int_bufStart[31:0] <= (WDATA[31:0] & wmask) | (int_bufStart[31:0] & ~wmask);
+    end
+end
+
+// int_bSpuriousSynch_i[0:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_bSpuriousSynch_i[0:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_BSPURIOUSSYNCH_I_DATA_0)
+            int_bSpuriousSynch_i[0:0] <= (WDATA[31:0] & wmask) | (int_bSpuriousSynch_i[0:0] & ~wmask);
+    end
+end
+
+// int_bSpuriousSynch_o
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_bSpuriousSynch_o <= 0;
+    else if (ACLK_EN) begin
+        if (bSpuriousSynch_o_ap_vld)
+            int_bSpuriousSynch_o <= bSpuriousSynch_o;
+    end
+end
+
+// int_bSpuriousSynch_o_ap_vld
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_bSpuriousSynch_o_ap_vld <= 1'b0;
+    else if (ACLK_EN) begin
+        if (bSpuriousSynch_o_ap_vld)
+            int_bSpuriousSynch_o_ap_vld <= 1'b1;
+        else if (ar_hs && raddr == ADDR_BSPURIOUSSYNCH_O_CTRL)
+            int_bSpuriousSynch_o_ap_vld <= 1'b0; // clear on read
+    end
+end
+
+// int_bRunningAcq[0:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_bRunningAcq[0:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_BRUNNINGACQ_DATA_0)
+            int_bRunningAcq[0:0] <= (WDATA[31:0] & wmask) | (int_bRunningAcq[0:0] & ~wmask);
     end
 end
 

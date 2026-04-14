@@ -95,6 +95,12 @@ int XSynch_Release(XSynch *InstancePtr);
 
 void XSynch_Set_bufStart(XSynch *InstancePtr, u32 Data);
 u32 XSynch_Get_bufStart(XSynch *InstancePtr);
+void XSynch_Set_bSpuriousSynch_i(XSynch *InstancePtr, u32 Data);
+u32 XSynch_Get_bSpuriousSynch_i(XSynch *InstancePtr);
+u32 XSynch_Get_bSpuriousSynch_o(XSynch *InstancePtr);
+u32 XSynch_Get_bSpuriousSynch_o_vld(XSynch *InstancePtr);
+void XSynch_Set_bRunningAcq(XSynch *InstancePtr, u32 Data);
+u32 XSynch_Get_bRunningAcq(XSynch *InstancePtr);
 
 #ifdef __cplusplus
 }

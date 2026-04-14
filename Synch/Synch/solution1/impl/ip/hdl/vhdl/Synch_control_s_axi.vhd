@@ -11,7 +11,7 @@ use IEEE.NUMERIC_STD.all;
 
 entity Synch_control_s_axi is
 generic (
-    C_S_AXI_ADDR_WIDTH    : INTEGER := 5;
+    C_S_AXI_ADDR_WIDTH    : INTEGER := 6;
     C_S_AXI_DATA_WIDTH    : INTEGER := 32);
 port (
     ACLK                  :in   STD_LOGIC;
@@ -34,7 +34,11 @@ port (
     RRESP                 :out  STD_LOGIC_VECTOR(1 downto 0);
     RVALID                :out  STD_LOGIC;
     RREADY                :in   STD_LOGIC;
-    bufStart              :out  STD_LOGIC_VECTOR(31 downto 0)
+    bufStart              :out  STD_LOGIC_VECTOR(31 downto 0);
+    bSpuriousSynch_i      :out  STD_LOGIC_VECTOR(0 downto 0);
+    bSpuriousSynch_o      :in   STD_LOGIC_VECTOR(0 downto 0);
+    bSpuriousSynch_o_ap_vld :in   STD_LOGIC;
+    bRunningAcq           :out  STD_LOGIC_VECTOR(0 downto 0)
 );
 end entity Synch_control_s_axi;
 
@@ -48,6 +52,20 @@ end entity Synch_control_s_axi;
 -- 0x10 : Data signal of bufStart
 --        bit 31~0 - bufStart[31:0] (Read/Write)
 -- 0x14 : reserved
+-- 0x18 : Data signal of bSpuriousSynch_i
+--        bit 0  - bSpuriousSynch_i[0] (Read/Write)
+--        others - reserved
+-- 0x1c : reserved
+-- 0x20 : Data signal of bSpuriousSynch_o
+--        bit 0  - bSpuriousSynch_o[0] (Read)
+--        others - reserved
+-- 0x24 : Control signal of bSpuriousSynch_o
+--        bit 0  - bSpuriousSynch_o_ap_vld (Read/COR)
+--        others - reserved
+-- 0x28 : Data signal of bRunningAcq
+--        bit 0  - bRunningAcq[0] (Read/Write)
+--        others - reserved
+-- 0x2c : reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 architecture behave of Synch_control_s_axi is
@@ -55,9 +73,15 @@ architecture behave of Synch_control_s_axi is
     signal wstate  : states := wrreset;
     signal rstate  : states := rdreset;
     signal wnext, rnext: states;
-    constant ADDR_BUFSTART_DATA_0 : INTEGER := 16#10#;
-    constant ADDR_BUFSTART_CTRL   : INTEGER := 16#14#;
-    constant ADDR_BITS         : INTEGER := 5;
+    constant ADDR_BUFSTART_DATA_0         : INTEGER := 16#10#;
+    constant ADDR_BUFSTART_CTRL           : INTEGER := 16#14#;
+    constant ADDR_BSPURIOUSSYNCH_I_DATA_0 : INTEGER := 16#18#;
+    constant ADDR_BSPURIOUSSYNCH_I_CTRL   : INTEGER := 16#1c#;
+    constant ADDR_BSPURIOUSSYNCH_O_DATA_0 : INTEGER := 16#20#;
+    constant ADDR_BSPURIOUSSYNCH_O_CTRL   : INTEGER := 16#24#;
+    constant ADDR_BRUNNINGACQ_DATA_0      : INTEGER := 16#28#;
+    constant ADDR_BRUNNINGACQ_CTRL        : INTEGER := 16#2c#;
+    constant ADDR_BITS         : INTEGER := 6;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
     signal wmask               : UNSIGNED(C_S_AXI_DATA_WIDTH-1 downto 0);
@@ -72,6 +96,10 @@ architecture behave of Synch_control_s_axi is
     signal RVALID_t            : STD_LOGIC;
     -- internal registers
     signal int_bufStart        : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_bSpuriousSynch_i : UNSIGNED(0 downto 0) := (others => '0');
+    signal int_bSpuriousSynch_o_ap_vld : STD_LOGIC;
+    signal int_bSpuriousSynch_o : UNSIGNED(0 downto 0) := (others => '0');
+    signal int_bRunningAcq     : UNSIGNED(0 downto 0) := (others => '0');
 
 
 begin
@@ -189,6 +217,14 @@ begin
                     case (TO_INTEGER(raddr)) is
                     when ADDR_BUFSTART_DATA_0 =>
                         rdata_data <= RESIZE(int_bufStart(31 downto 0), 32);
+                    when ADDR_BSPURIOUSSYNCH_I_DATA_0 =>
+                        rdata_data <= RESIZE(int_bSpuriousSynch_i(0 downto 0), 32);
+                    when ADDR_BSPURIOUSSYNCH_O_DATA_0 =>
+                        rdata_data <= RESIZE(int_bSpuriousSynch_o(0 downto 0), 32);
+                    when ADDR_BSPURIOUSSYNCH_O_CTRL =>
+                        rdata_data(0) <= int_bSpuriousSynch_o_ap_vld;
+                    when ADDR_BRUNNINGACQ_DATA_0 =>
+                        rdata_data <= RESIZE(int_bRunningAcq(0 downto 0), 32);
                     when others =>
                         NULL;
                     end case;
@@ -199,6 +235,8 @@ begin
 
 -- ----------------------- Register logic ----------------
     bufStart             <= STD_LOGIC_VECTOR(int_bufStart);
+    bSpuriousSynch_i     <= STD_LOGIC_VECTOR(int_bSpuriousSynch_i);
+    bRunningAcq          <= STD_LOGIC_VECTOR(int_bRunningAcq);
 
     process (ACLK)
     begin
@@ -206,6 +244,56 @@ begin
             if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_BUFSTART_DATA_0) then
                     int_bufStart(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_bufStart(31 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_BSPURIOUSSYNCH_I_DATA_0) then
+                    int_bSpuriousSynch_i(0 downto 0) <= (UNSIGNED(WDATA(0 downto 0)) and wmask(0 downto 0)) or ((not wmask(0 downto 0)) and int_bSpuriousSynch_i(0 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ARESET = '1') then
+                int_bSpuriousSynch_o <= (others => '0');
+            elsif (ACLK_EN = '1') then
+                if (bSpuriousSynch_o_ap_vld = '1') then
+                    int_bSpuriousSynch_o <= UNSIGNED(bSpuriousSynch_o);
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ARESET = '1') then
+                int_bSpuriousSynch_o_ap_vld <= '0';
+            elsif (ACLK_EN = '1') then
+                if (bSpuriousSynch_o_ap_vld = '1') then
+                    int_bSpuriousSynch_o_ap_vld <= '1';
+                elsif (ar_hs = '1' and raddr = ADDR_BSPURIOUSSYNCH_O_CTRL) then
+                    int_bSpuriousSynch_o_ap_vld <= '0'; -- clear on read
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_BRUNNINGACQ_DATA_0) then
+                    int_bRunningAcq(0 downto 0) <= (UNSIGNED(WDATA(0 downto 0)) and wmask(0 downto 0)) or ((not wmask(0 downto 0)) and int_bRunningAcq(0 downto 0));
                 end if;
             end if;
         end if;

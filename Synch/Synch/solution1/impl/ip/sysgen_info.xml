@@ -2,88 +2,13 @@
 <AdditionalInfo>
   <CTypeInfo>
       <RtlPort>
-        <name>s_axi_control_ARADDR</name>
+        <name>bSynch</name>
         <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>s_axi_control_ARREADY</name>
-        <type>Signed</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>s_axi_control_ARVALID</name>
-        <type>Signed</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>s_axi_control_AWADDR</name>
-        <type>Signed</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>s_axi_control_AWREADY</name>
-        <type>Signed</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>s_axi_control_AWVALID</name>
-        <type>Signed</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>s_axi_control_BREADY</name>
-        <type>Signed</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>s_axi_control_BRESP</name>
-        <type>Signed</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>s_axi_control_BVALID</name>
-        <type>Signed</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>s_axi_control_RDATA</name>
-        <type>Signed</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>s_axi_control_RREADY</name>
-        <type>Signed</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>s_axi_control_RRESP</name>
-        <type>Signed</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>s_axi_control_RVALID</name>
-        <type>Signed</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>s_axi_control_WDATA</name>
-        <type>Signed</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>s_axi_control_WREADY</name>
-        <type>Signed</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>s_axi_control_WSTRB</name>
-        <type>Signed</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>s_axi_control_WVALID</name>
-        <type>Signed</type>
+        <name>bSynch_ap_vld</name>
+        <type>bool</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
@@ -98,7 +23,7 @@
   <Machine>64</Machine>
   <modelParameters>
     <combinational>0</combinational>
-    <latency>1</latency>
-    <II>2</II>
+    <latency>3</latency>
+    <II>4 ~ 5</II>
   </modelParameters>
 </AdditionalInfo>
