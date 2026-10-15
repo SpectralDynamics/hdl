@@ -79,6 +79,7 @@ module axi_ad5766 #(
   input                                 dma_underflow,
   input                                 trigger,
   input                                 dac_trigger,
+  output                                spi_ready,      // ~spi_active: high when idle; paces interpolator FIFO read (one sample per conversion)
   // SPI engine control interface (to the SPI engine interconnect)
 
   input                                 spi_clk,        // should be connected to up_clk
@@ -163,6 +164,7 @@ module axi_ad5766 #(
   assign cmd_data = cmd_mem[spi_cmd_rd_addr];
   assign sdo_data_valid = spi_active;
   assign sdo_data = sdo_mem;
+  assign spi_ready = ~spi_active;   // FIFO advances one interpolated sample per completed DAC conversion
   assign sync_ready = 1'b1;
   assign sdi_data_ready = 1'b0;
 
@@ -238,8 +240,8 @@ module axi_ad5766 #(
       spi_active <= 1'b0;
     end else begin
       if (spi_active == 1'b0) begin
-        if ((dac_trigger == 1'b1 && spi_enable_s == 1'b1)) begin  
-  //        sdo_mem <= dma_data[23:0];        
+        if ((dac_trigger == 1'b1 && spi_enable_s == 1'b1)) begin
+          sdo_mem <= dma_data[23:0];        // fetch fresh interpolator sample per DAC conversion (dac_trigger = FIR FIFO valid @262144)
           spi_active <= 1'b1;
         end
       end else if (cmd_ready == 1'b1 && spi_cmd_rd_addr_next == ctrl_cmd_wr_addr) begin
@@ -295,14 +297,9 @@ module axi_ad5766 #(
         dma_valid <= 1'b0;
       end
     end
-    if (dma_valid == 1'b1) begin
-      sdo_mem <= dma_data[23:0];
-    end/* else begin
-        if (dac_trigger == 1'b1) begin  
-            sdo_mem <= 24'b0;
-        end
-    end*/
-   
+    // sdo_mem is now fetched on dac_trigger (interpolator FIFO valid @262144) in the spi_clk block above.
+    // This block keeps dma_valid pacing the TX-drive DMA at the ADC (trigger) rate only,
+    // so one client drive sample feeds DriveScale->FIR and becomes N samples at 262144 that the DAC consumes.
   end
 
   // rate controller

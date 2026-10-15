@@ -2,6 +2,16 @@
 <AdditionalInfo>
   <CTypeInfo>
       <RtlPort>
+        <name>bRunningAcqOut</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>bRunningAcqOut_ap_vld</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
         <name>bSynch</name>
         <type>Signed</type>
         <fractionWidth>0</fractionWidth>
@@ -23,7 +33,7 @@
   <Machine>64</Machine>
   <modelParameters>
     <combinational>0</combinational>
-    <latency>3</latency>
-    <II>4 ~ 5</II>
+    <latency>4</latency>
+    <II>5 ~ 6</II>
   </modelParameters>
 </AdditionalInfo>

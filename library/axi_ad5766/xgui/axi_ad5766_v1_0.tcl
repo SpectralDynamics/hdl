@@ -8,10 +8,10 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "SDO_MEM_ADDRESS_WIDTH" -parent ${Page_0}
   #Adding Group
   set FPGA_info [ipgui::add_group $IPINST -name "FPGA info" -parent ${Page_0}]
-  ipgui::add_param $IPINST -name "FPGA_TECHNOLOGY" -parent ${FPGA_info}
-  ipgui::add_param $IPINST -name "FPGA_FAMILY" -parent ${FPGA_info}
-  ipgui::add_param $IPINST -name "SPEED_GRADE" -parent ${FPGA_info}
-  ipgui::add_param $IPINST -name "DEV_PACKAGE" -parent ${FPGA_info}
+  ipgui::add_param $IPINST -name "FPGA_TECHNOLOGY" -parent ${FPGA_info} -widget comboBox
+  ipgui::add_param $IPINST -name "FPGA_FAMILY" -parent ${FPGA_info} -widget comboBox
+  ipgui::add_param $IPINST -name "SPEED_GRADE" -parent ${FPGA_info} -widget comboBox
+  ipgui::add_param $IPINST -name "DEV_PACKAGE" -parent ${FPGA_info} -widget comboBox
 
 
 

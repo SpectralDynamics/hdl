@@ -11,7 +11,7 @@ use IEEE.NUMERIC_STD.all;
 
 entity DriveScale_control_s_axi is
 generic (
-    C_S_AXI_ADDR_WIDTH    : INTEGER := 7;
+    C_S_AXI_ADDR_WIDTH    : INTEGER := 8;
     C_S_AXI_DATA_WIDTH    : INTEGER := 32);
 port (
     ACLK                  :in   STD_LOGIC;
@@ -48,7 +48,18 @@ port (
     OffsetCounts_d0       :in   STD_LOGIC_VECTOR(31 downto 0);
     samp_index            :out  STD_LOGIC_VECTOR(31 downto 0);
     iCurrentFilter        :out  STD_LOGIC_VECTOR(31 downto 0);
-    fClipValue            :out  STD_LOGIC_VECTOR(31 downto 0)
+    fClipValue            :out  STD_LOGIC_VECTOR(31 downto 0);
+    sync_reset            :out  STD_LOGIC_VECTOR(31 downto 0);
+    alignOffset           :in   STD_LOGIC_VECTOR(31 downto 0);
+    alignOffset_ap_vld    :in   STD_LOGIC;
+    colaEnable            :out  STD_LOGIC_VECTOR(31 downto 0);
+    group_delay           :out  STD_LOGIC_VECTOR(31 downto 0);
+    calibratedStepRecip_address0 :in   STD_LOGIC_VECTOR(1 downto 0);
+    calibratedStepRecip_ce0 :in   STD_LOGIC;
+    calibratedStepRecip_q0 :out  STD_LOGIC_VECTOR(31 downto 0);
+    loop_delay            :out  STD_LOGIC_VECTOR(31 downto 0);
+    dbg_ready             :in   STD_LOGIC_VECTOR(31 downto 0);
+    dbg_ready_ap_vld      :in   STD_LOGIC
 );
 end entity DriveScale_control_s_axi;
 
@@ -74,6 +85,28 @@ end entity DriveScale_control_s_axi;
 -- 0x60 : Data signal of fClipValue
 --        bit 31~0 - fClipValue[31:0] (Read/Write)
 -- 0x64 : reserved
+-- 0x68 : Data signal of sync_reset
+--        bit 31~0 - sync_reset[31:0] (Read/Write)
+-- 0x6c : reserved
+-- 0x70 : Data signal of alignOffset
+--        bit 31~0 - alignOffset[31:0] (Read)
+-- 0x74 : Control signal of alignOffset
+--        bit 0  - alignOffset_ap_vld (Read/COR)
+--        others - reserved
+-- 0x80 : Data signal of colaEnable
+--        bit 31~0 - colaEnable[31:0] (Read/Write)
+-- 0x84 : reserved
+-- 0x88 : Data signal of group_delay
+--        bit 31~0 - group_delay[31:0] (Read/Write)
+-- 0x8c : reserved
+-- 0xa0 : Data signal of loop_delay
+--        bit 31~0 - loop_delay[31:0] (Read/Write)
+-- 0xa4 : reserved
+-- 0xa8 : Data signal of dbg_ready
+--        bit 31~0 - dbg_ready[31:0] (Read)
+-- 0xac : Control signal of dbg_ready
+--        bit 0  - dbg_ready_ap_vld (Read/COR)
+--        others - reserved
 -- 0x20 ~
 -- 0x2f : Memory 'calibratedStep' (4 * 32b)
 --        Word n : bit [31:0] - calibratedStep[n]
@@ -83,6 +116,9 @@ end entity DriveScale_control_s_axi;
 -- 0x40 ~
 -- 0x4f : Memory 'OffsetCounts' (4 * 32b)
 --        Word n : bit [31:0] - OffsetCounts[n]
+-- 0x90 ~
+-- 0x9f : Memory 'calibratedStepRecip' (4 * 32b)
+--        Word n : bit [31:0] - calibratedStepRecip[n]
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 architecture behave of DriveScale_control_s_axi is
@@ -90,23 +126,37 @@ architecture behave of DriveScale_control_s_axi is
     signal wstate  : states := wrreset;
     signal rstate  : states := rdreset;
     signal wnext, rnext: states;
-    constant ADDR_SCALEVALUE_DATA_0     : INTEGER := 16#10#;
-    constant ADDR_SCALEVALUE_CTRL       : INTEGER := 16#14#;
-    constant ADDR_ZEROCROSS_DATA_0      : INTEGER := 16#18#;
-    constant ADDR_ZEROCROSS_CTRL        : INTEGER := 16#1c#;
-    constant ADDR_SAMP_INDEX_DATA_0     : INTEGER := 16#50#;
-    constant ADDR_SAMP_INDEX_CTRL       : INTEGER := 16#54#;
-    constant ADDR_ICURRENTFILTER_DATA_0 : INTEGER := 16#58#;
-    constant ADDR_ICURRENTFILTER_CTRL   : INTEGER := 16#5c#;
-    constant ADDR_FCLIPVALUE_DATA_0     : INTEGER := 16#60#;
-    constant ADDR_FCLIPVALUE_CTRL       : INTEGER := 16#64#;
-    constant ADDR_CALIBRATEDSTEP_BASE   : INTEGER := 16#20#;
-    constant ADDR_CALIBRATEDSTEP_HIGH   : INTEGER := 16#2f#;
-    constant ADDR_CALIBRATEDOFFSET_BASE : INTEGER := 16#30#;
-    constant ADDR_CALIBRATEDOFFSET_HIGH : INTEGER := 16#3f#;
-    constant ADDR_OFFSETCOUNTS_BASE     : INTEGER := 16#40#;
-    constant ADDR_OFFSETCOUNTS_HIGH     : INTEGER := 16#4f#;
-    constant ADDR_BITS         : INTEGER := 7;
+    constant ADDR_SCALEVALUE_DATA_0        : INTEGER := 16#10#;
+    constant ADDR_SCALEVALUE_CTRL          : INTEGER := 16#14#;
+    constant ADDR_ZEROCROSS_DATA_0         : INTEGER := 16#18#;
+    constant ADDR_ZEROCROSS_CTRL           : INTEGER := 16#1c#;
+    constant ADDR_SAMP_INDEX_DATA_0        : INTEGER := 16#50#;
+    constant ADDR_SAMP_INDEX_CTRL          : INTEGER := 16#54#;
+    constant ADDR_ICURRENTFILTER_DATA_0    : INTEGER := 16#58#;
+    constant ADDR_ICURRENTFILTER_CTRL      : INTEGER := 16#5c#;
+    constant ADDR_FCLIPVALUE_DATA_0        : INTEGER := 16#60#;
+    constant ADDR_FCLIPVALUE_CTRL          : INTEGER := 16#64#;
+    constant ADDR_SYNC_RESET_DATA_0        : INTEGER := 16#68#;
+    constant ADDR_SYNC_RESET_CTRL          : INTEGER := 16#6c#;
+    constant ADDR_ALIGNOFFSET_DATA_0       : INTEGER := 16#70#;
+    constant ADDR_ALIGNOFFSET_CTRL         : INTEGER := 16#74#;
+    constant ADDR_COLAENABLE_DATA_0        : INTEGER := 16#80#;
+    constant ADDR_COLAENABLE_CTRL          : INTEGER := 16#84#;
+    constant ADDR_GROUP_DELAY_DATA_0       : INTEGER := 16#88#;
+    constant ADDR_GROUP_DELAY_CTRL         : INTEGER := 16#8c#;
+    constant ADDR_LOOP_DELAY_DATA_0        : INTEGER := 16#a0#;
+    constant ADDR_LOOP_DELAY_CTRL          : INTEGER := 16#a4#;
+    constant ADDR_DBG_READY_DATA_0         : INTEGER := 16#a8#;
+    constant ADDR_DBG_READY_CTRL           : INTEGER := 16#ac#;
+    constant ADDR_CALIBRATEDSTEP_BASE      : INTEGER := 16#20#;
+    constant ADDR_CALIBRATEDSTEP_HIGH      : INTEGER := 16#2f#;
+    constant ADDR_CALIBRATEDOFFSET_BASE    : INTEGER := 16#30#;
+    constant ADDR_CALIBRATEDOFFSET_HIGH    : INTEGER := 16#3f#;
+    constant ADDR_OFFSETCOUNTS_BASE        : INTEGER := 16#40#;
+    constant ADDR_OFFSETCOUNTS_HIGH        : INTEGER := 16#4f#;
+    constant ADDR_CALIBRATEDSTEPRECIP_BASE : INTEGER := 16#90#;
+    constant ADDR_CALIBRATEDSTEPRECIP_HIGH : INTEGER := 16#9f#;
+    constant ADDR_BITS         : INTEGER := 8;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
     signal wmask               : UNSIGNED(C_S_AXI_DATA_WIDTH-1 downto 0);
@@ -125,6 +175,14 @@ architecture behave of DriveScale_control_s_axi is
     signal int_samp_index      : UNSIGNED(31 downto 0) := (others => '0');
     signal int_iCurrentFilter  : UNSIGNED(31 downto 0) := (others => '0');
     signal int_fClipValue      : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_sync_reset      : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_alignOffset_ap_vld : STD_LOGIC;
+    signal int_alignOffset     : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_colaEnable      : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_group_delay     : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_loop_delay      : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_dbg_ready_ap_vld : STD_LOGIC;
+    signal int_dbg_ready       : UNSIGNED(31 downto 0) := (others => '0');
     -- memory signals
     signal int_calibratedStep_address0 : UNSIGNED(1 downto 0);
     signal int_calibratedStep_ce0 : STD_LOGIC;
@@ -161,6 +219,17 @@ architecture behave of DriveScale_control_s_axi is
     signal int_OffsetCounts_q1 : UNSIGNED(31 downto 0);
     signal int_OffsetCounts_read : STD_LOGIC;
     signal int_OffsetCounts_write : STD_LOGIC;
+    signal int_calibratedStepRecip_address0 : UNSIGNED(1 downto 0);
+    signal int_calibratedStepRecip_ce0 : STD_LOGIC;
+    signal int_calibratedStepRecip_q0 : UNSIGNED(31 downto 0);
+    signal int_calibratedStepRecip_address1 : UNSIGNED(1 downto 0);
+    signal int_calibratedStepRecip_ce1 : STD_LOGIC;
+    signal int_calibratedStepRecip_we1 : STD_LOGIC;
+    signal int_calibratedStepRecip_be1 : UNSIGNED(3 downto 0);
+    signal int_calibratedStepRecip_d1 : UNSIGNED(31 downto 0);
+    signal int_calibratedStepRecip_q1 : UNSIGNED(31 downto 0);
+    signal int_calibratedStepRecip_read : STD_LOGIC;
+    signal int_calibratedStepRecip_write : STD_LOGIC;
 
     component DriveScale_control_s_axi_ram is
         generic (
@@ -261,6 +330,27 @@ port map (
      we1       => int_OffsetCounts_be1,
      d1        => int_OffsetCounts_d1,
      q1        => int_OffsetCounts_q1);
+-- int_calibratedStepRecip
+int_calibratedStepRecip : DriveScale_control_s_axi_ram
+generic map (
+     MEM_STYLE => "auto",
+     MEM_TYPE  => "2P",
+     BYTES     => 4,
+     DEPTH     => 4,
+     AWIDTH    => log2(4))
+port map (
+     clk0      => ACLK,
+     address0  => int_calibratedStepRecip_address0,
+     ce0       => int_calibratedStepRecip_ce0,
+     we0       => (others=>'0'),
+     d0        => (others=>'0'),
+     q0        => int_calibratedStepRecip_q0,
+     clk1      => ACLK,
+     address1  => int_calibratedStepRecip_address1,
+     ce1       => int_calibratedStepRecip_ce1,
+     we1       => int_calibratedStepRecip_be1,
+     d1        => int_calibratedStepRecip_d1,
+     q1        => int_calibratedStepRecip_q1);
 
 
 -- ----------------------- AXI WRITE ---------------------
@@ -328,7 +418,7 @@ port map (
     ARREADY <= ARREADY_t;
     RDATA   <= STD_LOGIC_VECTOR(rdata_data);
     RRESP   <= "00";  -- OKAY
-    RVALID_t  <= '1' when (rstate = rddata) and (int_calibratedStep_read = '0') and (int_calibratedOffset_read = '0') and (int_OffsetCounts_read = '0') else '0';
+    RVALID_t  <= '1' when (rstate = rddata) and (int_calibratedStep_read = '0') and (int_calibratedOffset_read = '0') and (int_OffsetCounts_read = '0') and (int_calibratedStepRecip_read = '0') else '0';
     RVALID    <= RVALID_t;
     ar_hs   <= ARVALID and ARREADY_t;
     raddr   <= UNSIGNED(ARADDR(ADDR_BITS-1 downto 0));
@@ -382,6 +472,22 @@ port map (
                         rdata_data <= RESIZE(int_iCurrentFilter(31 downto 0), 32);
                     when ADDR_FCLIPVALUE_DATA_0 =>
                         rdata_data <= RESIZE(int_fClipValue(31 downto 0), 32);
+                    when ADDR_SYNC_RESET_DATA_0 =>
+                        rdata_data <= RESIZE(int_sync_reset(31 downto 0), 32);
+                    when ADDR_ALIGNOFFSET_DATA_0 =>
+                        rdata_data <= RESIZE(int_alignOffset(31 downto 0), 32);
+                    when ADDR_ALIGNOFFSET_CTRL =>
+                        rdata_data(0) <= int_alignOffset_ap_vld;
+                    when ADDR_COLAENABLE_DATA_0 =>
+                        rdata_data <= RESIZE(int_colaEnable(31 downto 0), 32);
+                    when ADDR_GROUP_DELAY_DATA_0 =>
+                        rdata_data <= RESIZE(int_group_delay(31 downto 0), 32);
+                    when ADDR_LOOP_DELAY_DATA_0 =>
+                        rdata_data <= RESIZE(int_loop_delay(31 downto 0), 32);
+                    when ADDR_DBG_READY_DATA_0 =>
+                        rdata_data <= RESIZE(int_dbg_ready(31 downto 0), 32);
+                    when ADDR_DBG_READY_CTRL =>
+                        rdata_data(0) <= int_dbg_ready_ap_vld;
                     when others =>
                         NULL;
                     end case;
@@ -391,6 +497,8 @@ port map (
                     rdata_data <= int_calibratedOffset_q1;
                 elsif (int_OffsetCounts_read = '1') then
                     rdata_data <= int_OffsetCounts_q1;
+                elsif (int_calibratedStepRecip_read = '1') then
+                    rdata_data <= int_calibratedStepRecip_q1;
                 end if;
             end if;
         end if;
@@ -402,6 +510,10 @@ port map (
     samp_index           <= STD_LOGIC_VECTOR(int_samp_index);
     iCurrentFilter       <= STD_LOGIC_VECTOR(int_iCurrentFilter);
     fClipValue           <= STD_LOGIC_VECTOR(int_fClipValue);
+    sync_reset           <= STD_LOGIC_VECTOR(int_sync_reset);
+    colaEnable           <= STD_LOGIC_VECTOR(int_colaEnable);
+    group_delay          <= STD_LOGIC_VECTOR(int_group_delay);
+    loop_delay           <= STD_LOGIC_VECTOR(int_loop_delay);
 
     process (ACLK)
     begin
@@ -458,6 +570,106 @@ port map (
         end if;
     end process;
 
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_SYNC_RESET_DATA_0) then
+                    int_sync_reset(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_sync_reset(31 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ARESET = '1') then
+                int_alignOffset <= (others => '0');
+            elsif (ACLK_EN = '1') then
+                if (alignOffset_ap_vld = '1') then
+                    int_alignOffset <= UNSIGNED(alignOffset);
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ARESET = '1') then
+                int_alignOffset_ap_vld <= '0';
+            elsif (ACLK_EN = '1') then
+                if (alignOffset_ap_vld = '1') then
+                    int_alignOffset_ap_vld <= '1';
+                elsif (ar_hs = '1' and raddr = ADDR_ALIGNOFFSET_CTRL) then
+                    int_alignOffset_ap_vld <= '0'; -- clear on read
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_COLAENABLE_DATA_0) then
+                    int_colaEnable(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_colaEnable(31 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_GROUP_DELAY_DATA_0) then
+                    int_group_delay(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_group_delay(31 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_LOOP_DELAY_DATA_0) then
+                    int_loop_delay(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_loop_delay(31 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ARESET = '1') then
+                int_dbg_ready <= (others => '0');
+            elsif (ACLK_EN = '1') then
+                if (dbg_ready_ap_vld = '1') then
+                    int_dbg_ready <= UNSIGNED(dbg_ready);
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ARESET = '1') then
+                int_dbg_ready_ap_vld <= '0';
+            elsif (ACLK_EN = '1') then
+                if (dbg_ready_ap_vld = '1') then
+                    int_dbg_ready_ap_vld <= '1';
+                elsif (ar_hs = '1' and raddr = ADDR_DBG_READY_CTRL) then
+                    int_dbg_ready_ap_vld <= '0'; -- clear on read
+                end if;
+            end if;
+        end if;
+    end process;
+
 
 -- ----------------------- Memory logic ------------------
     -- calibratedStep
@@ -486,6 +698,15 @@ port map (
     int_OffsetCounts_we1 <= '1' when int_OffsetCounts_write = '1' and w_hs = '1' else '0';
     int_OffsetCounts_be1 <= UNSIGNED(WSTRB) when int_OffsetCounts_we1 = '1' else (others=>'0');
     int_OffsetCounts_d1  <= UNSIGNED(WDATA);
+    -- calibratedStepRecip
+    int_calibratedStepRecip_address0 <= UNSIGNED(calibratedStepRecip_address0);
+    int_calibratedStepRecip_ce0 <= calibratedStepRecip_ce0;
+    calibratedStepRecip_q0 <= STD_LOGIC_VECTOR(RESIZE(int_calibratedStepRecip_q0, 32));
+    int_calibratedStepRecip_address1 <= raddr(3 downto 2) when ar_hs = '1' else waddr(3 downto 2);
+    int_calibratedStepRecip_ce1 <= '1' when ar_hs = '1' or (int_calibratedStepRecip_write = '1' and WVALID  = '1') else '0';
+    int_calibratedStepRecip_we1 <= '1' when int_calibratedStepRecip_write = '1' and w_hs = '1' else '0';
+    int_calibratedStepRecip_be1 <= UNSIGNED(WSTRB) when int_calibratedStepRecip_we1 = '1' else (others=>'0');
+    int_calibratedStepRecip_d1 <= UNSIGNED(WDATA);
 
     process (ACLK)
     begin
@@ -572,6 +793,36 @@ port map (
                     int_OffsetCounts_write <= '1';
                 elsif (w_hs = '1') then
                     int_OffsetCounts_write <= '0';
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ARESET = '1') then
+                int_calibratedStepRecip_read <= '0';
+            elsif (ACLK_EN = '1') then
+                if (ar_hs = '1' and raddr >= ADDR_CALIBRATEDSTEPRECIP_BASE and raddr <= ADDR_CALIBRATEDSTEPRECIP_HIGH) then
+                    int_calibratedStepRecip_read <= '1';
+                else
+                    int_calibratedStepRecip_read <= '0';
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ARESET = '1') then
+                int_calibratedStepRecip_write <= '0';
+            elsif (ACLK_EN = '1') then
+                if (aw_hs = '1' and UNSIGNED(AWADDR(ADDR_BITS-1 downto 0)) >= ADDR_CALIBRATEDSTEPRECIP_BASE and UNSIGNED(AWADDR(ADDR_BITS-1 downto 0)) <= ADDR_CALIBRATEDSTEPRECIP_HIGH) then
+                    int_calibratedStepRecip_write <= '1';
+                elsif (w_hs = '1') then
+                    int_calibratedStepRecip_write <= '0';
                 end if;
             end if;
         end if;

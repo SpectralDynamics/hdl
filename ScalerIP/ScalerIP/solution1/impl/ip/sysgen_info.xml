@@ -2,6 +2,46 @@
 <AdditionalInfo>
   <CTypeInfo>
       <RtlPort>
+        <name>COLAIN65536OUT262144_TDATA</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>COLAIN65536OUT262144_TKEEP</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>COLAIN65536OUT262144_TLAST</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>COLAIN65536OUT262144_TREADY</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>COLAIN65536OUT262144_TSTRB</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>COLAIN65536OUT262144_TVALID</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>ColaInput</name>
+        <type>Floating-point</type>
+        <fractionWidth>24</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>ColaOutput</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
         <name>IN1024OUT8192_TDATA</name>
         <type>Signed</type>
         <fractionWidth>0</fractionWidth>
@@ -298,7 +338,7 @@
   <Machine>64</Machine>
   <modelParameters>
     <combinational>0</combinational>
-    <latency>19</latency>
-    <II>20 ~ 21</II>
+    <latency>12</latency>
+    <II>13 ~ 30</II>
   </modelParameters>
 </AdditionalInfo>

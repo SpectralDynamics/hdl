@@ -6,11 +6,17 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="streamToData_streamToData,hls_ip_2023_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg484-1,HLS_INPUT_CLOCK=29.802000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=8.571100,HLS_SYN_LAT=0,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=1,HLS_SYN_LUT=225,HLS_VERSION=2023_2}" *)
+(* CORE_GENERATION_INFO="streamToData_streamToData,hls_ip_2023_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg484-1,HLS_INPUT_CLOCK=29.802000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=12.737162,HLS_SYN_LAT=0,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=67,HLS_SYN_LUT=438,HLS_VERSION=2023_2}" *)
 
 module streamToData (
         ap_clk,
         ap_rst_n,
+        COLAIN65536OUT262144_TDATA,
+        COLAIN65536OUT262144_TVALID,
+        COLAIN65536OUT262144_TREADY,
+        COLAIN65536OUT262144_TKEEP,
+        COLAIN65536OUT262144_TSTRB,
+        COLAIN65536OUT262144_TLAST,
         IN1024OUT8192_TDATA,
         IN1024OUT8192_TVALID,
         IN1024OUT8192_TREADY,
@@ -65,15 +71,46 @@ module streamToData (
         IN262144OUT262144_TKEEP,
         IN262144OUT262144_TSTRB,
         IN262144OUT262144_TLAST,
+        ColaData,
+        ColaCountsOut,
+        ColaCountsOut_ap_vld,
         DacData,
         DacData_ap_vld,
-        interp
+        s_axi_control_AWVALID,
+        s_axi_control_AWREADY,
+        s_axi_control_AWADDR,
+        s_axi_control_WVALID,
+        s_axi_control_WREADY,
+        s_axi_control_WDATA,
+        s_axi_control_WSTRB,
+        s_axi_control_ARVALID,
+        s_axi_control_ARREADY,
+        s_axi_control_ARADDR,
+        s_axi_control_RVALID,
+        s_axi_control_RREADY,
+        s_axi_control_RDATA,
+        s_axi_control_RRESP,
+        s_axi_control_BVALID,
+        s_axi_control_BREADY,
+        s_axi_control_BRESP
 );
 
 parameter    ap_ST_fsm_state1 = 1'd1;
+parameter    C_S_AXI_CONTROL_DATA_WIDTH = 32;
+parameter    C_S_AXI_CONTROL_ADDR_WIDTH = 5;
+parameter    C_S_AXI_DATA_WIDTH = 32;
+
+parameter C_S_AXI_CONTROL_WSTRB_WIDTH = (32 / 8);
+parameter C_S_AXI_WSTRB_WIDTH = (32 / 8);
 
 input   ap_clk;
 input   ap_rst_n;
+input  [23:0] COLAIN65536OUT262144_TDATA;
+input   COLAIN65536OUT262144_TVALID;
+output   COLAIN65536OUT262144_TREADY;
+input  [2:0] COLAIN65536OUT262144_TKEEP;
+input  [2:0] COLAIN65536OUT262144_TSTRB;
+input  [0:0] COLAIN65536OUT262144_TLAST;
 input  [23:0] IN1024OUT8192_TDATA;
 input   IN1024OUT8192_TVALID;
 output   IN1024OUT8192_TREADY;
@@ -128,16 +165,39 @@ output   IN262144OUT262144_TREADY;
 input  [2:0] IN262144OUT262144_TKEEP;
 input  [2:0] IN262144OUT262144_TSTRB;
 input  [0:0] IN262144OUT262144_TLAST;
+input  [15:0] ColaData;
+output  [15:0] ColaCountsOut;
+output   ColaCountsOut_ap_vld;
 output  [23:0] DacData;
 output   DacData_ap_vld;
-input  [3:0] interp;
+input   s_axi_control_AWVALID;
+output   s_axi_control_AWREADY;
+input  [C_S_AXI_CONTROL_ADDR_WIDTH - 1:0] s_axi_control_AWADDR;
+input   s_axi_control_WVALID;
+output   s_axi_control_WREADY;
+input  [C_S_AXI_CONTROL_DATA_WIDTH - 1:0] s_axi_control_WDATA;
+input  [C_S_AXI_CONTROL_WSTRB_WIDTH - 1:0] s_axi_control_WSTRB;
+input   s_axi_control_ARVALID;
+output   s_axi_control_ARREADY;
+input  [C_S_AXI_CONTROL_ADDR_WIDTH - 1:0] s_axi_control_ARADDR;
+output   s_axi_control_RVALID;
+input   s_axi_control_RREADY;
+output  [C_S_AXI_CONTROL_DATA_WIDTH - 1:0] s_axi_control_RDATA;
+output  [1:0] s_axi_control_RRESP;
+output   s_axi_control_BVALID;
+input   s_axi_control_BREADY;
+output  [1:0] s_axi_control_BRESP;
 
+reg ColaCountsOut_ap_vld;
 reg DacData_ap_vld;
 
  reg    ap_rst_n_inv;
-reg    IN1024OUT8192_TDATA_blk_n;
+wire   [3:0] interp;
+reg    DacCountsOut_ap_vld;
+reg    COLAIN65536OUT262144_TDATA_blk_n;
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
+reg    IN1024OUT8192_TDATA_blk_n;
 reg    IN2048OUT8192_TDATA_blk_n;
 reg    IN4096OUT8192_TDATA_blk_n;
 reg    IN8192OUT65536_TDATA_blk_n;
@@ -146,20 +206,48 @@ reg    IN32768OUT65536_TDATA_blk_n;
 reg    IN65536OUT262144_TDATA_blk_n;
 reg    IN131072OUT262144_TDATA_blk_n;
 reg    IN262144OUT262144_TDATA_blk_n;
-reg   [23:0] ap_phi_mux_phi_ln30_phi_fu_284_p18;
-reg    ap_predicate_op88_read_state1;
+reg   [23:0] ap_phi_mux_phi_ln39_phi_fu_366_p18;
+reg    ap_predicate_op106_read_state1;
 reg    ap_block_state1;
-wire   [3:0] tmp_fu_357_p4;
-wire   [22:0] tmp_data_fu_349_p1;
-wire   [19:0] trunc_ln23_fu_353_p1;
-wire   [0:0] icmp_ln66_fu_367_p2;
-wire   [0:0] icmp_ln67_fu_373_p2;
-wire   [0:0] or_ln69_fu_395_p2;
-wire   [20:0] select_ln69_fu_387_p3;
-wire   [20:0] or_ln_fu_379_p3;
-wire   [20:0] DacCounts_fu_401_p3;
+wire   [18:0] add_ln64_fu_435_p2;
+wire   [19:0] DacCounts_fu_592_p3;
+wire   [18:0] ctmp_data_fu_431_p1;
+wire   [2:0] tmp_1_fu_505_p4;
+wire   [0:0] icmp_ln82_fu_515_p2;
+wire   [15:0] ColaCounts_1_fu_521_p1;
+wire   [0:0] icmp_ln78_fu_485_p2;
+wire   [15:0] ColaCounts_2_fu_525_p3;
+wire   [15:0] colaVal_3_fu_499_p2;
+wire   [0:0] tmp_fu_491_p3;
+wire   [0:0] and_ln81_fu_541_p2;
+wire   [15:0] ColaCounts_3_fu_533_p3;
+wire   [3:0] tmp_2_fu_556_p4;
+wire   [22:0] tmp_data_fu_477_p1;
+wire   [0:0] icmp_ln93_fu_566_p2;
+wire   [0:0] icmp_ln94_fu_572_p2;
+wire   [0:0] or_ln95_fu_586_p2;
+wire   [19:0] select_ln95_fu_578_p3;
+wire   [19:0] trunc_ln31_fu_481_p1;
+wire   [20:0] DacCounts_1_fu_601_p3;
 reg   [0:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
+wire    regslice_both_COLAIN65536OUT262144_V_data_V_U_apdone_blk;
+wire   [23:0] COLAIN65536OUT262144_TDATA_int_regslice;
+wire    COLAIN65536OUT262144_TVALID_int_regslice;
+reg    COLAIN65536OUT262144_TREADY_int_regslice;
+wire    regslice_both_COLAIN65536OUT262144_V_data_V_U_ack_in;
+wire    regslice_both_COLAIN65536OUT262144_V_keep_V_U_apdone_blk;
+wire   [2:0] COLAIN65536OUT262144_TKEEP_int_regslice;
+wire    regslice_both_COLAIN65536OUT262144_V_keep_V_U_vld_out;
+wire    regslice_both_COLAIN65536OUT262144_V_keep_V_U_ack_in;
+wire    regslice_both_COLAIN65536OUT262144_V_strb_V_U_apdone_blk;
+wire   [2:0] COLAIN65536OUT262144_TSTRB_int_regslice;
+wire    regslice_both_COLAIN65536OUT262144_V_strb_V_U_vld_out;
+wire    regslice_both_COLAIN65536OUT262144_V_strb_V_U_ack_in;
+wire    regslice_both_COLAIN65536OUT262144_V_last_V_U_apdone_blk;
+wire   [0:0] COLAIN65536OUT262144_TLAST_int_regslice;
+wire    regslice_both_COLAIN65536OUT262144_V_last_V_U_vld_out;
+wire    regslice_both_COLAIN65536OUT262144_V_last_V_U_ack_in;
 wire    regslice_both_IN1024OUT8192_V_data_V_U_apdone_blk;
 wire   [23:0] IN1024OUT8192_TDATA_int_regslice;
 wire    IN1024OUT8192_TVALID_int_regslice;
@@ -313,13 +401,98 @@ wire    regslice_both_IN262144OUT262144_V_last_V_U_apdone_blk;
 wire   [0:0] IN262144OUT262144_TLAST_int_regslice;
 wire    regslice_both_IN262144OUT262144_V_last_V_U_vld_out;
 wire    regslice_both_IN262144OUT262144_V_last_V_U_ack_in;
-reg    ap_condition_122;
+reg    ap_condition_134;
 wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
 #0 ap_CS_fsm = 1'd1;
 end
+
+streamToData_control_s_axi #(
+    .C_S_AXI_ADDR_WIDTH( C_S_AXI_CONTROL_ADDR_WIDTH ),
+    .C_S_AXI_DATA_WIDTH( C_S_AXI_CONTROL_DATA_WIDTH ))
+control_s_axi_U(
+    .AWVALID(s_axi_control_AWVALID),
+    .AWREADY(s_axi_control_AWREADY),
+    .AWADDR(s_axi_control_AWADDR),
+    .WVALID(s_axi_control_WVALID),
+    .WREADY(s_axi_control_WREADY),
+    .WDATA(s_axi_control_WDATA),
+    .WSTRB(s_axi_control_WSTRB),
+    .ARVALID(s_axi_control_ARVALID),
+    .ARREADY(s_axi_control_ARREADY),
+    .ARADDR(s_axi_control_ARADDR),
+    .RVALID(s_axi_control_RVALID),
+    .RREADY(s_axi_control_RREADY),
+    .RDATA(s_axi_control_RDATA),
+    .RRESP(s_axi_control_RRESP),
+    .BVALID(s_axi_control_BVALID),
+    .BREADY(s_axi_control_BREADY),
+    .BRESP(s_axi_control_BRESP),
+    .ACLK(ap_clk),
+    .ARESET(ap_rst_n_inv),
+    .ACLK_EN(1'b1),
+    .interp(interp),
+    .DacCountsOut(DacCounts_fu_592_p3),
+    .DacCountsOut_ap_vld(DacCountsOut_ap_vld)
+);
+
+streamToData_regslice_both #(
+    .DataWidth( 24 ))
+regslice_both_COLAIN65536OUT262144_V_data_V_U(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst_n_inv),
+    .data_in(COLAIN65536OUT262144_TDATA),
+    .vld_in(COLAIN65536OUT262144_TVALID),
+    .ack_in(regslice_both_COLAIN65536OUT262144_V_data_V_U_ack_in),
+    .data_out(COLAIN65536OUT262144_TDATA_int_regslice),
+    .vld_out(COLAIN65536OUT262144_TVALID_int_regslice),
+    .ack_out(COLAIN65536OUT262144_TREADY_int_regslice),
+    .apdone_blk(regslice_both_COLAIN65536OUT262144_V_data_V_U_apdone_blk)
+);
+
+streamToData_regslice_both #(
+    .DataWidth( 3 ))
+regslice_both_COLAIN65536OUT262144_V_keep_V_U(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst_n_inv),
+    .data_in(COLAIN65536OUT262144_TKEEP),
+    .vld_in(COLAIN65536OUT262144_TVALID),
+    .ack_in(regslice_both_COLAIN65536OUT262144_V_keep_V_U_ack_in),
+    .data_out(COLAIN65536OUT262144_TKEEP_int_regslice),
+    .vld_out(regslice_both_COLAIN65536OUT262144_V_keep_V_U_vld_out),
+    .ack_out(COLAIN65536OUT262144_TREADY_int_regslice),
+    .apdone_blk(regslice_both_COLAIN65536OUT262144_V_keep_V_U_apdone_blk)
+);
+
+streamToData_regslice_both #(
+    .DataWidth( 3 ))
+regslice_both_COLAIN65536OUT262144_V_strb_V_U(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst_n_inv),
+    .data_in(COLAIN65536OUT262144_TSTRB),
+    .vld_in(COLAIN65536OUT262144_TVALID),
+    .ack_in(regslice_both_COLAIN65536OUT262144_V_strb_V_U_ack_in),
+    .data_out(COLAIN65536OUT262144_TSTRB_int_regslice),
+    .vld_out(regslice_both_COLAIN65536OUT262144_V_strb_V_U_vld_out),
+    .ack_out(COLAIN65536OUT262144_TREADY_int_regslice),
+    .apdone_blk(regslice_both_COLAIN65536OUT262144_V_strb_V_U_apdone_blk)
+);
+
+streamToData_regslice_both #(
+    .DataWidth( 1 ))
+regslice_both_COLAIN65536OUT262144_V_last_V_U(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst_n_inv),
+    .data_in(COLAIN65536OUT262144_TLAST),
+    .vld_in(COLAIN65536OUT262144_TVALID),
+    .ack_in(regslice_both_COLAIN65536OUT262144_V_last_V_U_ack_in),
+    .data_out(COLAIN65536OUT262144_TLAST_int_regslice),
+    .vld_out(regslice_both_COLAIN65536OUT262144_V_last_V_U_vld_out),
+    .ack_out(COLAIN65536OUT262144_TREADY_int_regslice),
+    .apdone_blk(regslice_both_COLAIN65536OUT262144_V_last_V_U_apdone_blk)
+);
 
 streamToData_regslice_both #(
     .DataWidth( 24 ))
@@ -834,7 +1007,39 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state1) & (1'b0 == ap_block_state1))) begin
+    if (((interp == 4'd6) & (1'b1 == ap_CS_fsm_state1))) begin
+        COLAIN65536OUT262144_TDATA_blk_n = COLAIN65536OUT262144_TVALID_int_regslice;
+    end else begin
+        COLAIN65536OUT262144_TDATA_blk_n = 1'b1;
+    end
+end
+
+always @ (*) begin
+    if (((interp == 4'd6) & (1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
+        COLAIN65536OUT262144_TREADY_int_regslice = 1'b1;
+    end else begin
+        COLAIN65536OUT262144_TREADY_int_regslice = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
+        ColaCountsOut_ap_vld = 1'b1;
+    end else begin
+        ColaCountsOut_ap_vld = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
+        DacCountsOut_ap_vld = 1'b1;
+    end else begin
+        DacCountsOut_ap_vld = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
         DacData_ap_vld = 1'b1;
     end else begin
         DacData_ap_vld = 1'b0;
@@ -850,7 +1055,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((interp == 4'd0) & (1'b1 == ap_CS_fsm_state1) & (1'b0 == ap_block_state1))) begin
+    if (((interp == 4'd0) & (1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
         IN1024OUT8192_TREADY_int_regslice = 1'b1;
     end else begin
         IN1024OUT8192_TREADY_int_regslice = 1'b0;
@@ -866,7 +1071,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((interp == 4'd7) & (1'b1 == ap_CS_fsm_state1) & (1'b0 == ap_block_state1))) begin
+    if (((interp == 4'd7) & (1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
         IN131072OUT262144_TREADY_int_regslice = 1'b1;
     end else begin
         IN131072OUT262144_TREADY_int_regslice = 1'b0;
@@ -882,7 +1087,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((interp == 4'd4) & (1'b1 == ap_CS_fsm_state1) & (1'b0 == ap_block_state1))) begin
+    if (((interp == 4'd4) & (1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
         IN16384OUT65536_TREADY_int_regslice = 1'b1;
     end else begin
         IN16384OUT65536_TREADY_int_regslice = 1'b0;
@@ -898,7 +1103,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((interp == 4'd1) & (1'b1 == ap_CS_fsm_state1) & (1'b0 == ap_block_state1))) begin
+    if (((interp == 4'd1) & (1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
         IN2048OUT8192_TREADY_int_regslice = 1'b1;
     end else begin
         IN2048OUT8192_TREADY_int_regslice = 1'b0;
@@ -906,7 +1111,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((~(interp == 4'd5) & ~(interp == 4'd4) & ~(interp == 4'd3) & ~(interp == 4'd2) & ~(interp == 4'd1) & ~(interp == 4'd0) & ~(interp == 4'd7) & ~(interp == 4'd6) & (1'b1 == ap_CS_fsm_state1))) begin
+    if ((~(interp == 4'd1) & ~(interp == 4'd0) & ~(interp == 4'd6) & ~(interp == 4'd7) & ~(interp == 4'd5) & ~(interp == 4'd4) & ~(interp == 4'd3) & ~(interp == 4'd2) & (1'b1 == ap_CS_fsm_state1))) begin
         IN262144OUT262144_TDATA_blk_n = IN262144OUT262144_TVALID_int_regslice;
     end else begin
         IN262144OUT262144_TDATA_blk_n = 1'b1;
@@ -914,7 +1119,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state1) & (1'b0 == ap_block_state1) & (ap_predicate_op88_read_state1 == 1'b1))) begin
+    if (((1'b0 == ap_block_state1) & (ap_predicate_op106_read_state1 == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
         IN262144OUT262144_TREADY_int_regslice = 1'b1;
     end else begin
         IN262144OUT262144_TREADY_int_regslice = 1'b0;
@@ -930,7 +1135,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((interp == 4'd5) & (1'b1 == ap_CS_fsm_state1) & (1'b0 == ap_block_state1))) begin
+    if (((interp == 4'd5) & (1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
         IN32768OUT65536_TREADY_int_regslice = 1'b1;
     end else begin
         IN32768OUT65536_TREADY_int_regslice = 1'b0;
@@ -946,7 +1151,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((interp == 4'd2) & (1'b1 == ap_CS_fsm_state1) & (1'b0 == ap_block_state1))) begin
+    if (((interp == 4'd2) & (1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
         IN4096OUT8192_TREADY_int_regslice = 1'b1;
     end else begin
         IN4096OUT8192_TREADY_int_regslice = 1'b0;
@@ -962,7 +1167,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((interp == 4'd6) & (1'b1 == ap_CS_fsm_state1) & (1'b0 == ap_block_state1))) begin
+    if (((interp == 4'd6) & (1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
         IN65536OUT262144_TREADY_int_regslice = 1'b1;
     end else begin
         IN65536OUT262144_TREADY_int_regslice = 1'b0;
@@ -978,7 +1183,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((interp == 4'd3) & (1'b1 == ap_CS_fsm_state1) & (1'b0 == ap_block_state1))) begin
+    if (((interp == 4'd3) & (1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
         IN8192OUT65536_TREADY_int_regslice = 1'b1;
     end else begin
         IN8192OUT65536_TREADY_int_regslice = 1'b0;
@@ -996,28 +1201,28 @@ end
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state1)) begin
         if ((interp == 4'd0)) begin
-            ap_phi_mux_phi_ln30_phi_fu_284_p18 = IN1024OUT8192_TDATA_int_regslice;
+            ap_phi_mux_phi_ln39_phi_fu_366_p18 = IN1024OUT8192_TDATA_int_regslice;
         end else if ((interp == 4'd1)) begin
-            ap_phi_mux_phi_ln30_phi_fu_284_p18 = IN2048OUT8192_TDATA_int_regslice;
+            ap_phi_mux_phi_ln39_phi_fu_366_p18 = IN2048OUT8192_TDATA_int_regslice;
         end else if ((interp == 4'd2)) begin
-            ap_phi_mux_phi_ln30_phi_fu_284_p18 = IN4096OUT8192_TDATA_int_regslice;
+            ap_phi_mux_phi_ln39_phi_fu_366_p18 = IN4096OUT8192_TDATA_int_regslice;
         end else if ((interp == 4'd3)) begin
-            ap_phi_mux_phi_ln30_phi_fu_284_p18 = IN8192OUT65536_TDATA_int_regslice;
+            ap_phi_mux_phi_ln39_phi_fu_366_p18 = IN8192OUT65536_TDATA_int_regslice;
         end else if ((interp == 4'd4)) begin
-            ap_phi_mux_phi_ln30_phi_fu_284_p18 = IN16384OUT65536_TDATA_int_regslice;
+            ap_phi_mux_phi_ln39_phi_fu_366_p18 = IN16384OUT65536_TDATA_int_regslice;
         end else if ((interp == 4'd5)) begin
-            ap_phi_mux_phi_ln30_phi_fu_284_p18 = IN32768OUT65536_TDATA_int_regslice;
+            ap_phi_mux_phi_ln39_phi_fu_366_p18 = IN32768OUT65536_TDATA_int_regslice;
         end else if ((interp == 4'd6)) begin
-            ap_phi_mux_phi_ln30_phi_fu_284_p18 = IN65536OUT262144_TDATA_int_regslice;
+            ap_phi_mux_phi_ln39_phi_fu_366_p18 = IN65536OUT262144_TDATA_int_regslice;
         end else if ((interp == 4'd7)) begin
-            ap_phi_mux_phi_ln30_phi_fu_284_p18 = IN131072OUT262144_TDATA_int_regslice;
-        end else if ((1'b1 == ap_condition_122)) begin
-            ap_phi_mux_phi_ln30_phi_fu_284_p18 = IN262144OUT262144_TDATA_int_regslice;
+            ap_phi_mux_phi_ln39_phi_fu_366_p18 = IN131072OUT262144_TDATA_int_regslice;
+        end else if ((1'b1 == ap_condition_134)) begin
+            ap_phi_mux_phi_ln39_phi_fu_366_p18 = IN262144OUT262144_TDATA_int_regslice;
         end else begin
-            ap_phi_mux_phi_ln30_phi_fu_284_p18 = 'bx;
+            ap_phi_mux_phi_ln39_phi_fu_366_p18 = 'bx;
         end
     end else begin
-        ap_phi_mux_phi_ln30_phi_fu_284_p18 = 'bx;
+        ap_phi_mux_phi_ln39_phi_fu_366_p18 = 'bx;
     end
 end
 
@@ -1032,9 +1237,21 @@ always @ (*) begin
     endcase
 end
 
-assign DacCounts_fu_401_p3 = ((or_ln69_fu_395_p2[0:0] == 1'b1) ? select_ln69_fu_387_p3 : or_ln_fu_379_p3);
+assign COLAIN65536OUT262144_TREADY = regslice_both_COLAIN65536OUT262144_V_data_V_U_ack_in;
 
-assign DacData = DacCounts_fu_401_p3;
+assign ColaCountsOut = ((and_ln81_fu_541_p2[0:0] == 1'b1) ? 16'd0 : ColaCounts_3_fu_533_p3);
+
+assign ColaCounts_1_fu_521_p1 = add_ln64_fu_435_p2[15:0];
+
+assign ColaCounts_2_fu_525_p3 = ((icmp_ln82_fu_515_p2[0:0] == 1'b1) ? 16'd65535 : ColaCounts_1_fu_521_p1);
+
+assign ColaCounts_3_fu_533_p3 = ((icmp_ln78_fu_485_p2[0:0] == 1'b1) ? ColaCounts_2_fu_525_p3 : colaVal_3_fu_499_p2);
+
+assign DacCounts_1_fu_601_p3 = {{1'd1}, {DacCounts_fu_592_p3}};
+
+assign DacCounts_fu_592_p3 = ((or_ln95_fu_586_p2[0:0] == 1'b1) ? select_ln95_fu_578_p3 : trunc_ln31_fu_481_p1);
+
+assign DacData = DacCounts_1_fu_601_p3;
 
 assign IN1024OUT8192_TREADY = regslice_both_IN1024OUT8192_V_data_V_U_ack_in;
 
@@ -1054,39 +1271,53 @@ assign IN65536OUT262144_TREADY = regslice_both_IN65536OUT262144_V_data_V_U_ack_i
 
 assign IN8192OUT65536_TREADY = regslice_both_IN8192OUT65536_V_data_V_U_ack_in;
 
+assign add_ln64_fu_435_p2 = (ctmp_data_fu_431_p1 + 19'd32768);
+
+assign and_ln81_fu_541_p2 = (tmp_fu_491_p3 & icmp_ln78_fu_485_p2);
+
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
 always @ (*) begin
-    ap_block_state1 = (((interp == 4'd5) & (1'b0 == IN32768OUT65536_TVALID_int_regslice)) | ((interp == 4'd4) & (1'b0 == IN16384OUT65536_TVALID_int_regslice)) | ((interp == 4'd3) & (1'b0 == IN8192OUT65536_TVALID_int_regslice)) | ((interp == 4'd2) & (1'b0 == IN4096OUT8192_TVALID_int_regslice)) | ((interp == 4'd1) & (1'b0 == IN2048OUT8192_TVALID_int_regslice)) | ((interp == 4'd0) & (1'b0 == IN1024OUT8192_TVALID_int_regslice)) | ((1'b0 == IN262144OUT262144_TVALID_int_regslice) & (ap_predicate_op88_read_state1 == 1'b1)) | ((interp == 4'd7) & (1'b0 == IN131072OUT262144_TVALID_int_regslice)) | ((interp == 4'd6) & (1'b0 == IN65536OUT262144_TVALID_int_regslice)));
+    ap_block_state1 = (((interp == 4'd1) & (1'b0 == IN2048OUT8192_TVALID_int_regslice)) | ((interp == 4'd0) & (1'b0 == IN1024OUT8192_TVALID_int_regslice)) | ((interp == 4'd6) & (1'b0 == IN65536OUT262144_TVALID_int_regslice)) | ((interp == 4'd6) & (1'b0 == COLAIN65536OUT262144_TVALID_int_regslice)) | ((1'b0 == IN262144OUT262144_TVALID_int_regslice) & (ap_predicate_op106_read_state1 == 1'b1)) | ((interp == 4'd7) & (1'b0 == IN131072OUT262144_TVALID_int_regslice)) | ((interp == 4'd5) & (1'b0 == IN32768OUT65536_TVALID_int_regslice)) | ((interp == 4'd4) & (1'b0 == IN16384OUT65536_TVALID_int_regslice)) | ((interp == 4'd3) & (1'b0 == IN8192OUT65536_TVALID_int_regslice)) | ((interp == 4'd2) & (1'b0 == IN4096OUT8192_TVALID_int_regslice)));
 end
 
 always @ (*) begin
-    ap_condition_122 = (~(interp == 4'd5) & ~(interp == 4'd4) & ~(interp == 4'd3) & ~(interp == 4'd2) & ~(interp == 4'd1) & ~(interp == 4'd0) & ~(interp == 4'd7) & ~(interp == 4'd6));
+    ap_condition_134 = (~(interp == 4'd1) & ~(interp == 4'd0) & ~(interp == 4'd6) & ~(interp == 4'd7) & ~(interp == 4'd5) & ~(interp == 4'd4) & ~(interp == 4'd3) & ~(interp == 4'd2));
 end
 
 always @ (*) begin
-    ap_predicate_op88_read_state1 = (~(interp == 4'd5) & ~(interp == 4'd4) & ~(interp == 4'd3) & ~(interp == 4'd2) & ~(interp == 4'd1) & ~(interp == 4'd0) & ~(interp == 4'd7) & ~(interp == 4'd6));
+    ap_predicate_op106_read_state1 = (~(interp == 4'd1) & ~(interp == 4'd0) & ~(interp == 4'd6) & ~(interp == 4'd7) & ~(interp == 4'd5) & ~(interp == 4'd4) & ~(interp == 4'd3) & ~(interp == 4'd2));
 end
 
 always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
 end
 
-assign icmp_ln66_fu_367_p2 = (($signed(tmp_fu_357_p4) > $signed(4'd0)) ? 1'b1 : 1'b0);
+assign colaVal_3_fu_499_p2 = (16'd32768 ^ ColaData);
 
-assign icmp_ln67_fu_373_p2 = (($signed(tmp_data_fu_349_p1) < $signed(23'd7864320)) ? 1'b1 : 1'b0);
+assign ctmp_data_fu_431_p1 = COLAIN65536OUT262144_TDATA_int_regslice[18:0];
 
-assign or_ln69_fu_395_p2 = (icmp_ln67_fu_373_p2 | icmp_ln66_fu_367_p2);
+assign icmp_ln78_fu_485_p2 = ((interp == 4'd6) ? 1'b1 : 1'b0);
 
-assign or_ln_fu_379_p3 = {{1'd1}, {trunc_ln23_fu_353_p1}};
+assign icmp_ln82_fu_515_p2 = (($signed(tmp_1_fu_505_p4) > $signed(3'd0)) ? 1'b1 : 1'b0);
 
-assign select_ln69_fu_387_p3 = ((icmp_ln66_fu_367_p2[0:0] == 1'b1) ? 21'd1572863 : 21'd1572864);
+assign icmp_ln93_fu_566_p2 = (($signed(tmp_2_fu_556_p4) > $signed(4'd0)) ? 1'b1 : 1'b0);
 
-assign tmp_data_fu_349_p1 = ap_phi_mux_phi_ln30_phi_fu_284_p18[22:0];
+assign icmp_ln94_fu_572_p2 = (($signed(tmp_data_fu_477_p1) < $signed(23'd7864320)) ? 1'b1 : 1'b0);
 
-assign tmp_fu_357_p4 = {{ap_phi_mux_phi_ln30_phi_fu_284_p18[22:19]}};
+assign or_ln95_fu_586_p2 = (icmp_ln94_fu_572_p2 | icmp_ln93_fu_566_p2);
 
-assign trunc_ln23_fu_353_p1 = ap_phi_mux_phi_ln30_phi_fu_284_p18[19:0];
+assign select_ln95_fu_578_p3 = ((icmp_ln93_fu_566_p2[0:0] == 1'b1) ? 20'd524287 : 20'd524288);
+
+assign tmp_1_fu_505_p4 = {{add_ln64_fu_435_p2[18:16]}};
+
+assign tmp_2_fu_556_p4 = {{ap_phi_mux_phi_ln39_phi_fu_366_p18[22:19]}};
+
+assign tmp_data_fu_477_p1 = ap_phi_mux_phi_ln39_phi_fu_366_p18[22:0];
+
+assign tmp_fu_491_p3 = add_ln64_fu_435_p2[32'd18];
+
+assign trunc_ln31_fu_481_p1 = ap_phi_mux_phi_ln39_phi_fu_366_p18[19:0];
 
 
 reg find_kernel_block = 0;

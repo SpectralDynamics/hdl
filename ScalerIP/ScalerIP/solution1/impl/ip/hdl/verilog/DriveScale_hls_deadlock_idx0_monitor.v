@@ -3,7 +3,7 @@
 module DriveScale_hls_deadlock_idx0_monitor ( // for module DriveScale_DriveScale_inst
     input wire clock,
     input wire reset,
-    input wire [8:0] axis_block_sigs,
+    input wire [9:0] axis_block_sigs,
     input wire [0:0] inst_idle_sigs,
     input wire [0:0] inst_block_sigs,
     output wire block
@@ -20,7 +20,7 @@ wire seq_is_axis_block;
 assign block = monitor_find_block;
 assign all_sub_parallel_has_block = 1'b0;
 assign all_sub_single_has_block = 1'b0;
-assign cur_axis_has_block = 1'b0 | axis_block_sigs[0] | axis_block_sigs[1] | axis_block_sigs[2] | axis_block_sigs[3] | axis_block_sigs[4] | axis_block_sigs[5] | axis_block_sigs[6] | axis_block_sigs[7] | axis_block_sigs[8];
+assign cur_axis_has_block = 1'b0 | axis_block_sigs[0] | axis_block_sigs[1] | axis_block_sigs[2] | axis_block_sigs[3] | axis_block_sigs[4] | axis_block_sigs[5] | axis_block_sigs[6] | axis_block_sigs[7] | axis_block_sigs[8] | axis_block_sigs[9];
 assign seq_is_axis_block = all_sub_parallel_has_block | all_sub_single_has_block | cur_axis_has_block;
 
 always @(posedge clock) begin

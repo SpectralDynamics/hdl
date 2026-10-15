@@ -5,6 +5,11 @@
                 <option name="name" value="DriveScale"/>
             </pragma>
         </directive>
+        <directive functionName="DriveScale" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="DriveScale"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

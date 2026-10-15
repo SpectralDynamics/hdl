@@ -9,7 +9,7 @@ volatile bool bCurrentSynch        = false;  /* latched output: set by HLS, clea
 volatile bool bSpuriousSynchLastIn = false;  /* previous bSpuriousSynch_i, for 1->0 edge detect */
 
 bool Synch(int bufStart, volatile bool *bSpuriousSynch, volatile bool *bRunningAcq,
-           volatile bool spiSync, volatile bool *bSynch) {
+           volatile bool spiSync, volatile bool *bSynch, volatile bool *bRunningAcqOut) {
 
 #pragma HLS INTERFACE s_axilite register port=bufStart
 #pragma HLS INTERFACE ap_ctrl_none register port=spiSync
@@ -17,6 +17,12 @@ bool Synch(int bufStart, volatile bool *bSpuriousSynch, volatile bool *bRunningA
 #pragma HLS INTERFACE s_axilite register port=bSpuriousSynch
 #pragma HLS INTERFACE ap_ctrl_none register port=bSynch
 #pragma HLS INTERFACE ap_ctrl_none register port=return
+#pragma HLS INTERFACE ap_ctrl_none register port=bRunningAcqOut
+
+    /* Mirror bRunningAcq to a fabric output pin so the external ColaGate IP
+     * can force the cola DAC data to 0 whenever acquisition is not running.
+     * Set unconditionally (before the branch) so it is valid on every path. */
+    *bRunningAcqOut = *bRunningAcq;
 
     if (*bRunningAcq) {
         /*

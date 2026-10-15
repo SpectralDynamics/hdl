@@ -5,6 +5,11 @@
                 <option name="name" value="streamToData"/>
             </pragma>
         </directive>
+        <directive functionName="streamToData" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="streamToData"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

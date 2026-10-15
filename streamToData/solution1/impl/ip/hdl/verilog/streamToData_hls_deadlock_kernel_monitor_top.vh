@@ -5,20 +5,21 @@ wire kernel_monitor_report;
 assign kernel_monitor_reset = ~ap_rst_n;
 assign kernel_monitor_clock = ap_clk;
 assign kernel_monitor_report = 1'b0;
-wire [8:0] axis_block_sigs;
+wire [9:0] axis_block_sigs;
 wire [0:0] inst_idle_sigs;
 wire [0:0] inst_block_sigs;
 wire kernel_block;
 
-assign axis_block_sigs[0] = ~IN1024OUT8192_TDATA_blk_n;
-assign axis_block_sigs[1] = ~IN2048OUT8192_TDATA_blk_n;
-assign axis_block_sigs[2] = ~IN4096OUT8192_TDATA_blk_n;
-assign axis_block_sigs[3] = ~IN8192OUT65536_TDATA_blk_n;
-assign axis_block_sigs[4] = ~IN16384OUT65536_TDATA_blk_n;
-assign axis_block_sigs[5] = ~IN32768OUT65536_TDATA_blk_n;
-assign axis_block_sigs[6] = ~IN65536OUT262144_TDATA_blk_n;
-assign axis_block_sigs[7] = ~IN131072OUT262144_TDATA_blk_n;
-assign axis_block_sigs[8] = ~IN262144OUT262144_TDATA_blk_n;
+assign axis_block_sigs[0] = ~COLAIN65536OUT262144_TDATA_blk_n;
+assign axis_block_sigs[1] = ~IN1024OUT8192_TDATA_blk_n;
+assign axis_block_sigs[2] = ~IN2048OUT8192_TDATA_blk_n;
+assign axis_block_sigs[3] = ~IN4096OUT8192_TDATA_blk_n;
+assign axis_block_sigs[4] = ~IN8192OUT65536_TDATA_blk_n;
+assign axis_block_sigs[5] = ~IN16384OUT65536_TDATA_blk_n;
+assign axis_block_sigs[6] = ~IN32768OUT65536_TDATA_blk_n;
+assign axis_block_sigs[7] = ~IN65536OUT262144_TDATA_blk_n;
+assign axis_block_sigs[8] = ~IN131072OUT262144_TDATA_blk_n;
+assign axis_block_sigs[9] = ~IN262144OUT262144_TDATA_blk_n;
 
 assign inst_block_sigs[0] = 1'b0;
 

@@ -78,6 +78,8 @@ module axi_ad5541 #(
   input                                 dma_xfer_req,
   input                                 dma_underflow,
   input                                 trigger,
+  input                                 dac_trigger,   // 262144 conversion strobe (1 spi_clk pulse,
+                                                       // ADC-locked); trigger keeps pacing the DMA
   // SPI engine control interface (to the SPI engine interconnect)
 
   input                                 spi_clk,        // should be connected to up_clk
@@ -240,11 +242,13 @@ module axi_ad5541 #(
     if (spi_resetn == 1'b0) begin
       spi_active <= 1'b0;
     end else begin
-      if (spi_active == 1'b0) begin        
-        if ((trigger == 1'b1 && doPulse == 1'b0 && spi_enable_s == 1'b1)) begin
+      if (spi_active == 1'b0) begin
+        // conversion now starts on the 262144 dac_trigger strobe (was: trigger =
+        // adc_valid/client rate) so the cola DAC steps at the interpolated rate,
+        // matching the drive DAC (axi_ad5766 got the same split).
+        if ((dac_trigger == 1'b1 && spi_enable_s == 1'b1)) begin
           spi_active <= 1'b1;
-          doPulse <= 1'b1;
-        end        
+        end
       end else if (cmd_ready == 1'b1 && spi_cmd_rd_addr_next == ctrl_cmd_wr_addr) begin
           spi_active <= 1'b0;
       end
@@ -298,11 +302,12 @@ module axi_ad5541 #(
         dma_valid <= 1'b0;
       end
     end
-    if (dma_valid == 1'b1) begin
+    // value latch moved from dma_valid (client rate) to dac_trigger (262144):
+    // dma_data carries the interpolated cola stream (fifo_generator_5 -> ColaGate),
+    // one fresh sample per conversion strobe.
+    if (dac_trigger == 1'b1) begin
       sdo_mem <= dma_data[15:0];
-      
     end
-   
   end
 
   // rate controller
