@@ -220,15 +220,18 @@ float DriveScale(float input, float *ColaInput, hls::stream<cpkt > &COLAIN65536O
 		else if (colaI < -32768) colaI = -32768;
 		unsigned short colaRaw = (unsigned short)colaI;
 		colaDelayBuf[colaWrPtr] = colaRaw;
-		/* s_align_ofs is back in the index expression to compensate for rendezvous skew
-		 * (so the cola read position tracks when cola samples actually started flowing).
-		 * The -50 headroom shifts the read position deeper into the ring buffer's safe
-		 * region, keeping the cliff (at K_buffer = 0) well below any normal operating
-		 * group_delay value across the expected s_align_ofs range. With colaDelay = 41
-		 * and headroom = 50, cliff sits at group_delay = -91 - s_align_ofs, giving
-		 * ~50 samples of margin for typical s_align_ofs values. Offset still drifts
-		 * linearly with s_align_ofs unless group_delay is adjusted per acquisition. */
-		ColaOut = colaDelayBuf[((int)colaWrPtr - (int)colaDelay - (int)(*group_delay) - (int)s_align_ofs - 50) & 0xFF];
+		/* 2026-10-28: the cola read index uses a CONSTANT in place of s_align_ofs.
+		 * s_align_ofs latches once per boot (s_align_valid is only cleared by
+		 * sync_reset, which never reaches this block while samples flow), and on
+		 * the cola FIFO drain + prefill bitstream it came out 18 on most boots and
+		 * 17 on some, moving cola by one sample for that whole boot. That
+		 * bitstream starts cola and DAC in lockstep, so there is no per-run skew
+		 * left to compensate. 18 = the common value, so the driver's group_delay
+		 * table (#640, centred on 18-boots) and the ring headroom are unchanged.
+		 * s_align_ofs is still computed and reported via alignOffset.
+		 * The -50 keeps the 256-entry ring wrap away from normal group_delay values. */
+		const int kAlignNominal = 18;
+		ColaOut = colaDelayBuf[((int)colaWrPtr - (int)colaDelay - (int)(*group_delay) - kAlignNominal - 50) & 0xFF];
 		*ColaOutput = ColaOut;
 		colaWrPtr = (colaWrPtr + 1) & 0xFF;
 	} else {

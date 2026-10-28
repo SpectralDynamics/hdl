@@ -132,7 +132,10 @@
       "axi_gpio_dacgate": "",
       "dacgate_arm_slice": "",
       "dacgate_byp_slice": "",
-      "dacgate_status_concat": ""
+      "dacgate_status_concat": "",
+      "packreset_run_not": "",
+      "packreset_sync_and": "",
+      "cola_rd_or": ""
     },
     "interface_ports": {
       "ddr": {
@@ -7134,7 +7137,7 @@
       },
       "DriveScale_0": {
         "vlnv": "SpectralDynamics:hls:DriveScale:1.5",
-        "ip_revision": "2114787226",
+        "ip_revision": "2114848955",
         "xci_name": "system_DriveScale_0_0",
         "xci_path": "ip\\system_DriveScale_0_0\\system_DriveScale_0_0.xci",
         "inst_hier_path": "DriveScale_0"
@@ -7613,6 +7616,17 @@
           "boundary_crc": "0x0"
         },
         "interface_ports": {
+          "cola_wr": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "analog.com:interface:fifo_rd:1.0",
+            "vlnv": "analog.com:interface:fifo_rd_rtl:1.0",
+            "port_maps": {
+              "VALID": {
+                "physical_name": "cola_wr_valid",
+                "direction": "I"
+              }
+            }
+          },
           "dma_wr": {
             "mode": "Slave",
             "vlnv_bus_definition": "analog.com:interface:fifo_rd:1.0",
@@ -7692,6 +7706,9 @@
           "dma_enable_o": {
             "direction": "O"
           },
+          "cola_dma_enable_o": {
+            "direction": "O"
+          },
           "adc_clk": {
             "type": "clk",
             "direction": "I",
@@ -7717,6 +7734,19 @@
               "POLARITY": {
                 "value": "ACTIVE_LOW",
                 "value_src": "constant"
+              }
+            }
+          },
+          "cola_drain_o": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
               }
             }
           },
@@ -7832,6 +7862,51 @@
           },
           "NUM_PORTS": {
             "value": "4"
+          }
+        }
+      },
+      "packreset_run_not": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "ip_revision": "3",
+        "xci_name": "system_packreset_run_not_0",
+        "xci_path": "ip\\system_packreset_run_not_0\\system_packreset_run_not_0.xci",
+        "inst_hier_path": "packreset_run_not",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "packreset_sync_and": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "ip_revision": "3",
+        "xci_name": "system_packreset_sync_and_0",
+        "xci_path": "ip\\system_packreset_sync_and_0\\system_packreset_sync_and_0.xci",
+        "inst_hier_path": "packreset_sync_and",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "and"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "cola_rd_or": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "ip_revision": "3",
+        "xci_name": "system_cola_rd_or_0",
+        "xci_path": "ip\\system_cola_rd_or_0\\system_cola_rd_or_0.xci",
+        "inst_hier_path": "cola_rd_or",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "or"
+          },
+          "C_SIZE": {
+            "value": "1"
           }
         }
       }
@@ -8313,11 +8388,22 @@
           "dacgate_status_concat/In0"
         ]
       },
+      "DacStartGate_0_cola_dma_enable_o": {
+        "ports": [
+          "DacStartGate_0/cola_dma_enable_o",
+          "spi1/dma_enable"
+        ]
+      },
+      "DacStartGate_0_cola_drain_o": {
+        "ports": [
+          "DacStartGate_0/cola_drain_o",
+          "cola_rd_or/Op2"
+        ]
+      },
       "DacStartGate_0_dma_enable_o": {
         "ports": [
           "DacStartGate_0/dma_enable_o",
-          "spi/dma_enable",
-          "spi1/dma_enable"
+          "spi/dma_enable"
         ]
       },
       "DacStartGate_0_fifo_rd_en_o": {
@@ -8396,7 +8482,8 @@
       "Synch_0_bRunningAcqOut": {
         "ports": [
           "Synch_0/bRunningAcqOut",
-          "ColaGate_0/bRunningAcq"
+          "ColaGate_0/bRunningAcq",
+          "packreset_run_not/Op1"
         ]
       },
       "ad7768_dma_2_irq": {
@@ -8415,7 +8502,8 @@
         "ports": [
           "axi_ad5441_dma/fifo_rd_valid",
           "ColaCounts_0/ap_start",
-          "fifo_generator_3/wr_en"
+          "fifo_generator_3/wr_en",
+          "DacStartGate_0/cola_wr_valid"
         ]
       },
       "axi_ad5441_dma_irq": {
@@ -8685,6 +8773,12 @@
           "cola_cs"
         ]
       },
+      "cola_rd_or_Res": {
+        "ports": [
+          "cola_rd_or/Res",
+          "fifo_generator_3/rd_en"
+        ]
+      },
       "cola_sclk": {
         "ports": [
           "spi1/sclk",
@@ -8800,7 +8894,7 @@
       "fifo_generator_1_valid": {
         "ports": [
           "fifo_generator_1/valid",
-          "fifo_generator_3/rd_en",
+          "cola_rd_or/Op1",
           "DriveScale_0/ap_start"
         ]
       },
@@ -8868,6 +8962,18 @@
         "ports": [
           "otg_vbusoc",
           "sys_logic_inv/Op1"
+        ]
+      },
+      "packreset_run_not_Res": {
+        "ports": [
+          "packreset_run_not/Res",
+          "packreset_sync_and/Op2"
+        ]
+      },
+      "packreset_sync_and_Res": {
+        "ports": [
+          "packreset_sync_and/Res",
+          "util_vector_logic_3/Op2"
         ]
       },
       "ready_in_1": {
@@ -9402,8 +9508,8 @@
       "util_vector_logic_0_Res": {
         "ports": [
           "util_vector_logic_0/Res",
-          "util_vector_logic_3/Op2",
           "Synch_0/spiSync",
+          "packreset_sync_and/Op1",
           "DacStartGate_0/sync_in"
         ]
       },

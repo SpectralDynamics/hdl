@@ -121,11 +121,18 @@ module DacStartGate #(
   // turn makes the software arm point forgiving.
   input  wire        dma_wr_valid,
   output wire        dma_enable_o,   // -> spi/dma_enable  (was xlconstant_1)
+  // Cola stream (spi1 / axi_ad5441_dma). spi1/dma_clk is the same clock as
+  // dma_clk (both are spi_clk = sys_cpu_clk), so no synchroniser is needed.
+  input  wire        cola_wr_valid,     // axi_ad5441_dma/fifo_rd_valid -> fifo_generator_3/wr_en
+  output wire        cola_dma_enable_o, // -> spi1/dma_enable (was dma_enable_o)
 
   // ---- ADC clock domain -----------------------------------------------------
   input  wire        adc_clk,
   input  wire        adc_resetn,
   output wire        fifo_rd_en_o,   // -> fifo_generator_1/rd_en (was xlconstant_1)
+  // -> cola_rd_or/Op2, ORed with fifo_generator_1/valid into fifo_generator_3/rd_en.
+  // High while disarmed so the cola FIFO drains between runs (see the end of file).
+  output wire        cola_drain_o,
 
   // ---- control, from PS EMIO GPIO (gpio_o) ----------------------------------
   input  wire        arm,            // 0->1 arms the gate; 0 returns to IDLE
@@ -296,6 +303,48 @@ module DacStartGate #(
   end
 
   //---------------------------------------------------------------------------
+  // Cola prefill (2026-10-28), dma_clk domain.
+  //
+  // spi1 used to share dma_enable_o, which closes as soon as the DAC FIFO has
+  // PREFILL_DEPTH words. The cola DMA delivered a few fewer in that window, so
+  // at release the 16-read burst out of fifo_generator_1 found
+  // fifo_generator_3 empty 1-5 times (ILA) and cola started that many samples
+  // late. Cola now gets its own enable that stays open through PREFILL and
+  // WAIT_SYNC until fifo_generator_3 has PREFILL_DEPTH words too.
+  //
+  // Follows dstate; never drives it. The DAC FSM, dma_enable_o, prefilled_o and
+  // the release decision are unchanged, so DAC-only runs (no cola stream: the
+  // count just never completes) behave exactly as before.
+  //---------------------------------------------------------------------------
+  reg        cola_en_r;
+  reg [15:0] cola_cnt;
+
+  always @(posedge dma_clk) begin
+    if (!dma_resetn) begin
+      cola_en_r <= 1'b0;
+      cola_cnt  <= 16'd0;
+    end else begin
+      case (dstate)
+        S_PREFILL, S_WAIT_SYNC: begin
+          // Count every write, including one already in flight when the enable
+          // dropped, so the count is what is really in the FIFO.
+          if (cola_wr_valid) begin
+            cola_cnt  <= cola_cnt + 16'd1;
+            cola_en_r <= ((cola_cnt + 16'd1) < PREFILL_DEPTH[15:0]);
+          end else
+            cola_en_r <= (cola_cnt < PREFILL_DEPTH[15:0]);
+        end
+        S_RUN: cola_en_r <= 1'b1;
+        // IDLE (the cola FIFO is being drained) and HOLD_RD: closed, count reset.
+        default: begin
+          cola_en_r <= 1'b0;
+          cola_cnt  <= 16'd0;
+        end
+      endcase
+    end
+  end
+
+  //---------------------------------------------------------------------------
   // ADC clock domain
   //
   // This is the domain that actually determines DAC output phase, and it is the
@@ -390,7 +439,20 @@ module DacStartGate #(
   // as the escape hatch if anything misbehaves in the field.
   //---------------------------------------------------------------------------
   assign dma_enable_o = bypass_d ? 1'b1 : dma_en_r;
+  assign cola_dma_enable_o = bypass_d ? 1'b1 : cola_en_r;
   assign fifo_rd_en_o = bypass_a ? 1'b1 : rd_en_r;
+  /*
+   * Cola FIFO drain (2026-10-28). fifo_generator_3 (cola) is read only when
+   * fifo_generator_1 (DAC) is, so whatever cola the previous run left behind
+   * was still there at the next release and played BEFORE the new cola stream:
+   * an ILA showed 31-39 stale words per run stopped mid-stream, building up
+   * run after run, which is the cola-late-by-0..500 the client measured.
+   * Disarmed means dma_enable is low, so nothing refills it while it drains;
+   * at arm, drain stops (2 adc_clk) well before PREFILL opens dma_enable
+   * (RD_CLOSE_WAIT dma_clk later). Off in bypass, where dma_enable is forced
+   * open and draining would eat live cola.
+   */
+  assign cola_drain_o = ~arm_a & ~bypass_a;
 
   assign armed_o      = (dstate != S_IDLE);
   // During S_RUN this reports how the run STARTED, not a live FIFO state:
